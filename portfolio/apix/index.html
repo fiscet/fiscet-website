@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html
+  xmlns="https://www.w3.org/1999/xhtml"
+  xml:lang="hu"
+  xmlns:fb="https://www.facebook.com/2008/fbml"
+  dir="ltr">
+  <head>
+    <title>Christian Zanchetta :: Portofolio web application Apix</title>
+    <meta
+      name="description"
+      content="Christian Zanchetta Frontend developer portfolio web application php codeginiter 4 and ReactJs with Typescript" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/css">
+      .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        overflow: auto;
+      }
+
+      #image-title {
+        color: #fff;
+      }
+
+      #fullscreen-image {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <script>
+      function setFullscreenImage(src, title) {
+        var fullscreenImage = document.getElementById("fullscreen-image");
+        var modalTitle = document.getElementById("image-title");
+
+        if (src) {
+          fullscreenImage.src = src;
+        }
+        if (title) {
+          modalTitle.innerHTML = title;
+        }
+      }
+
+      function ready() {
+        if (document.getElementsByClassName("thumb").length) {
+          var modal = document.getElementById("modal");
+          var thumbs = document.getElementsByClassName("thumb");
+
+          var curIndex = 0;
+
+          for (let i = 0; i < thumbs.length; i++) {
+            thumbs[i].onclick = function (e) {
+              modal.style.display = "block";
+              document.body.style.overflow = "hidden";
+
+              setFullscreenImage(e.target.src, e.target.alt);
+            };
+          }
+
+          modal.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", ready);
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG936FL7M3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WG936FL7M3');
+  </script>
+  </head>
+
+  <body>
+    <div class="modal-container" id="modal">
+      <div class="modal-body">
+        <p id="image-title" class="text-lg"></p>
+        <img id="fullscreen-image" />
+      </div>
+    </div>
+    <div class="container mx-auto my-4 p-4">
+      <div class="flex">
+        <div class="pr-2">
+          <a href="https://www.fiscet.it/" title="Back to home"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+            </svg>
+          </a>
+        </div>
+        <h1 class="mb-4 text-4xl font-extrabold leading-none">Apix CRM</h1>
+      </div>
+      <div class="max-w-3xl">
+        <h3 class="mb-2 text-2xl font-semibold leading-none">Description</h3>
+        <p class="mb-2">
+          Verticalized CRM for the management of customers and sales in the
+          mediation of electronic components. The central part of the program is
+          based on customers, from which other managements branch off such as
+          the registry of customer managers, contacts and interactions with
+          customers, sales details divided by principal, annual final balances,
+          etc.
+        </p>
+
+        <p class="mb-2">
+          All lists are pageable, filterable and selectable. To access the
+          details, just double click on the line, while to access other details
+          there are special links on the entity (for example, the product sheet
+          from the sales list).
+        </p>
+
+        <p class="mb-2">
+          All entities are manageable either from the main menu or from the
+          settings.
+        </p>
+
+        <p class="mb-2">
+          Also there is a section for importing Customers, Products and Sales
+          from a csv file
+        </p>
+        <hr class="my-4" />
+        <h3 class="mb-2 text-2xl font-semibold leading-none">Stack</h3>
+        <p class="mb-2 font-semibold">Backend</p>
+        <ul>
+          <li>RESTful server in CodeIgniter 4</li>
+          <li>MariaDB</li>
+          <li>JWT authentication</li>
+        </ul>
+        <p class="my-2 font-semibold">Frontend</p>
+        <ul>
+          <li>ReactJs 16 with Typescript</li>
+          <li>Material UI 4</li>
+          <li>Material XGrid Pro</li>
+          <li>React-query with Axios</li>
+          <li>React-i18 (the app is multilanguage)</li>
+          <li>Recoil state management</li>
+        </ul>
+      </div>
+      <hr class="my-4" />
+
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 13.21.49.png"
+              alt="Main menu"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">Main menu</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 13.22.03.png"
+              alt="Customer form"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">Customer form</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 13.22.40.png"
+              alt="Customer contacts"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">Customer contacts</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 13.22.59.png"
+              alt="New activity"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">New activity</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 13.23.10.png"
+              alt="Customer sales"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">Customer sales</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 13.23.25.png"
+              alt="Product details"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">Product details</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 13.23.41.png"
+              alt="Sales by customer per year"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">Sales by customer per year</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="col-span-2">
+            <img
+              src="images/Screenshot 2023-06-08 alle 15.37.04.png"
+              alt="Import CSV file"
+              class="thumb w-full max-w-md" />
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">Import CSV file</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
