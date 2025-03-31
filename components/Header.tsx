@@ -1,22 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import NavItem from './navigation/NavItem';
+import { AnimatePresence } from 'motion/react';
 import { handleScrollTo } from '@/lib/utils';
 import Logo from './Logo';
 import NavMenu from './navigation/NavMenu';
 import MobileButton from './navigation/MobileButton';
 import MobileMenu from './navigation/MobileMenu';
 
-const NAV_LINKS = [
-  { sectionId: 'home', text: 'Home' },
-  { sectionId: 'about', text: 'About' },
-  { sectionId: 'services', text: 'Services' },
-  { sectionId: 'contact', text: 'Contact' }
-] as const;
-
-const ANIMATION_DURATION = 0.3;
 const SCROLL_DELAY = 300;
 
 export default function Header() {
