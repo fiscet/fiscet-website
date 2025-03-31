@@ -13,6 +13,20 @@ const navLinks = [
   { href: '#contact', text: 'Contact' }
 ];
 
+// const handleScrollTo = (id: string) => {
+//   const element = document.getElementById(id);
+//   if (element) {
+//     const headerOffset = 80; // Height of the sticky header
+//     const elementPosition = element.getBoundingClientRect().top;
+//     const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+//     window.scrollTo({
+//       top: offsetPosition,
+//       behavior: 'smooth',
+//     });
+//   }
+// };
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

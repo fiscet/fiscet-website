@@ -1,10 +1,10 @@
-// components/contact/ContactSection.tsx
+import Section from '../Section';
 import { SectionTitle } from '../SectionTitle';
 import { ContactForm } from './ContactForm';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-12">
+    <Section id="contact" className="py-12">
       <div className="max-w-2xl mx-auto">
         <SectionTitle>Contact Us</SectionTitle>
         <p className="text-gray-600 text-center mb-8">
@@ -12,6 +12,6 @@ export default function ContactSection() {
         </p>
         <ContactForm />
       </div>
-    </section>
+    </Section>
   );
 }

@@ -19,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased md:scroll-smooth`}>
+      <body className={`${inter.className} antialiased`}>
         <Header />
-        <main className="my-6">{children}</main>
+        <main className="mt-6">{children}</main>
         <Toaster />
       </body>
     </html>

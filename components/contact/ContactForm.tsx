@@ -49,6 +49,7 @@ export function ContactForm() {
       });
 
       if (!response.ok) {
+        console.error('Failed to send message:', response);
         throw new Error('Failed to send message');
       }
 

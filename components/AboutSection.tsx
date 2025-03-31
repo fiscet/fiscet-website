@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import { SectionTitle } from './SectionTitle';
 import { Button } from './ui/button';
+import Section from './Section';
 
 export default function AboutSection() {
   return (
-    <div className="flex flex-col md:flex-row justify-between gap-x-32">
+    <Section
+      id="about"
+      className="flex flex-col md:flex-row justify-between gap-x-32"
+    >
       <div className="about-desc flex-2/3">
         <div>
           <SectionTitle className="text-3xl">About</SectionTitle>
@@ -21,6 +25,6 @@ export default function AboutSection() {
           </Button>
         </Link>
       </div>
-    </div>
+    </Section>
   );
 }

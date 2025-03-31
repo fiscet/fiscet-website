@@ -51,6 +51,9 @@
     --foreground: #ededed;
   }
 } */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Inter, Helvetica, sans-serif;

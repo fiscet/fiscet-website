@@ -19,9 +19,16 @@ export async function POST(req: Request) {
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: process.env.SMTP_SECURE === 'true',
+      logger: true,
+      debug: true,
       auth: {
         user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD
+        pass: process.env.SMTP_PASSWORD,
+        timeout: 10000
+      },
+      tls: {
+        minVersion: 'TLSv1',
+        ciphers: 'HIGH:MEDIUM:!aNULL:!eNULL:@STRENGTH:!DH:!kEDH'
       }
     });
 
