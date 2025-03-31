@@ -7,7 +7,7 @@ import HomeTech from './HomeTech';
 
 export default function HomeSection() {
   return (
-    <Section id="home" className="pt-36 -mt-36">
+    <Section id="home">
       <div className="flex flex-col md:flex-row justify-between gap-x-32">
         <div className="home-text flex-2/3">
           <div>
