@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { Toaster } from '@/components/ui/sonner';
+
 import Header from '@/components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,8 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased md:scroll-smooth`}>
         <Header />
-
         <main className="my-6">{children}</main>
+        <Toaster />
       </body>
     </html>
   );

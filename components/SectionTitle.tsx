@@ -12,7 +12,7 @@ export function SectionTitle({
 }) {
   return (
     <motion.h3
-      className={cn('text-2xl font-bold text-fis-logo mb-4', className)}
+      className={cn('text-xl font-bold text-fis-logo mb-4', className)}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.3 }}

@@ -10,7 +10,7 @@ export default function HomeSpeedImage() {
         height={450}
         className="z-0"
       />
-      <span className="absolute bottom-[-9%] left-[-9%] z-[-1]">
+      <span className="absolute bottom-[-4%] left-[-4%] md:bottom-[-15%] md:left-[-15%] xl:bottom-[-9%] xl:left-[-9%] z-[-1]">
         <svg
           width="93"
           height="93"
