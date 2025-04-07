@@ -14,14 +14,19 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
 import { useState } from 'react';
 import { toast } from 'sonner';
+import PrivacyModal from '@/components/PrivacyModal';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
   subject: z.string().min(5, 'Subject must be at least 5 characters'),
-  message: z.string().min(10, 'Message must be at least 10 characters')
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+  privacyAccepted: z.boolean().refine((val) => val === true, {
+    message: 'You must accept the privacy policy to proceed'
+  })
 });
 
 export function ContactForm() {
@@ -33,7 +38,8 @@ export function ContactForm() {
       name: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
+      privacyAccepted: false
     }
   });
 
@@ -124,6 +130,26 @@ export function ContactForm() {
                 />
               </FormControl>
               <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="privacyAccepted"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  I accept the <PrivacyModal />
+                </FormLabel>
+                <FormMessage />
+              </div>
             </FormItem>
           )}
         />
