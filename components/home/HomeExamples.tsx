@@ -10,7 +10,7 @@ export default function HomeExamples() {
         <span className="block min-h-[1px] max-h-[1px] w-8 bg-gray-400"></span>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className='p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out'>
+        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
           <Link href="https://fisevents.com" target="_blank">
             <Image
               src="/images/fisevents_logo.png"
@@ -23,10 +23,14 @@ export default function HomeExamples() {
           </Link>
         </div>
         <div className="border-r-2 hidden md:block">&nbsp;</div>
-        <div className='p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out'>
-          <Link href="https://fis-apart.vercel.app/" target="_blank" className="flex flex-col items-center">
-            <House className='w-10 h-10 text-blue-600' />
-            <span className='text-violet-800'>AI Demo</span>
+        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
+          <Link
+            href="https://fisapart.vercel.app/"
+            target="_blank"
+            className="flex flex-col items-center"
+          >
+            <House className="w-10 h-10 text-blue-600" />
+            <span className="text-violet-800">AI Demo</span>
           </Link>
         </div>
       </div>
