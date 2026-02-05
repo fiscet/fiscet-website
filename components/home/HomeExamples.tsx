@@ -29,8 +29,8 @@ export default function HomeExamples() {
               src="/images/mamivibe_logo.png"
               alt="Sanity.io + NextJS website"
               title="MamiVibe: Sanity.io + NextJS website"
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               className="rounded-md"
             />
           </Link>
