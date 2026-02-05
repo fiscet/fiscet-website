@@ -24,6 +24,19 @@ export default function HomeExamples() {
         </div>
         <div className="border-r-2 hidden md:block">&nbsp;</div>
         <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
+          <Link href="https://mamivibe.hu" target="_blank">
+            <Image
+              src="/images/mamivibe_logo.png"
+              alt="Sanity.io + NextJS website"
+              title="MamiVibe: Sanity.io + NextJS website"
+              width={150}
+              height={150}
+              className="rounded-md"
+            />
+          </Link>
+        </div>
+        <div className="border-r-2 hidden md:block">&nbsp;</div>
+        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
           <Link
             href="https://fisapart.vercel.app/"
             target="_blank"
