@@ -41,18 +41,26 @@ export default function HomeTech() {
           </Link>
         </div>
         <div className="text-4xl font-bold">+</div>
-        <div>
-          <Link href="https://nextjs.org" target="_blank">
-            <Image
-              src="/images/nextjs_logo.jpg"
-              alt="Frontend with Next.js"
-              title="Frontend with Next.js"
-              width={50}
-              height={50}
-              className="rounded-md"
-            />
-          </Link>
-        </div>
+        <Link href="https://nextjs.org" target="_blank">
+          <Image
+            src="/images/nextjs_logo.jpg"
+            alt="Frontend with Next.js"
+            title="Frontend with Next.js"
+            width={50}
+            height={50}
+            className="rounded-md"
+          />
+        </Link>
+        <div className="text-4xl font-bold">&asymp;</div>
+        <Link href="https://mastra.ai/" target="_blank">
+          <Image
+            src="/images/mastra.svg"
+            alt="Mastra"
+            width={50}
+            height={50}
+            className="rounded-md"
+          />
+        </Link>
       </div>
     </>
   );

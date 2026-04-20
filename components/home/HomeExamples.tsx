@@ -38,13 +38,25 @@ export default function HomeExamples() {
         <div className="border-r-2 hidden md:block">&nbsp;</div>
         <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
           <Link
+            href="https://github.com/fiscet/"
+            target="_blank"
+            className="flex flex-col items-center"
+          >
+            <Image
+              src="/images/github-svgrepo-com.svg"
+              alt="GitHub"
+              width={50}
+              height={50}
+            />
+          </Link>
+          {/* <Link
             href="https://fisapart.vercel.app/"
             target="_blank"
             className="flex flex-col items-center"
           >
             <House className="w-10 h-10 text-blue-600" />
             <span className="text-violet-800">AI Demo</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>
