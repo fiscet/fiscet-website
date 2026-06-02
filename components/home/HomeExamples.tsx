@@ -1,3 +1,4 @@
+import { House } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -37,6 +38,23 @@ export default function HomeExamples() {
         <div className="border-r-2 hidden md:block">&nbsp;</div>
         <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
           <Link
+            href="https://fisapart.vercel.app/"
+            target="_blank"
+            className="flex flex-col items-center"
+          >
+            <Image
+              src="/images/fisapart_logo.png"
+              alt="Vercel AI SDK + NextJS website"
+              title="FisApart: AI demo"
+              width={100}
+              height={100}
+              className="rounded-md"
+            />
+          </Link>
+        </div>
+        <div className="border-r-2 hidden md:block">&nbsp;</div>
+        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
+          <Link
             href="https://github.com/fiscet/"
             target="_blank"
             className="flex flex-col items-center"
@@ -48,14 +66,6 @@ export default function HomeExamples() {
               height={50}
             />
           </Link>
-          {/* <Link
-            href="https://fisapart.vercel.app/"
-            target="_blank"
-            className="flex flex-col items-center"
-          >
-            <House className="w-10 h-10 text-blue-600" />
-            <span className="text-violet-800">AI Demo</span>
-          </Link> */}
         </div>
       </div>
     </>
