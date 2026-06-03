@@ -51,7 +51,7 @@ export default function HomeExamples() {
             />
           </Link>
         </div>
-        <div className="border-r-2 hidden md:block">&nbsp;</div>
+        {/* <div className="border-r-2 hidden md:block">&nbsp;</div>
         <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
           <Link
             href="https://github.com/fiscet/"
@@ -65,7 +65,7 @@ export default function HomeExamples() {
               height={50}
             />
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );
