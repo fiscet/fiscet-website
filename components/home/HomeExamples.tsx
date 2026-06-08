@@ -1,71 +1,86 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+type Example = {
+  name: string;
+  href: string;
+  logo: string;
+  tag: string;
+  description: string;
+  logoSize: number;
+};
+
+const examples: Example[] = [
+  {
+    name: 'FisEvents',
+    href: 'https://fisevents.com',
+    logo: '/images/fisevents_logo.png',
+    tag: 'SaaS · Next.js + Sanity',
+    description: 'Event websites and attendee management in one platform',
+    logoSize: 130
+  },
+  {
+    name: 'MamiVibe',
+    href: 'https://mamivibe.hu',
+    logo: '/images/mamivibe_logo.png',
+    tag: 'Website · Next.js + Sanity',
+    description: 'Fast, content-driven business website on a headless CMS',
+    logoSize: 100
+  },
+  {
+    name: 'FisApart',
+    href: 'https://fisapart.fiscet.it',
+    logo: '/images/fisapart_logo.png',
+    tag: 'AI demo · Vercel AI SDK',
+    description: 'Conversational AI assistant for a booking website',
+    logoSize: 100
+  },
+  {
+    name: 'Build vs Buy',
+    href: 'https://bvb.fiscet.it',
+    logo: '/images/build-vs-buy_logo.png',
+    tag: 'AI tool',
+    description: 'Helps SMEs decide whether to build or buy software',
+    logoSize: 100
+  }
+];
+
 export default function HomeExamples() {
   return (
     <>
       <div className="flex gap-4 items-center mb-4">
-        <span className="text-sm text-gray-400">Demo example</span>
+        <span className="text-sm text-gray-400">Portfolio</span>
         <span className="block min-h-[1px] max-h-[1px] w-8 bg-gray-400"></span>
       </div>
-      <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
-          <Link href="https://fisevents.com" target="_blank">
-            <Image
-              src="/images/fisevents_logo.png"
-              alt="Sanity.io + NextJS"
-              title="FisEvents: Sanity.io + NextJS"
-              width={150}
-              height={150}
-              className="rounded-md"
-            />
-          </Link>
-        </div>
-        <div className="border-r-2 hidden md:block">&nbsp;</div>
-        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
-          <Link href="https://mamivibe.hu" target="_blank">
-            <Image
-              src="/images/mamivibe_logo.png"
-              alt="Sanity.io + NextJS website"
-              title="MamiVibe: Sanity.io + NextJS website"
-              width={100}
-              height={100}
-              className="rounded-md"
-            />
-          </Link>
-        </div>
-        <div className="border-r-2 hidden md:block">&nbsp;</div>
-        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {examples.map((example) => (
           <Link
-            href="https://fisapart.vercel.app/"
+            key={example.name}
+            href={example.href}
             target="_blank"
-            className="flex flex-col items-center"
+            title={`${example.name}: ${example.description}`}
+            className="flex flex-col items-center text-center p-6 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out"
           >
-            <Image
-              src="/images/fisapart_logo.png"
-              alt="Vercel AI SDK + NextJS website"
-              title="FisApart: AI demo"
-              width={100}
-              height={100}
-              className="rounded-md"
-            />
+            <div className="flex items-center justify-center h-28">
+              <Image
+                src={example.logo}
+                alt={example.name}
+                width={example.logoSize}
+                height={example.logoSize}
+                className="rounded-md"
+              />
+            </div>
+            <span className="mt-4 text-[11px] uppercase tracking-wider text-gray-400">
+              {example.tag}
+            </span>
+            <span className="mt-1 font-semibold text-gray-800">
+              {example.name}
+            </span>
+            <span className="mt-1 text-sm text-gray-500">
+              {example.description}
+            </span>
           </Link>
-        </div>
-        {/* <div className="border-r-2 hidden md:block">&nbsp;</div>
-        <div className="p-4 shadow-2xs hover:shadow-lg rounded-md transition-shadow duration-300 ease-in-out">
-          <Link
-            href="https://github.com/fiscet/"
-            target="_blank"
-            className="flex flex-col items-center"
-          >
-            <Image
-              src="/images/github-svgrepo-com.svg"
-              alt="GitHub"
-              width={50}
-              height={50}
-            />
-          </Link>
-        </div> */}
+        ))}
       </div>
     </>
   );
