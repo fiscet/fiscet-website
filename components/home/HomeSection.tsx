@@ -19,6 +19,9 @@ export default function HomeSection() {
               scalable, and ready to launch!
             </p>
           </div>
+          <div className="my-10">
+            <HomeExamples />
+          </div>
           <div className="my-6">
             <SectionTitle>Headless CMS Architecture</SectionTitle>
             <p>
@@ -33,8 +36,6 @@ export default function HomeSection() {
             </p>
           </div>
           <HomeTech />
-          <SectionSpacer />
-          <HomeExamples />
         </div>
         <div className="sm:mx-auto md:mx-0 flex-1/3 mt-6 mb:mt-0">
           <HomeSpeedImage />
