@@ -1,5 +1,4 @@
 import Section from '../Section';
-import SectionSpacer from '../SectionSpacer';
 import { SectionTitle } from '../SectionTitle';
 import HomeExamples from './HomeExamples';
 import HomeSpeedImage from './HomeSpeedImage';
