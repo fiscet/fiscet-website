@@ -19,3 +19,13 @@ export const handleScrollTo = (id: string) => {
     });
   }
 };
+
+// Smooth-scroll to the section named in the URL hash, accounting for the
+// sticky header. Used on the home page so cross-page links like /#about land
+// correctly after navigation.
+export const scrollToHash = () => {
+  const id = window.location.hash.replace('#', '');
+  if (!id) return;
+  // Wait for layout so getBoundingClientRect is accurate after navigation.
+  requestAnimationFrame(() => handleScrollTo(id));
+};

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import NavItem from './NavItem';
 
 export const NAV_LINKS = [
@@ -25,6 +26,12 @@ export default function NavMenu({ handleNavClick }: NavProps) {
           {text}
         </NavItem>
       ))}
+      <Link
+        href="/blog"
+        className="text-fis-logo hover:text-gray-400 cursor-pointer"
+      >
+        Blog
+      </Link>
     </>
   );
 }
