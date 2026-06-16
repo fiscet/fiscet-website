@@ -2,7 +2,7 @@
 slug: choosing-a-headless-cms
 title: "Payload, Sanity, or Strapi: choosing a headless CMS"
 description: "There's no single best headless CMS — only the right fit for the project. Here's how I decide between Payload, Sanity, and Strapi."
-publishedAt: 2026-06-23
+publishedAt: 2026-05-23
 seriesOrder: 2
 ---
 

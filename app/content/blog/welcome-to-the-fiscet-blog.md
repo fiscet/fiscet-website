@@ -2,7 +2,7 @@
 slug: welcome-to-the-fiscet-blog
 title: "Welcome to the Fiscet blog"
 description: "Notes on building fast, scalable web applications with Next.js and headless CMS — the decisions, trade-offs, and lessons from real client work."
-publishedAt: 2026-06-16
+publishedAt: 2025-06-16
 seriesOrder: 1
 ---
 
