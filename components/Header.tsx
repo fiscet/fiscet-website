@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { AnimatePresence } from 'motion/react';
 import { handleScrollTo } from '@/lib/utils';
 import Logo from './Logo';
@@ -12,9 +13,18 @@ const SCROLL_DELAY = 300;
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleNavClick = (sectionId: string) => {
     setIsMenuOpen(false);
+
+    if (pathname !== '/') {
+      // On another route (e.g. /blog): go home, then let the page scroll.
+      router.push(`/#${sectionId}`);
+      return;
+    }
+
     setTimeout(() => handleScrollTo(sectionId), SCROLL_DELAY);
   };
 
