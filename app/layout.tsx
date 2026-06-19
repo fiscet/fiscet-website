@@ -7,7 +7,10 @@ import GoogleTagManager from '@/components/GoogleTagManager';
 
 const inter = Inter({ subsets: ['latin'] });
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.fiscet.it';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: 'Fullstack Applications Next.js, Payload CMS, Sanity & Strapi',
   description:
     'Custom web applications built with Next.js, leveraging headless CMS solutions like Payload CMS, Sanity.io, and Strapi. Fast, scalable, and user-friendly digital solutions for your business with modern tech stack.',
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
       'Custom web applications built with Next.js, leveraging headless CMS solutions like Payload CMS, Sanity.io, and Strapi. Fast, scalable, and user-friendly digital solutions for your business with modern tech stack.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Your Company Name'
+    siteName: 'Fiscet',
   },
   twitter: {
     card: 'summary_large_image',
