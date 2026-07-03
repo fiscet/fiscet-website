@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 const GITHUB_REPO = 'fiscet/fiscet-website';
 const BLOG_DIR = 'app/content/blog';
