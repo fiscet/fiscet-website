@@ -20,15 +20,20 @@ type ExistingPost = {
   body: string;
 };
 
+function githubHeaders(accept: string): Record<string, string> {
+  return {
+    ...(process.env.GITHUB_TOKEN
+      ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }
+      : {}),
+    Accept: accept,
+    'X-GitHub-Api-Version': '2022-11-28'
+  };
+}
+
 async function githubFetch(url: string, init?: RequestInit) {
   const res = await fetch(url, {
     ...init,
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-      ...init?.headers
-    }
+    headers: { ...githubHeaders('application/vnd.github+json'), ...init?.headers }
   });
   if (!res.ok) {
     throw new Error(`GitHub ${init?.method ?? 'GET'} ${url} failed: ${res.status} ${await res.text()}`);
@@ -44,11 +49,7 @@ async function fetchExistingPosts(): Promise<ExistingPost[]> {
   return Promise.all(
     mdFiles.map(async (f) => {
       const res = await fetch(`${GITHUB_CONTENTS_API}/${f.path}?ref=main`, {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-          Accept: 'application/vnd.github.raw+json',
-          'X-GitHub-Api-Version': '2022-11-28'
-        }
+        headers: githubHeaders('application/vnd.github.raw+json')
       });
       if (!res.ok) throw new Error(`GitHub read of ${f.path} failed: ${res.status}`);
       const { data, content } = matter(await res.text());
@@ -85,9 +86,12 @@ Output a research brief with:
 - The startup chosen and why it is interesting (the product angle, "the clever part").
 - Concretely WHAT the product does and HOW it works technically.
 - Key concrete numbers/facts worth citing.
-- The source URLs you used (full URLs, one per line).`
+- The source names you used (do NOT write out URLs, they are collected separately).`
   });
-  return { brief: text, sources };
+  const sourceUrls = sources.flatMap((s) =>
+    s.sourceType === 'url' ? [{ url: s.url, title: s.title }] : []
+  );
+  return { brief: text, sourceUrls };
 }
 
 const postSchema = z.object({
@@ -99,7 +103,7 @@ const postSchema = z.object({
   body: z
     .string()
     .describe(
-      'The markdown body of the post, WITHOUT frontmatter, ending with a "## Sources" section of plain markdown links.'
+      'The markdown body of the post, WITHOUT frontmatter and WITHOUT any Sources section or URLs.'
     )
 });
 
@@ -113,7 +117,7 @@ Voice: a personal, curious "discovery" voice in a professional dev-blog register
 
 PUNCTUATION: go very light on em-dashes ("—"). Prefer commas, colons, parentheses, or separate sentences. At most ONE em-dash in the whole post (ideally zero), and this applies to the title and description too.
 
-Length: 260-340 words of body. End the body with a "## Sources" section listing the source URLs from the brief as plain markdown links.
+Length: strictly 260-340 words of body, do NOT exceed 340. Do NOT include a "## Sources" section and do NOT write out any URL: sources are appended separately. You may name sources inline in prose (e.g. "according to TechCrunch").
 
 Here is an existing post as a reference for tone, structure and length:
 ---
@@ -126,11 +130,41 @@ ${brief}`
   return output;
 }
 
+type SourceLink = { url: string; title?: string };
+
+async function resolveSources(sources: SourceLink[]): Promise<SourceLink[]> {
+  const resolved = await Promise.all(
+    sources.map(async ({ url, title }) => {
+      try {
+        const res = await fetch(url, { redirect: 'manual' });
+        return { url: res.headers.get('location') ?? url, title };
+      } catch {
+        return { url, title };
+      }
+    })
+  );
+  const seen = new Set<string>();
+  return resolved.filter(({ url }) => {
+    if (seen.has(url) || url.includes('vertexaisearch.cloud.google.com')) return false;
+    seen.add(url);
+    return true;
+  });
+}
+
+function sourcesSection(sources: SourceLink[]): string {
+  if (sources.length === 0) return '';
+  const lines = sources
+    .slice(0, 5)
+    .map(({ url, title }) => `- ${title ? `${title}: ` : ''}${url}`);
+  return `\n## Sources\n\n${lines.join('\n')}\n`;
+}
+
 function buildMarkdown(
   post: z.infer<typeof postSchema>,
   slug: string,
   publishedAt: string,
-  seriesOrder: number
+  seriesOrder: number,
+  sources: SourceLink[]
 ) {
   const quote = (s: string) => `"${s.replace(/"/g, '\\"')}"`;
   return [
@@ -143,7 +177,7 @@ function buildMarkdown(
     '---',
     '',
     post.body.trim(),
-    ''
+    sourcesSection(sources)
   ].join('\n');
 }
 
@@ -154,7 +188,9 @@ export async function GET(request: Request) {
   ) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
-  for (const name of ['GEMINI_KEY', 'GITHUB_TOKEN']) {
+  const dryRun = new URL(request.url).searchParams.has('dryRun');
+  const required = dryRun ? ['GEMINI_KEY'] : ['GEMINI_KEY', 'GITHUB_TOKEN'];
+  for (const name of required) {
     if (!process.env[name]) {
       return NextResponse.json({ error: `Missing env var ${name}` }, { status: 500 });
     }
@@ -165,8 +201,9 @@ export async function GET(request: Request) {
     const maxSeriesOrder = Math.max(0, ...existing.map((p) => p.seriesOrder));
     const samplePost = existing.reduce((a, b) => (a.seriesOrder > b.seriesOrder ? a : b));
 
-    const { brief } = await researchStartup(existing);
+    const { brief, sourceUrls } = await researchStartup(existing);
     const post = await writePost(brief, samplePost);
+    const resolvedSources = await resolveSources(sourceUrls);
 
     const slug = post.slug
       .toLowerCase()
@@ -182,7 +219,18 @@ export async function GET(request: Request) {
       dateStyle: 'short'
     }).format(new Date());
     const seriesOrder = maxSeriesOrder + 1;
-    const markdown = buildMarkdown(post, slug, publishedAt, seriesOrder);
+    const markdown = buildMarkdown(post, slug, publishedAt, seriesOrder, resolvedSources);
+
+    if (dryRun) {
+      return NextResponse.json({
+        ok: true,
+        dryRun: true,
+        title: post.title,
+        file: `${BLOG_DIR}/${slug}.md`,
+        seriesOrder,
+        markdown
+      });
+    }
 
     const commit = await githubFetch(`${GITHUB_CONTENTS_API}/${BLOG_DIR}/${slug}.md`, {
       method: 'PUT',
