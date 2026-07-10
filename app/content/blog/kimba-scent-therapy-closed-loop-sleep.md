@@ -3,7 +3,7 @@ slug: kimba-scent-therapy-closed-loop-sleep
 title: "Kimba: the one sense that can reach you while you sleep"
 description: "A bedside hub reads live data from your smartwatch and answers with scent, the only sensory channel that can nudge the sleeping brain without waking it."
 publishedAt: 2026-07-10
-seriesOrder: 21
+seriesOrder: 22
 ---
 
 I fell into this one while reading about why sleep trackers never seem to actually help. They measure everything and change nothing: you wake up, look at a score, and shrug. Kimba, a sleep startup that launched its bedside hub in June, starts from the opposite question. If a device already knows you are drifting toward a bad night, why can it only report the damage instead of stepping in?
