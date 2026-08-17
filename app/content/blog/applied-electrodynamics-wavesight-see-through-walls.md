@@ -3,7 +3,7 @@ slug: applied-electrodynamics-wavesight-see-through-walls
 title: "Applied Electrodynamics: a camera that reads what's hidden behind a wall"
 description: "A five-person YC startup built WaveSight, a radio-wave camera that turns hidden pipes, wiring and studs into a millimeter-accurate 3D map, without touching the wall."
 publishedAt: 2026-08-17
-seriesOrder: 36
+seriesOrder: 37
 ---
 
 I came across this while scrolling past a video of someone pointing what looked like a tablet at a bare wall, watching pipes and wiring appear on screen like an X-ray. Except it wasn't an X-ray. It was radio.
