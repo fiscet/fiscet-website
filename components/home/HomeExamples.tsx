@@ -42,6 +42,15 @@ const examples: Example[] = [
     tag: 'AI tool',
     description: 'Helps SMEs decide whether to build or buy software',
     logoSize: 100
+  },
+  {
+    name: 'FisServer',
+    href: 'https://fisserver.fiscet.it',
+    logo: '/images/fisserver_logo.png',
+    tag: 'Backend · AdonisJS + PostgreSQL',
+    description:
+      'Multi-tenant SaaS backend foundation with RBAC and an MCP server',
+    logoSize: 100
   }
 ];
 
@@ -52,7 +61,7 @@ export default function HomeExamples() {
         <span className="text-sm text-gray-400">Portfolio</span>
         <span className="block min-h-[1px] max-h-[1px] w-8 bg-gray-400"></span>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {examples.map((example) => (
           <Link
             key={example.name}
