@@ -41,7 +41,7 @@ export default function HomePage() {
       <HashScroll />
       <div className="container mx-auto flex flex-col p-4 mb-4">
         <PageTitle className="text-center">
-          Custom Web Solutions for your business 🚀
+          Custom Web Solutions for your business
         </PageTitle>
         <HomeSection />
         <SectionSpacer />

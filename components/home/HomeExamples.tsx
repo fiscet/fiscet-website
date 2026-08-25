@@ -12,20 +12,21 @@ type Example = {
 
 const examples: Example[] = [
   {
+    name: 'FisServer',
+    href: 'https://fisserver.fiscet.it',
+    logo: '/images/fisserver_logo.png',
+    tag: 'Backend · AdonisJS + PostgreSQL',
+    description:
+      'Multi-tenant SaaS backend foundation with RBAC and an MCP server',
+    logoSize: 100
+  },
+  {
     name: 'FisEvents',
     href: 'https://fisevents.com',
     logo: '/images/fisevents_logo.png',
     tag: 'SaaS · Next.js + Sanity',
     description: 'Event websites and attendee management in one platform',
     logoSize: 130
-  },
-  {
-    name: 'MamiVibe',
-    href: 'https://mamivibe.hu',
-    logo: '/images/mamivibe_logo.png',
-    tag: 'Website · Next.js + Sanity',
-    description: 'Fast, content-driven business website on a headless CMS',
-    logoSize: 100
   },
   {
     name: 'FisApart',
@@ -44,12 +45,11 @@ const examples: Example[] = [
     logoSize: 100
   },
   {
-    name: 'FisServer',
-    href: 'https://fisserver.fiscet.it',
-    logo: '/images/fisserver_logo.png',
-    tag: 'Backend · AdonisJS + PostgreSQL',
-    description:
-      'Multi-tenant SaaS backend foundation with RBAC and an MCP server',
+    name: 'MamiVibe',
+    href: 'https://mamivibe.hu',
+    logo: '/images/mamivibe_logo.png',
+    tag: 'Website · Next.js + Sanity',
+    description: 'Fast, content-driven business website on a headless CMS',
     logoSize: 100
   }
 ];
