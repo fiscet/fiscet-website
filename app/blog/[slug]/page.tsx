@@ -181,16 +181,23 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
       </header>
 
       {post.image && (
-        <div className="mb-10 rounded-2xl overflow-hidden">
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={1200}
-            height={630}
-            className="w-full h-auto object-cover"
-            priority
-          />
-        </div>
+        <figure className="mb-10">
+          <div className="rounded-2xl overflow-hidden">
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={1200}
+              height={630}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+          {post.imageCredit && (
+            <figcaption className="mt-2 px-1 text-xs text-muted-foreground">
+              {post.imageCredit}
+            </figcaption>
+          )}
+        </figure>
       )}
 
       <div className="prose prose-lg max-w-none prose-headings:text-fis-logo prose-a:text-fis-logo prose-strong:text-foreground">

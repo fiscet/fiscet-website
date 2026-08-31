@@ -5,6 +5,8 @@ description: "Cosa è già in vigore, cosa è stato rinviato e cosa fare subito,
 publishedAt: 2026-08-31
 seriesOrder: 44
 lang: it
+image: /images/blog/ai-act.jpeg
+imageCredit: 'Immagine di copertina generata con intelligenza artificiale.'
 ---
 
 ## Perché questa guida, e perché proprio ora
@@ -36,6 +38,8 @@ Gli obblighi cambiano parecchio a seconda del ruolo. Un'agenzia che usa un softw
 ## La timeline reale, aggiornata
 
 Questa è la parte che quasi nessuna guida generica riporta correttamente, perché è cambiata nel corso del 2026.
+
+![Timeline dell'AI Act aggiornata ad agosto 2026: nella corsia superiore gli obblighi già in vigore (febbraio 2025 divieti e alfabetizzazione, agosto 2025 obblighi GPAI, 2 agosto 2026 trasparenza e sanzioni, 2 dicembre 2026 fine proroga watermarking); nella corsia inferiore i due blocchi rinviati, ciascuno con la data originale come cerchio vuoto e una freccia verso la nuova scadenza: alto rischio stand-alone dell'Allegato III dal 2 agosto 2026 al 2 dicembre 2027 (+16 mesi), IA incorporata in prodotti regolamentati dell'Allegato I dal 2 agosto 2027 al 2 agosto 2028 (+12 mesi)](/images/blog/ai-act-timeline-it.svg)
 
 | Data | Cosa è successo / cosa succede |
 |---|---|

@@ -5,6 +5,8 @@ description: "What's actually in force, what got postponed, and what to do now, 
 publishedAt: 2026-08-31
 seriesOrder: 45
 lang: en
+image: /images/blog/ai-act.jpeg
+imageCredit: 'Cover image generated with artificial intelligence.'
 ---
 
 ## Why this guide, and why now
@@ -36,6 +38,8 @@ The obligations differ significantly depending on the role. An agency that uses 
 ## The real timeline, updated
 
 This is the part almost no generic guide gets right, because it changed during 2026.
+
+![Timeline of the AI Act as of August 2026. The upper lane shows obligations already in force: February 2025 prohibitions and AI literacy, August 2025 GPAI provider obligations, 2 August 2026 transparency duties and penalties, 2 December 2026 end of the watermarking grace period. The lower lane shows the two postponed blocks, each with its original date as a hollow marker and an arrow to the new deadline: stand-alone high-risk systems under Annex III from 2 August 2026 to 2 December 2027 (+16 months), and AI embedded in already-regulated products under Annex I from 2 August 2027 to 2 August 2028 (+12 months)](/images/blog/ai-act-timeline-en.svg)
 
 | Date | What happened / what's happening |
 |---|---|

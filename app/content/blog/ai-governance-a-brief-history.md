@@ -26,7 +26,7 @@ Looking at the record, AI governance has consistently been a response to capabil
 
 In each case, the regulatory response came after the capability that prompted it, not before. This is worth stating plainly because it shapes what governance can realistically do: it manages risk retroactively and iteratively, not preemptively.
 
-![Timeline diagram showing AI capability milestones (Transformer 2017, ChatGPT 2022) followed by governance responses at different speeds — a voluntary standard about two months later, binding law about twenty-one months later — plus the EU/US regulatory paths diverging after January 2025](/images/ai-governance-timeline.svg)
+![Timeline diagram showing AI capability milestones (Transformer 2017, ChatGPT 2022) followed by governance responses at different speeds — a voluntary standard about two months later, binding law about twenty-one months later — plus the EU/US regulatory paths diverging after January 2025](/images/blog/ai-governance-timeline.svg)
 
 _Capability moves first, governance follows — but at very different speeds depending on whether the response is a voluntary standard or binding law._
 

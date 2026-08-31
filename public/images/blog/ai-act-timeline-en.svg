@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1620 700" role="img" aria-label="Timeline diagram of the AI Act as of August 2026. The upper lane shows obligations already in force: February 2025 prohibitions and AI literacy, August 2025 GPAI provider obligations, 2 August 2026 transparency duties and penalties, 2 December 2026 end of the watermarking grace period. The lower lane shows the two postponed blocks, each with its original date as a hollow marker and an arrow to the new deadline: stand-alone high-risk systems under Annex III moved from 2 August 2026 to 2 December 2027 (+16 months), and AI embedded in already-regulated products under Annex I moved from 2 August 2027 to 2 August 2028 (+12 months).">
+  <defs>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1620" height="700" fill="#ffffff"/>
+
+  <!-- title -->
+  <text x="60" y="46" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#1e0c5c">The AI Act: what is already binding, what got postponed</text>
+  <text x="60" y="74" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#737373">The real deadlines after the 2026 simplification package · updated 31 August 2026</text>
+
+  <!-- past / in-force band -->
+  <rect x="290" y="145" width="507" height="455" fill="#f5f5f8"/>
+  <text x="805" y="137" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9a3412">today · 31 Aug 2026</text>
+
+  <!-- year guides -->
+  <g stroke="#f0f0f2" stroke-width="1">
+    <line x1="588" y1="145" x2="588" y2="600"/>
+    <line x1="902" y1="145" x2="902" y2="600"/>
+    <line x1="1217" y1="145" x2="1217" y2="600"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#a3a3a3" text-anchor="middle">
+    <text x="444" y="620">2025</text>
+    <text x="745" y="620">2026</text>
+    <text x="1060" y="620">2027</text>
+    <text x="1310" y="620">2028</text>
+  </g>
+
+  <!-- lane lines -->
+  <line x1="290" y1="300" x2="1410" y2="300" stroke="#d4d4d8" stroke-width="2"/>
+  <line x1="290" y1="450" x2="1410" y2="450" stroke="#efefef" stroke-width="1.5"/>
+  <line x1="290" y1="540" x2="1410" y2="540" stroke="#efefef" stroke-width="1.5"/>
+
+  <!-- lane labels -->
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="end">
+    <text x="272" y="296" font-size="13" font-weight="700" letter-spacing="1" fill="#1e0c5c">IN FORCE</text>
+    <text x="272" y="313" font-size="11" fill="#8a8a8a">binding today</text>
+    <text x="272" y="489" font-size="13" font-weight="700" letter-spacing="1" fill="#b45309">POSTPONED</text>
+    <text x="272" y="506" font-size="11" fill="#8a8a8a">not cancelled</text>
+  </g>
+
+  <!-- ============ IN-FORCE LANE ============ -->
+  <g font-family="Helvetica, Arial, sans-serif">
+
+    <!-- Feb 2025 (far tier, left-aligned) -->
+    <line x1="300" y1="216" x2="300" y2="292" stroke="#c8c8d0" stroke-width="1"/>
+    <circle cx="300" cy="300" r="8" fill="#1e0c5c"/>
+    <text x="292" y="158" font-size="14" font-weight="700" fill="#1e0c5c">FEBRUARY 2025</text>
+    <text x="292" y="178" font-size="12" fill="#484848">Ban on unacceptable-risk</text>
+    <text x="292" y="194" font-size="12" fill="#484848">practices (Art. 5)</text>
+    <text x="292" y="210" font-size="12" fill="#8a8a8a">+ AI literacy duty (later softened)</text>
+
+    <!-- Aug 2025 (near tier) -->
+    <line x1="457" y1="280" x2="457" y2="292" stroke="#c8c8d0" stroke-width="1"/>
+    <circle cx="457" cy="300" r="8" fill="#1e0c5c"/>
+    <text x="457" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1e0c5c">AUGUST 2025</text>
+    <text x="457" y="258" text-anchor="middle" font-size="12" fill="#484848">Obligations for GPAI model</text>
+    <text x="457" y="274" text-anchor="middle" font-size="12" fill="#484848">providers · EU AI Office starts</text>
+
+    <!-- 2 Aug 2026 (far tier, emphasised) -->
+    <line x1="771" y1="216" x2="771" y2="290" stroke="#b45309" stroke-width="1.5"/>
+    <circle cx="771" cy="300" r="11" fill="none" stroke="#b45309" stroke-width="2"/>
+    <circle cx="771" cy="300" r="6" fill="#b45309"/>
+    <text x="771" y="158" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">2 AUGUST 2026</text>
+    <text x="771" y="178" text-anchor="middle" font-size="12" fill="#484848">Transparency: chatbots, generated</text>
+    <text x="771" y="194" text-anchor="middle" font-size="12" fill="#484848">content and deepfakes</text>
+    <text x="771" y="210" text-anchor="middle" font-size="12" fill="#484848">Penalties fully applicable</text>
+
+    <!-- 2 Dec 2026 (near tier) -->
+    <line x1="876" y1="280" x2="876" y2="292" stroke="#c8c8d0" stroke-width="1"/>
+    <circle cx="876" cy="300" r="8" fill="#1e0c5c"/>
+    <text x="876" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1e0c5c">2 DECEMBER 2026</text>
+    <text x="876" y="258" text-anchor="middle" font-size="12" fill="#484848">End of watermarking grace</text>
+    <text x="876" y="274" text-anchor="middle" font-size="12" fill="#484848">period + two new bans</text>
+  </g>
+
+  <!-- ============ POSTPONED LANE ============ -->
+  <g font-family="Helvetica, Arial, sans-serif">
+
+    <!-- row A: Annex III -->
+    <text x="760" y="454" text-anchor="end" font-size="12" fill="#484848">Stand-alone high-risk systems (Annex III): hiring, credit, justice, education</text>
+    <circle cx="771" cy="450" r="7" fill="#ffffff" stroke="#c9a37a" stroke-width="2"/>
+    <text x="771" y="476" text-anchor="middle" font-size="11" font-style="italic" fill="#a3a3a3">was: 2 Aug 2026</text>
+    <path d="M783,450 L1176,450" stroke="#b45309" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrOrange)"/>
+    <text x="976" y="438" text-anchor="middle" font-size="12" font-weight="700" fill="#b45309">+16 months</text>
+    <circle cx="1191" cy="450" r="8" fill="#b45309"/>
+    <text x="1208" y="447" font-size="13" font-weight="700" fill="#b45309">2 DECEMBER 2027</text>
+    <text x="1208" y="463" font-size="11" fill="#8a8a8a">new deadline</text>
+
+    <!-- row B: Annex I -->
+    <text x="1075" y="544" text-anchor="end" font-size="12" fill="#484848">AI embedded in already-regulated products (Annex I): medical devices, machinery</text>
+    <circle cx="1086" cy="540" r="7" fill="#ffffff" stroke="#c9a37a" stroke-width="2"/>
+    <text x="1086" y="566" text-anchor="middle" font-size="11" font-style="italic" fill="#a3a3a3">was: 2 Aug 2027</text>
+    <path d="M1098,540 L1385,540" stroke="#b45309" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrOrange)"/>
+    <text x="1243" y="528" text-anchor="middle" font-size="12" font-weight="700" fill="#b45309">+12 months</text>
+    <circle cx="1400" cy="540" r="8" fill="#b45309"/>
+    <text x="1417" y="537" font-size="13" font-weight="700" fill="#b45309">2 AUGUST 2028</text>
+    <text x="1417" y="553" font-size="11" fill="#8a8a8a">new deadline</text>
+  </g>
+
+  <!-- notes -->
+  <text x="60" y="656" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#8a8a8a">The postponement moves the application dates, not the substance of the obligations: high-risk systems stay regulated, and the required documentation takes far longer than a few weeks to build.</text>
+  <text x="60" y="678" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#bdbdbd">Sources: Regulation (EU) 2024/1689 and the 2026 simplification package (&#171;Digital Omnibus&#187;). Full source list at the end of the article.</text>
+</svg>

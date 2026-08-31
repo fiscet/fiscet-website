@@ -12,6 +12,7 @@ export type BlogPost = {
   seriesOrder: number;
   lang: PostLang;
   image?: string;
+  imageCredit?: string;
   content: string;
 };
 
@@ -51,6 +52,7 @@ function readAllPosts(): BlogPost[] {
       seriesOrder: Number(data.seriesOrder ?? 0),
       lang: normalizeLang(data.lang),
       image: data.image ? String(data.image) : undefined,
+      imageCredit: data.imageCredit ? String(data.imageCredit) : undefined,
       content,
     };
   });
