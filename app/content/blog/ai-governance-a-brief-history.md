@@ -1,8 +1,8 @@
 ---
 slug: ai-governance-a-brief-history
-title: "Artificial Intelligence and Its Governance: A Brief History and Where Things Stand Today"
+title: 'Artificial Intelligence and Its Governance: A Brief History and Where Things Stand Today'
 description: "How AI's technical evolution and the regulation trying to keep up with it actually fit together — from the 2017 Transformer to the EU AI Act's 2026 enforcement."
-publishedAt: 2026-09-10
+publishedAt: 2026-09-01
 seriesOrder: 42
 ---
 
@@ -27,7 +27,7 @@ In each case, the regulatory response came after the capability that prompted it
 
 ![Timeline diagram showing AI capability milestones (Transformer 2017, ChatGPT 2022) followed by governance responses at different speeds — a voluntary standard about two months later, binding law about twenty-one months later — plus the EU/US regulatory paths diverging after January 2025](/images/ai-governance-timeline.svg)
 
-*Capability moves first, governance follows — but at very different speeds depending on whether the response is a voluntary standard or binding law.*
+_Capability moves first, governance follows — but at very different speeds depending on whether the response is a voluntary standard or binding law._
 
 ## Where things stand as of August 2026
 
