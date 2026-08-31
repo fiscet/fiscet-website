@@ -4,6 +4,7 @@ title: "Greyparrot: AI vision for the dirtiest place I could imagine"
 description: "A London startup puts AI cameras over recycling conveyor belts, turning an opaque plant into a measurable system: proof that the best vision work happens where nobody expected it."
 publishedAt: 2026-06-08
 seriesOrder: 3
+lang: en
 ---
 
 Here's something we take for granted: until recently, recycling plants estimated the composition of their waste by sampling. By eye.

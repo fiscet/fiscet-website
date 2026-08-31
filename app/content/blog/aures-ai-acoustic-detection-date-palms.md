@@ -4,6 +4,7 @@ title: "Aures AI: listening for the pest that eats a tree from the inside"
 description: "A six-person Doha team built a phone app that identifies a hidden infestation by sound alone, catching a beetle larva weeks before any leaf shows damage."
 publishedAt: 2026-07-13
 seriesOrder: 23
+lang: en
 ---
 
 I came across this one while reading about a pest that has quietly plagued palm growers since the 1980s: the red palm weevil. Its larvae bore into a date palm's trunk and feed there for weeks, and by the time the crown wilts or the wood turns hollow, the tree is usually already lost. A small startup in Doha, Aures AI, decided the fix wasn't a better trap or a sharper eye. It was a microphone.

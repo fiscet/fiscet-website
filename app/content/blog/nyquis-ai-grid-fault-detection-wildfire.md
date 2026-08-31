@@ -4,6 +4,7 @@ title: "Nyquis: catching the spark before it becomes a fire"
 description: "A small startup is teaching power grids to recognize the electrical signature of a wildfire before it ignites, not just cut power after it does."
 publishedAt: 2026-07-31
 seriesOrder: 30
+lang: en
 ---
 
 I keep coming back to grid-sparked wildfires, because the failure mode is almost always the same: something small goes wrong long before anything big does.

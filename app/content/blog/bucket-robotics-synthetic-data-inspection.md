@@ -4,6 +4,7 @@ title: "Bucket Robotics: training the AI before the part even exists"
 description: "Instead of photographing thousands of defective parts, Bucket generates the vision model straight from CAD with synthetic data, so quality control is ready before production starts."
 publishedAt: 2026-06-15
 seriesOrder: 9
+lang: en
 ---
 
 Browsing the web, I ran into a startup that took a deeply boring problem, factory quality control, and flipped it in a way that grabbed my attention.

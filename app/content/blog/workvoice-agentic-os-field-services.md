@@ -4,6 +4,7 @@ title: "Workvoice: turning a site walkthrough into a paid invoice"
 description: "A Poland-based startup built an agentic OS that listens to a technician on site and turns the visit into a priced, compliant, billable job before the van leaves."
 publishedAt: 2026-08-26
 seriesOrder: 40
+lang: en
 ---
 
 I went looking for AI applied somewhere far from chatbots and coding agents, and field service trades turned out to be a good place to look. Workvoice, a small Poland-based team, starts from a plain observation: a technician who just fixed a boiler or serviced a fire extinguisher often spends more time writing up the visit than doing the actual work.

@@ -4,6 +4,7 @@ title: "Verkor.io: an AI agent designed a CPU core from a 219-word prompt"
 description: "A chip design startup built an agentic harness that turned one written spec into a working RISC-V CPU core in twelve hours, no human writing the register-transfer code."
 publishedAt: 2026-08-03
 seriesOrder: 31
+lang: en
 ---
 
 I ran into this one while reading about chip design, a field I don't normally follow closely, and it stopped me: a startup called Verkor.io fed a single 219-word specification to an AI agent, and twelve hours later had a complete, working CPU core.

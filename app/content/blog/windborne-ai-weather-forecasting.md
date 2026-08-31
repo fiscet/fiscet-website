@@ -4,6 +4,7 @@ title: "WindBorne: a better feedback loop, not just a better model"
 description: "A team that started by building better weather balloons now out-forecasts agencies that have owned the field for decades, because the balloons and the AI feed each other."
 publishedAt: 2026-06-10
 seriesOrder: 5
+lang: en
 ---
 
 I stumbled on one of those stories that make me think we sometimes use AI really well.

@@ -4,6 +4,7 @@ title: "Tornyol: micro-drones that hunt mosquitoes by the sound of their wings"
 description: "Two founders, 40-gram drones, and a serious idea hiding behind a joke: chemical-free mosquito control that identifies the female by its wingbeat and runs the whole signal chain on board."
 publishedAt: 2026-06-17
 seriesOrder: 11
+lang: en
 ---
 
 I ran into a startup this week with an idea that sounds like a joke until you look at how it works: micro-drones that hunt mosquitoes.

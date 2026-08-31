@@ -4,6 +4,7 @@ title: "Forge Robotics: the welding robot that measures before it moves"
 description: "A tiny Irish-founded startup skips the teach pendant entirely. Forge scans each part to sub-millimeter accuracy first, then lets the welding arm plan its own path, closing the gap that leaves 10% of welded parts needing rework."
 publishedAt: 2026-07-15
 seriesOrder: 24
+lang: en
 ---
 
 I came across Forge Robotics while reading about a number that surprised me: in the US alone there are roughly 400,000 unfilled welding jobs today, headed toward 600,000 by 2030. Manufacturing has a labor problem robots were supposed to solve decades ago, and mostly haven't.

@@ -4,6 +4,7 @@ title: "Atom Touch: a prosthetic arm that learns to move each finger"
 description: "A small California startup built a prosthetic arm whose AI neural interface reads muscle signals through the skin, giving amputees individual finger control at a fraction of the usual cost."
 publishedAt: 2026-08-05
 seriesOrder: 32
+lang: en
 ---
 
 I came across a video of someone typing on a keyboard with a prosthetic hand, one finger at a time, and had to check whether that was really new. Most myoelectric prosthetics on the market still boil down to open and close: a rough grip triggered by a single muscle signal. Atom, a small startup out of California, built something that treats each finger as its own instruction.

@@ -4,6 +4,7 @@ title: "Voxel Energy: powering data centers by never leaving DC"
 description: "The bottleneck for AI data centers isn't chips, it's a multi-year wait to plug into the grid. Voxel skips the grid entirely with off-grid solar, second-life EV batteries, and a microgrid that stays DC end to end."
 publishedAt: 2026-06-22
 seriesOrder: 13
+lang: en
 ---
 
 I came across Voxel while reading about why AI data centers keep slipping their schedules. I assumed the holdup was chips or construction. It turns out the wall is much more boring: getting permission to plug into the electrical grid. Interconnection queues now run anywhere from two to seven years in many regions, so you can finish the building and still sit idle, waiting for the utility.

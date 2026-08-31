@@ -4,6 +4,7 @@ title: "Bindwell: designing safer pesticides with AI before the lab"
 description: "A tiny team built three neural models that predict a pest protein's shape, screen millions of compounds in hours, and flag when a prediction can't be trusted."
 publishedAt: 2026-06-29
 seriesOrder: 16
+lang: en
 ---
 
 I do not usually expect to find clever AI in a field as old as crop protection, which is exactly why Bindwell stuck with me.

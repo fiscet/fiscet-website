@@ -4,6 +4,7 @@ title: "RxAll: the pill scanner that learned to work without a data center"
 description: "A Nigerian startup builds a handheld scanner that spots fake pills in seconds. When the internet failed during a live demo, the fix reshaped the whole product."
 publishedAt: 2026-07-17
 seriesOrder: 25
+lang: en
 ---
 
 I came across this one in an IEEE Spectrum piece about "small AI," and the origin story stuck with me more than the technology itself. In 2019, Adebayo Alonge was in a Cape Town hotel room, about to demo his startup's device for spotting fake medicine. It didn't work. His server was in the US, and getting the result of a single pill scan took over five minutes.

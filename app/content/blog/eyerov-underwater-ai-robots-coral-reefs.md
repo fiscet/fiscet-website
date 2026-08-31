@@ -4,6 +4,7 @@ title: "EyeROV: robots that dive so divers don't have to"
 description: "A Kochi startup's underwater robots inspect dams, ship hulls and pipelines for industry, then survey coral reefs in the Andaman and Lakshadweep islands for marine scientists, using the same AI vision layer."
 publishedAt: 2026-08-14
 seriesOrder: 36
+lang: en
 ---
 
 I came across this while browsing India's NITI Aayog frontier-tech showcase, in a category I wasn't expecting: underwater robots that also moonlight as coral reef researchers.

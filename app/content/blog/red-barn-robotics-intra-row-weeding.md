@@ -4,6 +4,7 @@ title: "Red Barn Robotics: a Roomba for the weeds no machine could ever touch"
 description: "A five-person Seattle startup builds an autonomous robot that pulls weeds growing right next to the crop, the one job herbicide sprayers and tractor cultivators still cannot do."
 publishedAt: 2026-07-03
 seriesOrder: 18
+lang: en
 ---
 
 I keep coming back to farm robotics because it is one of the few corners of AI where the hard part is not the model, it is the physical world. This week a small Seattle startup, Red Barn Robotics, caught my attention for exactly that reason.

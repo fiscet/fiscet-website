@@ -4,6 +4,7 @@ title: "GodHands: agents that memorize a task instead of re-thinking it every ti
 description: "A two-person startup goes after the real bottleneck for AI agents: not raw capability but reliability, by recording a workflow once and replaying it deterministically across any app, even legacy software with no API."
 publishedAt: 2026-06-24
 seriesOrder: 14
+lang: en
 ---
 
 Exploring agentic AI, I keep hitting the same wall: an agent that nails a task in the demo and then breaks on the third run. A button moved, a popup appeared, the model re-read the screen and guessed wrong. So a tiny startup attacking exactly that problem caught my attention this week.

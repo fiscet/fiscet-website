@@ -4,6 +4,7 @@ title: "Bubble Robotics: giving offshore infrastructure a robot that never comes
 description: "A Swiss team of ex-NASA and ETH Zurich engineers built modular underwater robots that dock, recharge, and stay at sea for six months, turning annual ship inspections into a continuous digital twin."
 publishedAt: 2026-07-26
 seriesOrder: 27
+lang: en
 ---
 
 I came across Bubble Robotics while reading about the ridiculous cost of checking on things underwater. Offshore wind foundations, subsea cables, pipelines: keeping an eye on them usually means chartering a vessel and a crew for a few days, at up to $100,000 a day, then waiting a year before the next look. That gap between inspections is where problems quietly grow.

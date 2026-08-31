@@ -2,15 +2,31 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 
+export type PostLang = 'it' | 'en';
+
 export type BlogPost = {
   slug: string;
   title: string;
   description: string;
   publishedAt: string;
   seriesOrder: number;
+  lang: PostLang;
   image?: string;
   content: string;
 };
+
+const LANG_LABELS: Record<PostLang, { code: string; name: string }> = {
+  it: { code: 'IT', name: 'Italiano' },
+  en: { code: 'EN', name: 'English' },
+};
+
+export function getLangLabel(lang: PostLang) {
+  return LANG_LABELS[lang];
+}
+
+function normalizeLang(value: unknown): PostLang {
+  return String(value ?? '').toLowerCase().startsWith('it') ? 'it' : 'en';
+}
 
 const CONTENT_DIR = path.join(process.cwd(), 'app', 'content', 'blog');
 
@@ -33,6 +49,7 @@ function readAllPosts(): BlogPost[] {
       description: String(data.description),
       publishedAt,
       seriesOrder: Number(data.seriesOrder ?? 0),
+      lang: normalizeLang(data.lang),
       image: data.image ? String(data.image) : undefined,
       content,
     };

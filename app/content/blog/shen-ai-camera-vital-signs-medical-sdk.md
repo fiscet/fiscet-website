@@ -4,6 +4,7 @@ title: "Shen AI: turning a phone camera into a certified vital-signs monitor"
 description: "An Estonian-Polish startup reads heart rate, blood pressure, and breathing rate from a 30-second phone camera scan, and its Medical SDK just earned CE certification as a Class IIa device."
 publishedAt: 2026-08-28
 seriesOrder: 41
+lang: en
 ---
 
 I keep noticing how much of the interesting AI work right now happens by removing a piece of hardware rather than adding one, and Shen AI is a clean example. The startup, headquartered in Tallinn with its R&D team in Wrocław, spent the past few years teaching a phone camera to read a pulse, and at the end of July it earned CE certification as a Class IIa medical device for the part of that claim that matters most: the numbers are now regulated, not just demoed.

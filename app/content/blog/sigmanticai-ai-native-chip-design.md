@@ -4,6 +4,7 @@ title: "SigmanticAI: an AI agent that writes chips and lets the synthesizer grad
 description: "Most AI coding tools have a soft definition of success. Hardware doesn't: Verilog either passes synthesis or it doesn't. SigmanticAI points fine-tuned models and reinforcement learning at exactly that pass/fail oracle."
 publishedAt: 2026-06-19
 seriesOrder: 12
+lang: en
 ---
 
 I keep a soft spot for the corners of AI that aren't chasing the same chatbot. This week I found one: an agent that doesn't write software. It writes the chips the software runs on.

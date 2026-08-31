@@ -4,6 +4,7 @@ title: "Vivodyne: teaching AI models cause and effect by growing human tissue in
 description: "A University of Pennsylvania spinout runs modular robotic labs that grow twenty kinds of human tissue, generating the causal biological data that today's AI drug-discovery models are missing."
 publishedAt: 2026-08-21
 seriesOrder: 38
+lang: en
 ---
 
 I ran into this story while reading the latest round of pushback against the "AI will cure cancer" line that keeps circulating from AI lab CEOs, and one detail in the rebuttal stuck with me: a startup arguing that today's models don't fail at biology because they're too small, they fail because nobody ever showed them why a cell got sick in the first place.

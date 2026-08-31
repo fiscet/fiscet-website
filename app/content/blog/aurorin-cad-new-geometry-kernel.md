@@ -4,6 +4,7 @@ title: "Aurorin CAD: rewriting the 1980s engine everyone quietly tolerates"
 description: "Most engineering software runs on a geometry kernel older than the people using it. Aurorin is rebuilding that load-bearing layer from scratch: AI-native, for modern hardware."
 publishedAt: 2026-06-10
 seriesOrder: 6
+lang: en
 ---
 
 Let me tell you something that makes me smile: most of the engineering software we use runs on a geometry engine older than the people using it.

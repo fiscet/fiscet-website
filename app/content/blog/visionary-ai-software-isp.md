@@ -4,6 +4,7 @@ title: "Visionary.ai: throwing out a chip that's been in every camera for decade
 description: "An all-software, AI-based ISP that works on the sensor's RAW signal before it's degraded: +75% object detection and −91% false positives in low light, all at the edge."
 publishedAt: 2026-06-15
 seriesOrder: 10
+lang: en
 ---
 
 I ran into a startup that did something fairly bold when you think about it: they threw out a piece of hardware that's been inside practically every camera for decades.

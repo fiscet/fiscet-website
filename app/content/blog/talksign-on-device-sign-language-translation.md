@@ -4,6 +4,7 @@ title: "Talksign: skipping the cloud to translate sign language in real time"
 description: "A self-funded Nigeria-and-UK team builds a bidirectional ASL translator that runs on hand landmarks instead of raw video, so it keeps working offline and under 100ms."
 publishedAt: 2026-07-21
 seriesOrder: 26
+lang: en
 ---
 
 I ran into Talksign while reading about a Nigerian founder taking on Google's SignGemma, and the detail that stopped me wasn't the rivalry. It was the decision to throw away video streaming entirely.

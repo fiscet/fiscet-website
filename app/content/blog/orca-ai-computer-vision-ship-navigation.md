@@ -4,6 +4,7 @@ title: "Orca AI: teaching cargo ships to see what radar misses"
 description: "A Tel Aviv startup mounts thermal and day cameras above the bridge so ships can spot small, unlit vessels that radar and AIS miss, and Lloyd's Register just ran a real Mediterranean trial to check the claim."
 publishedAt: 2026-08-19
 seriesOrder: 38
+lang: en
 ---
 
 I came across Orca AI while reading about a live trial Lloyd's Register ran this spring, and the detail that caught me was how unglamorous the problem is: small fishing boats that radar simply doesn't see.

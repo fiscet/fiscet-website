@@ -4,6 +4,7 @@ title: "Onescope: giving the two-century-old stethoscope an AI upgrade"
 description: "A Geneva spinout packs a stethoscope, pulse oximeter and thermometer into one pocket device, then lets an AI model read lung sounds instead of a trained ear."
 publishedAt: 2026-08-24
 seriesOrder: 39
+lang: en
 ---
 
 I came across Onescope while reading that the stethoscope, invented in 1816, is still the tool doctors reach for to check lungs, and that it hasn't fundamentally changed since. What stopped me was the number attached to that fact: pneumonia kills a child every 39 seconds, and a good share of those deaths trace back to auscultation being subjective, dependent on a trained ear that isn't always in the room.

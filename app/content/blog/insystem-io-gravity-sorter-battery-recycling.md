@@ -4,6 +4,7 @@ title: "inSystem.io: catching the battery hiding in your trash before it catches
 description: "A small Dutch startup built a free-fall sorting machine that pulls loose batteries out of household waste at 96 percent purity, using a camera that tracks each falling object instead of a conveyor belt."
 publishedAt: 2026-07-27
 seriesOrder: 29
+lang: en
 ---
 
 I came across inSystem.io while reading about why recycling trucks keep catching fire, and the number that stopped me was this: a single fully loaded municipal waste truck contains, on average, 252 portable batteries. Nobody throws a battery away on purpose anymore, and yet globally only about 15 percent of them are ever properly recycled (in the Netherlands, a country that takes this seriously, it's still just half). The rest ride along in the household waste stream, get shredded with everything else, and occasionally ignite.

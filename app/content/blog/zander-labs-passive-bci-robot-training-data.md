@@ -4,6 +4,7 @@ title: "Zander Labs: teaching robots from the exact moment a human notices a mis
 description: "A small German-Dutch neuroscience startup builds a brain-wave headset that flags the instant a person registers error or surprise, adding that signal to the training data robots learn from."
 publishedAt: 2026-08-12
 seriesOrder: 35
+lang: en
 ---
 
 I came across this while reading about a warehouse in California where people wear headsets to teach robots how to pour coffee and stack poker chips, and one detail stopped me: the headset was also reading their brain waves.

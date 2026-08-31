@@ -4,6 +4,7 @@ title: "Satellites on Fire: beating NASA's wildfire alerts with more satellites,
 description: "Three Argentine students turned a school project into a wildfire detection platform that fuses eight satellite feeds and beats NASA's FIRMS alerts by roughly 35 minutes on average."
 publishedAt: 2026-07-01
 seriesOrder: 17
+lang: en
 ---
 
 I keep noticing that some of the most useful AI work is not about a smarter model, it is about smarter plumbing around an old one. Satellites on Fire is a good example.

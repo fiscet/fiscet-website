@@ -4,6 +4,7 @@ title: "Q.ANT: doing AI math with light instead of transistors"
 description: "A small Stuttgart team built a processor that runs neural-network math inside optical waveguides, claiming far lower energy because light barely heats up and one optical element replaces hundreds of transistors."
 publishedAt: 2026-06-26
 seriesOrder: 15
+lang: en
 ---
 
 I keep reading that AI's real wall is not intelligence, it is electricity. So a startup that attacks the problem at the level of physics, rather than the model, immediately caught my attention.

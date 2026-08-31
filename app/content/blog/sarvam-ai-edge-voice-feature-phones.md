@@ -4,6 +4,7 @@ title: "Sarvam AI: the interesting question isn't how big, but how far down"
 description: "While everyone races for bigger models, an Indian startup is squeezing a voice assistant into a feature phone: offline, a few megabytes, 22 languages. The constraint is the feature."
 publishedAt: 2026-06-12
 seriesOrder: 8
+lang: en
 ---
 
 A story caught my attention because it runs in the opposite direction of everything you read about AI. While everyone chases the biggest model, an Indian startup is doing the reverse: fitting a voice assistant inside a feature phone, one of those old button phones.

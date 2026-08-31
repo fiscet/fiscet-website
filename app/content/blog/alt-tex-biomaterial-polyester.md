@@ -4,6 +4,7 @@ title: "ALT TEX: the innovation that fits in instead of replacing"
 description: "A ten-person Toronto team turns food waste into a polyester alternative, and the clever part isn't the chemistry: it's that it runs on the polyester machines that already exist."
 publishedAt: 2026-06-08
 seriesOrder: 4
+lang: en
 ---
 
 Ten people in Toronto make fabric out of food waste. Put like that, it sounds like yet another "green" story. That's not the interesting part.

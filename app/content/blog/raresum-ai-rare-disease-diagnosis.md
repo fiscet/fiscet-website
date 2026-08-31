@@ -4,6 +4,7 @@ title: "RareSum: mining years of clinical notes to catch rare diseases earlier"
 description: "A Turkiye-based startup runs NLP over messy hospital notes to surface rare-disease clues that no single doctor could ever read at scale."
 publishedAt: 2026-08-31
 seriesOrder: 43
+lang: en
 ---
 
 I ran into RareSum in a list of finalists for the UN's AI for Good Innovation Factory, and the number that stopped me had nothing to do with the technology: patients with a rare disease wait five to seven years, on average, for an accurate diagnosis, and nearly four in ten get misdiagnosed at least once along the way. Multiply that by the roughly 350 million people living with a rare disease worldwide, and diagnosis time itself becomes the product to fix, not a new drug.

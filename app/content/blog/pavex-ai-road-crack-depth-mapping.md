@@ -4,6 +4,7 @@ title: "PaveX: turning road inspections into color-coded data instead of guesswo
 description: "A Purdue spinout replaced expensive survey vehicles with a low-cost sensor kit and computer vision that scores every crack and pothole by depth, and has already mapped over 3,400 miles of Indiana roads."
 publishedAt: 2026-07-27
 seriesOrder: 28
+lang: en
 ---
 
 I ran into PaveX while reading about how American cities decide which roads to repave, and the honest answer for a lot of them turns out to be "someone drove around and eyeballed it." Municipal pavement assessments have historically relied on specialized survey vehicles costing hundreds of thousands of dollars, or on inspectors making subjective calls from a moving car. Neither approach scales well when a public works department is responsible for thousands of miles of asphalt.

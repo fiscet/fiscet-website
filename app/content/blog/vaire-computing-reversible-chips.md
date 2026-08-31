@@ -4,6 +4,7 @@ title: "Vaire Computing: chips that recycle their own heat"
 description: "A London and Cambridge startup is building processors where computation runs both forward and backward, so the energy that would normally leak out as heat gets reused for the next calculation."
 publishedAt: 2026-08-10
 seriesOrder: 34
+lang: en
 ---
 
 I was reading about the cooling bill behind every AI data center when I found a startup trying to make the heat disappear at the source, not after the fact.

@@ -4,6 +4,7 @@ title: "Neuronova: a chip that computes before it goes digital"
 description: "A Milan startup skips the always-on digitizer that drains battery life in smart devices. Its H1 chip processes sound in analog first, cutting power for wake-word detection by up to 1,000x."
 publishedAt: 2026-07-08
 seriesOrder: 20
+lang: en
 ---
 
 I stumbled on Neuronova while reading about why "always-on" voice assistants drain batteries so fast, and one idea stood out: what if the chip never converted sound to digital until something worth hearing actually happened.

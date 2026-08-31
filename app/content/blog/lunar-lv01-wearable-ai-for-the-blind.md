@@ -4,6 +4,7 @@ title: "Lunar: a button on a white cane that describes the world"
 description: "Three Hamburg graduates built LV01, a modular wearable that turns a camera view into a spoken scene description. The trigger sits where a blind person's hand already is: on the cane."
 publishedAt: 2026-07-10
 seriesOrder: 21
+lang: en
 ---
 
 I came across Lunar through its founding story, and it's one of those ideas born at a bus stop. During a farmers' strike in Germany, Lukas Ganss met a blind person who couldn't find out which buses had been cancelled. All that displayed information, useless to someone who can't see it. He and two fellow students at the University of Hamburg, Alejandro Poiqui and Timon Pitz, started building a fix in their master's Digital Innovation Lab, and it became a startup called Lunar.

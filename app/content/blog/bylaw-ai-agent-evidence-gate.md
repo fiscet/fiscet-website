@@ -4,6 +4,7 @@ title: "Bylaw: catching the moment an agent trusts the wrong fact"
 description: "A Waterloo team built the check nobody puts in front of an agent's write: not can it use the tool, but can it trust the evidence behind the decision."
 publishedAt: 2026-07-06
 seriesOrder: 19
+lang: en
 ---
 
 I keep running into the same complaint from teams shipping AI agents: the agent called the right tool and still did the wrong thing. Bylaw, a small YC-backed team out of Waterloo, built a company around that exact gap.

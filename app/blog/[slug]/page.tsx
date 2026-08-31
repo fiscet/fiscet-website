@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import LangBadge from '@/components/LangBadge';
 import {
   getAllPublishedSlugs,
   getPostBySlug,
@@ -14,6 +15,8 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.fiscet.it';
 const AUTHOR_NAME = 'Christian Zanchetta';
 const AUTHOR_URL =
   'https://www.linkedin.com/in/christian-zanchetta-a7140621/?locale=en-US';
+
+const OG_LOCALES = { it: 'it_IT', en: 'en_US' } as const;
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -44,6 +47,7 @@ export async function generateMetadata({
       description: post.description,
       url,
       type: 'article',
+      locale: OG_LOCALES[post.lang],
       publishedTime: post.publishedAt,
       authors: [AUTHOR_NAME],
       ...(post.image && { images: [{ url: `${BASE_URL}${post.image}` }] }),
@@ -87,6 +91,7 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
     description: post.description,
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
+    inLanguage: post.lang,
     author: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL },
     publisher: { '@type': 'Organization', name: 'Fiscet', url: BASE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
@@ -119,7 +124,7 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
   };
 
   return (
-    <article className="max-w-3xl mx-auto pb-20">
+    <article lang={post.lang} className="max-w-3xl mx-auto pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
@@ -130,7 +135,7 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
       />
 
       <header className="pt-10 pb-8">
-        <nav aria-label="Breadcrumb" className="mb-6">
+        <nav lang="en" aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-2 text-sm text-muted-foreground">
             <li>
               <Link href="/" className="hover:text-fis-logo transition-colors">
@@ -152,12 +157,10 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
             </li>
           </ol>
         </nav>
-        <time
-          dateTime={post.publishedAt}
-          className="text-xs uppercase tracking-wider text-muted-foreground font-medium"
-        >
-          {formatDate(post.publishedAt)}
-        </time>
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
+          <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+          <LangBadge lang={post.lang} />
+        </div>
         <h1 className="mt-2 text-3xl md:text-5xl font-bold text-fis-logo leading-tight">
           {post.title}
         </h1>
@@ -198,6 +201,7 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
 
       {(olderPost || newerPost) && (
         <nav
+          lang="en"
           aria-label="More posts"
           className="mt-16 pt-8 border-t border-border grid grid-cols-1 md:grid-cols-2 gap-6"
         >
@@ -209,7 +213,10 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
               <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
                 Previous
               </span>
-              <span className="block mt-1 font-semibold text-fis-logo">
+              <span
+                lang={olderPost.lang}
+                className="block mt-1 font-semibold text-fis-logo"
+              >
                 {olderPost.title}
               </span>
             </Link>
@@ -224,7 +231,10 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
               <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
                 Next
               </span>
-              <span className="block mt-1 font-semibold text-fis-logo">
+              <span
+                lang={newerPost.lang}
+                className="block mt-1 font-semibold text-fis-logo"
+              >
                 {newerPost.title}
               </span>
             </Link>

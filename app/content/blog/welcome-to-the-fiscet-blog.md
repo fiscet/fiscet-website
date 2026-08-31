@@ -4,6 +4,7 @@ title: "Welcome to the Fiscet blog"
 description: "Notes on building fast, scalable web applications with Next.js and headless CMS — the decisions, trade-offs, and lessons from real client work."
 publishedAt: 2025-06-16
 seriesOrder: 1
+lang: en
 ---
 
 This is where I write about the work behind Fiscet: building custom web applications with Next.js and headless CMS platforms like Payload, Sanity, and Strapi.

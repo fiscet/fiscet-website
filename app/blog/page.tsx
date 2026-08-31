@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import LangBadge from '@/components/LangBadge';
 import { getAllPosts, getPublishedPosts, isPostPublished } from '@/lib/blog';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.fiscet.it';
@@ -57,6 +58,7 @@ export default function BlogIndexPage() {
       headline: p.title,
       description: p.description,
       datePublished: p.publishedAt,
+      inLanguage: p.lang,
       url: `${BASE_URL}/blog/${p.slug}`,
       author: { '@type': 'Person', name: AUTHOR_NAME },
     })),
@@ -146,6 +148,7 @@ export default function BlogIndexPage() {
                           </time>
                         </span>
                       )}
+                      <LangBadge lang={post.lang} />
                     </div>
                     <h2 className="mt-2 text-xl md:text-2xl font-bold text-fis-logo leading-snug">
                       {published ? (

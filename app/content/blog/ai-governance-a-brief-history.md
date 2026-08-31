@@ -4,6 +4,7 @@ title: 'Artificial Intelligence and Its Governance: A Brief History and Where Th
 description: "How AI's technical evolution and the regulation trying to keep up with it actually fit together — from the 2017 Transformer to the EU AI Act's 2026 enforcement."
 publishedAt: 2026-09-01
 seriesOrder: 42
+lang: en
 ---
 
 Most conversations about artificial intelligence focus on what the technology can do. Fewer focus on how it got here, and fewer still on how it is being governed. Both questions matter for anyone making decisions about adopting AI in a business context — technical capability changes quickly, but the rules that govern its use change on a different, often slower, timeline. Understanding the gap between the two is, in practice, more useful than tracking the latest model release.

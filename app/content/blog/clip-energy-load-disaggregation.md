@@ -4,6 +4,7 @@ title: "CLIP Energy: reading every appliance from a single number"
 description: "One non-invasive clip-on sensor plus a neural net that disaggregates the load, turning a single meter reading into appliance-by-appliance insight, and cutting bills ~20%."
 publishedAt: 2026-06-12
 seriesOrder: 7
+lang: en
 ---
 
 I came across a UK startup doing something that, put plainly, sounds like magic: figuring out which appliances you have running at home by looking at a single number.

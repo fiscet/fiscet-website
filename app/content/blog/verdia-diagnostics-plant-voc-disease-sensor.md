@@ -4,6 +4,7 @@ title: "Verdia Diagnostics: a patch that smells a sick plant before it looks sic
 description: "A three-person NC State spinout built a leaf sensor that reads the gas a plant emits under stress, catching disease about a week before any visible symptom."
 publishedAt: 2026-08-07
 seriesOrder: 33
+lang: en
 ---
 
 I ran into this one while reading about how much food the world loses before it even reaches a plate: up to 40 percent of crops to pests and pathogens, over $200 billion a year. Most detection still relies on a human walking the rows looking for spots, wilting, or discoloration, and by then the pathogen has already had days to spread. Verdia Diagnostics, a startup spun out of NC State by a postdoc and two professors, decided to skip the eyes entirely and go for the nose.
