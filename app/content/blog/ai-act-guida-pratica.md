@@ -1,7 +1,7 @@
 ---
 slug: ai-act-guida-pratica
 title: 'AI Act: la guida pratica per chi sviluppa e usa intelligenza artificiale'
-description: "Cosa è già in vigore, cosa è stato rinviato e cosa fare subito, aggiornato alle scadenze reali di fine agosto 2026 — per chi sviluppa e per chi usa l'IA."
+description: "Cosa è già in vigore, cosa è stato rinviato e cosa fare subito, aggiornato alle scadenze reali di fine agosto 2026, per chi sviluppa e per chi usa l'IA."
 publishedAt: 2026-08-31
 seriesOrder: 44
 lang: it
@@ -9,7 +9,7 @@ lang: it
 
 ## Perché questa guida, e perché proprio ora
 
-Il 2 agosto 2026 è stata per mesi indicata come la data in cui l'AI Act sarebbe "entrato pienamente in vigore". Non è andata così. A metà 2026 le istituzioni europee hanno approvato un pacchetto di semplificazione (il cosiddetto "Digital Omnibus") che ha rinviato proprio gli obblighi più pesanti — quelli sui sistemi ad alto rischio — mantenendo invece invariati altri obblighi che erano già in calendario.
+Il 2 agosto 2026 è stata per mesi indicata come la data in cui l'AI Act sarebbe "entrato pienamente in vigore". Non è andata così. A metà 2026 le istituzioni europee hanno approvato un pacchetto di semplificazione (il cosiddetto "Digital Omnibus") che ha rinviato proprio gli obblighi più pesanti (quelli sui sistemi ad alto rischio), mantenendo invece invariati altri obblighi che erano già in calendario.
 
 Il risultato pratico: alcune cose sono obbligatorie da oggi, altre lo diventeranno tra uno o due anni, altre ancora sono in vigore da tempo e vengono spesso ignorate perché meno note. Questa guida distingue le tre categorie e traduce ciascuna in azioni concrete, sia per chi sviluppa sistemi di intelligenza artificiale sia per chi li usa in un'organizzazione.
 
@@ -31,7 +31,7 @@ Un secondo asse, altrettanto importante, distingue due ruoli:
 - **Provider (fornitore)**: chi sviluppa un sistema di IA o un modello e lo immette sul mercato, anche gratuitamente.
 - **Deployer (utilizzatore)**: chi usa un sistema di IA già sviluppato da altri, all'interno della propria attività professionale.
 
-Gli obblighi cambiano parecchio a seconda del ruolo. Un'agenzia che usa un software di selezione del personale acquistato da un fornitore esterno è un deployer; il fornitore di quel software è il provider. Una persona che costruisce un'applicazione con l'API di un modello di linguaggio è, per quell'applicazione, un provider — anche se non ha addestrato alcun modello da zero.
+Gli obblighi cambiano parecchio a seconda del ruolo. Un'agenzia che usa un software di selezione del personale acquistato da un fornitore esterno è un deployer; il fornitore di quel software è il provider. Una persona che costruisce un'applicazione con l'API di un modello di linguaggio è, per quell'applicazione, un provider, anche se non ha addestrato alcun modello da zero.
 
 ## La timeline reale, aggiornata
 
@@ -46,7 +46,7 @@ Questa è la parte che quasi nessuna guida generica riporta correttamente, perch
 | **2 dicembre 2027** *(rinviato da agosto 2026)* | Obblighi per i sistemi ad alto rischio "stand-alone" (Allegato III: selezione del personale, credito, giustizia, istruzione, servizi essenziali, ecc.) |
 | **2 agosto 2028** *(rinviato da agosto 2027)* | Obblighi per l'IA incorporata in prodotti già regolamentati (Allegato I: dispositivi medici, macchinari, giocattoli, ecc.) |
 
-Cosa significa in pratica: se oggi sviluppi o usi un chatbot, uno strumento che genera testo, immagini o video, sei già dentro obblighi vincolanti. Se sviluppi o usi un sistema che decide chi assumere, chi ottiene un prestito o come vengono valutati gli studenti, hai più tempo — ma non è un'esenzione, è un rinvio, e conviene prepararsi comunque.
+Cosa significa in pratica: se oggi sviluppi o usi un chatbot, uno strumento che genera testo, immagini o video, sei già dentro obblighi vincolanti. Se sviluppi o usi un sistema che decide chi assumere, chi ottiene un prestito o come vengono valutati gli studenti, hai più tempo: non è un'esenzione, è un rinvio, e conviene prepararsi comunque.
 
 ## Le pratiche vietate (in vigore dal 2025)
 
@@ -59,7 +59,7 @@ Alcuni usi dell'IA non sono "ad alto rischio da gestire": sono vietati punto e b
 - Categorizzazione biometrica per dedurre origine etnica, opinioni politiche o orientamento sessuale
 - Dal 2026: generazione non consensuale di immagini o video intimi, e generazione di materiale di abuso sessuale su minori
 
-**Esempio per chi sviluppa**: un'agenzia di marketing che propone a un cliente un tool per "leggere le emozioni" dei dipendenti durante le riunioni tramite webcam sta proponendo qualcosa di vietato, non semplicemente rischioso — va rifiutato o riprogettato, non "gestito con un disclaimer".
+**Esempio per chi sviluppa**: un'agenzia di marketing che propone a un cliente un tool per "leggere le emozioni" dei dipendenti durante le riunioni tramite webcam sta proponendo qualcosa di vietato, non semplicemente rischioso. Va rifiutato o riprogettato, non "gestito con un disclaimer".
 
 **Esempio per chi usa**: un'azienda che acquista un software HR che assegna un punteggio di affidabilità ai candidati incrociando dati social estranei alla candidatura rientra nello stesso divieto, anche se non ha sviluppato lei il software.
 
@@ -71,11 +71,11 @@ Tre obblighi principali:
 
 - **Dichiarare l'interazione con un'IA**: se un utente sta parlando con un chatbot o un sistema automatizzato, deve poterlo capire, a meno che non sia già ovvio dal contesto.
 - **Marcare i contenuti generati o manipolati dall'IA**: immagini, audio, video e testo devono essere riconoscibili come artificiali attraverso soluzioni tecniche (marcatura, metadati) quando tecnicamente fattibile.
-- **Dichiarare i deepfake**: contenuti che ritraggono in modo realistico persone, luoghi o eventi come autentici, quando non lo sono, vanno etichettati come tali — salvo eccezioni per opere palesemente satiriche o artistiche.
+- **Dichiarare i deepfake**: contenuti che ritraggono in modo realistico persone, luoghi o eventi come autentici, quando non lo sono, vanno etichettati come tali, salvo eccezioni per opere palesemente satiriche o artistiche.
 
-**Esempio per chi sviluppa**: se costruisci un assistente virtuale per l'e-commerce di un cliente basato su un modello di linguaggio, devi assicurarti che l'interfaccia comunichi chiaramente che non si sta parlando con una persona — un messaggio nel primo scambio o un'etichetta persistente sono sufficienti, il silenzio no.
+**Esempio per chi sviluppa**: se costruisci un assistente virtuale per l'e-commerce di un cliente basato su un modello di linguaggio, devi assicurarti che l'interfaccia comunichi chiaramente che non si sta parlando con una persona: un messaggio nel primo scambio o un'etichetta persistente sono sufficienti, il silenzio no.
 
-**Esempio per chi usa**: uno studio di comunicazione che genera immagini con l'IA per una campagna pubblicitaria deve mantenere la marcatura tecnica del contenuto generato, anche dopo un editing successivo — per le immagini questo obbligo non ha eccezioni legate alla revisione editoriale. L'eccezione per "contenuto rivisto e con responsabilità editoriale identificata" riguarda specificamente i testi generati dall'IA su temi di interesse pubblico (per esempio un articolo redazionale assistito dall'IA ma rivisto e firmato da una persona responsabile), non le immagini o i video.
+**Esempio per chi usa**: uno studio di comunicazione che genera immagini con l'IA per una campagna pubblicitaria deve mantenere la marcatura tecnica del contenuto generato, anche dopo un editing successivo. Per le immagini questo obbligo non ha eccezioni legate alla revisione editoriale. L'eccezione per "contenuto rivisto e con responsabilità editoriale identificata" riguarda specificamente i testi generati dall'IA su temi di interesse pubblico (per esempio un articolo redazionale assistito dall'IA ma rivisto e firmato da una persona responsabile), non le immagini o i video.
 
 ## Modelli di IA per finalità generali - GPAI (in vigore dal 2025)
 
@@ -103,7 +103,7 @@ Il rinvio al 2 dicembre 2027 (sistemi stand-alone) e al 2 agosto 2028 (IA incorp
 
 L'obbligo, in vigore dal 2025, richiedeva inizialmente di garantire un livello adeguato di competenza sull'IA al personale che la usa o la sviluppa. Con la revisione del 2026 il testo è stato ammorbidito: ora si richiede di adottare "misure a supporto" dello sviluppo di questa competenza, un impegno meno stringente ma comunque presente.
 
-**Esempio pratico**: non serve un corso di certificazione formale, ma serve poter dimostrare, se richiesto, che l'organizzazione ha fatto qualcosa di concreto — una sessione interna, materiale di formazione, linee guida scritte su cosa il personale può o non può fare con gli strumenti di IA a disposizione.
+**Esempio pratico**: non serve un corso di certificazione formale, ma serve poter dimostrare, se richiesto, che l'organizzazione ha fatto qualcosa di concreto: una sessione interna, materiale di formazione, linee guida scritte su cosa il personale può o non può fare con gli strumenti di IA a disposizione.
 
 ## Le sanzioni
 
@@ -113,13 +113,13 @@ Le sanzioni sono pienamente applicabili dal 2 agosto 2026 e sono proporzionate a
 - Fino a 15 milioni di euro o il 3% del fatturato per la violazione degli altri obblighi (compresi quelli sui sistemi ad alto rischio e sui modelli GPAI, quando applicabili)
 - Fino a 7,5 milioni di euro o l'1% del fatturato per informazioni false o fuorvianti fornite alle autorità
 
-Per le piccole e medie imprese e le startup, la sanzione applicata è la più bassa tra le due soglie (percentuale o importo fisso), non la più alta — una tutela pensata apposta per non schiacciare le realtà più piccole.
+Per le piccole e medie imprese e le startup, la sanzione applicata è la più bassa tra le due soglie (percentuale o importo fisso), non la più alta: una tutela pensata apposta per non schiacciare le realtà più piccole.
 
 ## Checklist operativa
 
 **Se sviluppi sistemi di IA (anche solo un'app che usa un'API esterna):**
 
-- [ ] Verifica se quello che stai costruendo rientra tra le pratiche vietate — in caso di dubbio, riprogetta prima di lanciare
+- [ ] Verifica se quello che stai costruendo rientra tra le pratiche vietate: in caso di dubbio, riprogetta prima di lanciare
 - [ ] Se l'utente interagisce con un sistema automatizzato, rendilo esplicito nell'interfaccia
 - [ ] Se generi contenuti (testo, immagini, audio, video), verifica la marcatura tecnica disponibile e mantienila lungo la catena di distribuzione del contenuto
 - [ ] Se operi in un settore ad alto rischio (HR, credito, education, sanità, giustizia), inizia già ora a documentare dati di addestramento, criteri decisionali e possibilità di intervento umano
@@ -137,6 +137,6 @@ Per le piccole e medie imprese e le startup, la sanzione applicata è la più ba
 
 ## Fonti
 
-- [AI Act, cosa entra in vigore dal 2 agosto 2026 e cosa slitta — Agenda Digitale](https://www.agendadigitale.eu/sicurezza/ai-act-cosa-entra-in-vigore-dal-2-agosto-2026-e-cosa-slitta/)
-- [EU AI Act's High-Risk Deadline: Deferred, Not Cancelled — Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-high-risk-deadline-omnibus-20260/)
-- [EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines and Other Key Changes — Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)
+- [AI Act, cosa entra in vigore dal 2 agosto 2026 e cosa slitta (Agenda Digitale)](https://www.agendadigitale.eu/sicurezza/ai-act-cosa-entra-in-vigore-dal-2-agosto-2026-e-cosa-slitta/)
+- [EU AI Act's High-Risk Deadline: Deferred, Not Cancelled (Cloud Security Alliance)](https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-high-risk-deadline-omnibus-20260/)
+- [EU AI Act Omnibus Agreement: Postponed High-Risk Deadlines and Other Key Changes (Gibson Dunn)](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)

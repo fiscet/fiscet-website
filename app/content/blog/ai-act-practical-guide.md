@@ -1,7 +1,7 @@
 ---
 slug: ai-act-practical-guide
 title: 'The AI Act: a practical guide for people who build and use AI'
-description: "What's actually in force, what got postponed, and what to do now — updated to the real deadlines as of late August 2026, for developers and businesses alike."
+description: "What's actually in force, what got postponed, and what to do now, updated to the real deadlines as of late August 2026, for developers and businesses alike."
 publishedAt: 2026-08-31
 seriesOrder: 45
 lang: en
@@ -9,7 +9,7 @@ lang: en
 
 ## Why this guide, and why now
 
-For months, 2 August 2026 was flagged as the date the AI Act would "fully enter into force." That is not quite what happened. In mid-2026, EU institutions approved a simplification package (the so-called "Digital Omnibus") that postponed exactly the heaviest obligations — those on high-risk systems — while leaving other obligations that were already scheduled unchanged.
+For months, 2 August 2026 was flagged as the date the AI Act would "fully enter into force." That is not quite what happened. In mid-2026, EU institutions approved a simplification package (the so-called "Digital Omnibus") that postponed exactly the heaviest obligations (those on high-risk systems), while leaving other obligations that were already scheduled unchanged.
 
 The practical result: some things are mandatory as of today, others will become mandatory in one or two years, and others still have been in force for a while and are often overlooked simply because they're less well known. This guide separates the three categories and turns each into concrete actions, for people who build AI systems and for people who use them inside an organization.
 
@@ -31,7 +31,7 @@ A second, equally important axis distinguishes two roles:
 - **Provider**: whoever develops an AI system or model and places it on the market, even for free.
 - **Deployer**: whoever uses an AI system already developed by someone else, within their own professional activity.
 
-The obligations differ significantly depending on the role. An agency that uses a hiring-screening tool bought from an external vendor is a deployer; the vendor of that tool is the provider. Someone who builds an application on top of a language model's API is, for that application, a provider — even without having trained any model from scratch.
+The obligations differ significantly depending on the role. An agency that uses a hiring-screening tool bought from an external vendor is a deployer; the vendor of that tool is the provider. Someone who builds an application on top of a language model's API is, for that application, a provider, even without having trained any model from scratch.
 
 ## The real timeline, updated
 
@@ -46,7 +46,7 @@ This is the part almost no generic guide gets right, because it changed during 2
 | **2 December 2027** *(postponed from August 2026)* | Obligations for stand-alone high-risk systems (Annex III: hiring, credit, justice, education, essential services, etc.) |
 | **2 August 2028** *(postponed from August 2027)* | Obligations for AI embedded in already-regulated products (Annex I: medical devices, machinery, toys, etc.) |
 
-What this means in practice: if you build or use a chatbot, or a tool that generates text, images or video today, you are already inside binding obligations. If you build or use a system that decides who gets hired, who gets a loan, or how students are graded, you have more time — but that's a postponement, not an exemption, and it's worth preparing regardless.
+What this means in practice: if you build or use a chatbot, or a tool that generates text, images or video today, you are already inside binding obligations. If you build or use a system that decides who gets hired, who gets a loan, or how students are graded, you have more time: that's a postponement, not an exemption, and it's worth preparing regardless.
 
 ## Prohibited practices (in force since 2025)
 
@@ -59,7 +59,7 @@ Some uses of AI aren't "high-risk to be managed": they are simply banned, regard
 - Biometric categorization used to infer racial or ethnic origin, political opinions, or sexual orientation
 - Since 2026: non-consensual generation of intimate images or videos, and generation of child sexual abuse material
 
-**Example for developers**: a marketing agency pitching a client a tool that "reads employees' emotions" from webcam footage during meetings is proposing something banned, not merely risky — it needs to be rejected or redesigned, not "managed with a disclaimer."
+**Example for developers**: a marketing agency pitching a client a tool that "reads employees' emotions" from webcam footage during meetings is proposing something banned, not merely risky. It needs to be rejected or redesigned, not "managed with a disclaimer."
 
 **Example for users**: a company that buys HR software assigning candidates a reliability score by cross-referencing social-media data unrelated to the job application falls under the same ban, even though it didn't build the software itself.
 
@@ -71,13 +71,13 @@ Three main obligations:
 
 - **Disclosing interaction with AI**: if a user is talking to a chatbot or an automated system, they must be able to tell, unless it's already obvious from context.
 - **Marking AI-generated or manipulated content**: images, audio, video, and text must be recognizable as artificial through technical means (marking, metadata) where technically feasible.
-- **Disclosing deepfakes**: content that realistically depicts people, places, or events as authentic when they are not must be labeled as such — with exceptions for clearly satirical or artistic works.
+- **Disclosing deepfakes**: content that realistically depicts people, places, or events as authentic when they are not must be labeled as such, with exceptions for clearly satirical or artistic works.
 
-**Example for developers**: if you're building a virtual assistant for a client's e-commerce site based on a language model, you need to make sure the interface clearly communicates that the user isn't talking to a person — a message in the first exchange or a persistent label is enough; silence isn't.
+**Example for developers**: if you're building a virtual assistant for a client's e-commerce site based on a language model, you need to make sure the interface clearly communicates that the user isn't talking to a person: a message in the first exchange or a persistent label is enough; silence isn't.
 
-**Example for users**: a communications agency generating images with AI for an ad campaign must keep the technical marking on the generated content, even after further editing — for images this obligation has no exception tied to editorial review. The "reviewed content with identified editorial responsibility" exception specifically covers AI-generated text on matters of public interest (for example, an AI-assisted editorial piece that's been reviewed and signed off by an accountable person), not images or video.
+**Example for users**: a communications agency generating images with AI for an ad campaign must keep the technical marking on the generated content, even after further editing. For images this obligation has no exception tied to editorial review. The "reviewed content with identified editorial responsibility" exception specifically covers AI-generated text on matters of public interest (for example, an AI-assisted editorial piece that's been reviewed and signed off by an accountable person), not images or video.
 
-## General-purpose AI models — GPAI (in force since 2025)
+## General-purpose AI models: GPAI (in force since 2025)
 
 This concerns whoever develops "general-purpose" models (the models underlying ChatGPT, Claude, Gemini, and similar), not whoever uses them via an API or interface.
 
@@ -101,9 +101,9 @@ The postponement to 2 December 2027 (stand-alone systems) and 2 August 2028 (AI 
 
 ## AI literacy (softened obligation, not gone)
 
-The obligation, in force since 2025, initially required ensuring an adequate level of AI competence among staff who use or develop it. With the 2026 revision, the text was softened: it now requires adopting "supporting measures" for developing this competence — a less stringent commitment, but still present.
+The obligation, in force since 2025, initially required ensuring an adequate level of AI competence among staff who use or develop it. With the 2026 revision, the text was softened: it now requires adopting "supporting measures" for developing this competence: a less stringent commitment, but still present.
 
-**Practical example**: no formal certification course is required, but the organization needs to be able to show, if asked, that it has done something concrete — an internal session, training material, written guidelines on what staff can and can't do with the AI tools available to them.
+**Practical example**: no formal certification course is required, but the organization needs to be able to show, if asked, that it has done something concrete: an internal session, training material, written guidelines on what staff can and can't do with the AI tools available to them.
 
 ## Penalties
 
@@ -113,22 +113,22 @@ Penalties have been fully applicable since 2 August 2026 and are proportionate t
 - Up to €15 million or 3% of turnover for violating other obligations (including those on high-risk systems and GPAI models, where applicable)
 - Up to €7.5 million or 1% of turnover for providing false or misleading information to authorities
 
-For small and medium enterprises and startups, the penalty applied is the lower of the two thresholds (percentage or fixed amount), not the higher one — a protection specifically designed not to crush smaller businesses.
+For small and medium enterprises and startups, the penalty applied is the lower of the two thresholds (percentage or fixed amount), not the higher one: a protection specifically designed not to crush smaller businesses.
 
 ## Operational checklist
 
 **If you build AI systems (even just an app using an external API):**
 
-- [ ] Check whether what you're building falls under a prohibited practice — when in doubt, redesign before launch
+- [ ] Check whether what you're building falls under a prohibited practice: when in doubt, redesign before launch
 - [ ] If the user is interacting with an automated system, make that explicit in the interface
 - [ ] If you generate content (text, images, audio, video), check what technical marking is available and keep it throughout the content's distribution chain
 - [ ] If you operate in a high-risk sector (HR, credit, education, healthcare, justice), start documenting training data, decision criteria, and human-intervention capability now
 - [ ] If you distribute or modify a third party's model, check whether this makes you a "provider" yourself, with documentation obligations
-- [ ] Keep at least minimal internal documentation of AI-related design decisions — in the event of a review, that's what gets asked for first
+- [ ] Keep at least minimal internal documentation of AI-related design decisions: in the event of a review, that's what gets asked for first
 
 **If you use AI systems in your business (even just a tool bought from a vendor):**
 
-- [ ] Do a real inventory of the AI tools used in the business — not just the ones chosen by IT, but also the ones adopted individually by departments or people
+- [ ] Do a real inventory of the AI tools used in the business: not just the ones chosen by IT, but also the ones adopted individually by departments or people
 - [ ] For each tool, check whether the vendor has made the required transparency documentation available
 - [ ] If you use chatbots or automated assistants facing customers, check that they disclose their artificial nature
 - [ ] If your sector falls under high-risk, start asking vendors for compliance documentation contractually, even ahead of the 2027-2028 deadlines
@@ -137,6 +137,6 @@ For small and medium enterprises and startups, the penalty applied is the lower 
 
 ## Sources
 
-- [AI Act, cosa entra in vigore dal 2 agosto 2026 e cosa slitta — Agenda Digitale](https://www.agendadigitale.eu/sicurezza/ai-act-cosa-entra-in-vigore-dal-2-agosto-2026-e-cosa-slitta/)
-- [EU AI Act's High-Risk Deadline: Deferred, Not Cancelled — Cloud Security Alliance](https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-high-risk-deadline-omnibus-20260/)
-- [EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines and Other Key Changes — Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)
+- [AI Act, cosa entra in vigore dal 2 agosto 2026 e cosa slitta (Agenda Digitale)](https://www.agendadigitale.eu/sicurezza/ai-act-cosa-entra-in-vigore-dal-2-agosto-2026-e-cosa-slitta/)
+- [EU AI Act's High-Risk Deadline: Deferred, Not Cancelled (Cloud Security Alliance)](https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-high-risk-deadline-omnibus-20260/)
+- [EU AI Act Omnibus Agreement: Postponed High-Risk Deadlines and Other Key Changes (Gibson Dunn)](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)
