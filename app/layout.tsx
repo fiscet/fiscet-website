@@ -4,6 +4,9 @@ import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import Header from '@/components/Header';
 import GoogleTagManager from '@/components/GoogleTagManager';
+import { CookieConsentProvider } from '@/components/cookie-consent/CookieConsentContext';
+import CookieBanner from '@/components/cookie-consent/CookieBanner';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,10 +46,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <GoogleTagManager />
-        <Header />
-        <main className="mt-6">{children}</main>
-        <Toaster />
+        <CookieConsentProvider>
+          <GoogleTagManager />
+          <Header />
+          <main className="mt-6">{children}</main>
+          <Toaster />
+          <CookieBanner />
+        </CookieConsentProvider>
+        <Analytics />
       </body>
     </html>
   );

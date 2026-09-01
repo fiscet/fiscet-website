@@ -14,6 +14,7 @@ export default function PrivacyModal() {
   return (
     <>
       <button
+        type="button"
         onClick={() => setIsOpen(true)}
         className="text-primary hover:underline"
       >
@@ -62,6 +63,22 @@ export default function PrivacyModal() {
                 organizations
               </li>
             </ul>
+
+            <h2 className="text-2xl font-semibold mt-6 mb-4">
+              Cookies and Analytics
+            </h2>
+            <p className="mb-4">
+              We use Vercel Web Analytics, which is cookie-free and does not
+              collect personal data or track you across sites.
+            </p>
+            <p className="mb-4">
+              We also use Google Analytics to understand how the site is used.
+              Google Analytics sets cookies and is only loaded after you accept
+              it in the cookie banner. If you reject or ignore the banner, no
+              Google Analytics cookies are set and no data is sent to Google. You
+              can change your choice at any time via the &ldquo;Cookie
+              preferences&rdquo; link in the footer.
+            </p>
 
             <h2 className="text-2xl font-semibold mt-6 mb-4">
               Contact Information
