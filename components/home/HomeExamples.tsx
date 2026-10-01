@@ -8,6 +8,9 @@ type Example = {
   href: string;
   logo: string;
   logoSize: number;
+  // Wide logos: explicit size instead of the square logoSize.
+  logoWidth?: number;
+  logoHeight?: number;
 };
 
 const examples: Example[] = [
@@ -40,6 +43,14 @@ const examples: Example[] = [
     href: 'https://mamivibe.hu',
     logo: '/images/mamivibe_logo.png',
     logoSize: 100
+  },
+  {
+    name: 'Studio Dentistico Marin',
+    href: 'https://dentistaconegliano.it',
+    logo: '/images/marin_logo.webp',
+    logoSize: 100,
+    logoWidth: 220,
+    logoHeight: 45
   }
 ];
 
@@ -70,9 +81,9 @@ export default function HomeExamples({
                 <Image
                   src={example.logo}
                   alt={example.name}
-                  width={example.logoSize}
-                  height={example.logoSize}
-                  className="rounded-md"
+                  width={example.logoWidth ?? example.logoSize}
+                  height={example.logoHeight ?? example.logoSize}
+                  className="rounded-md object-contain"
                 />
               </div>
               <span className="mt-4 text-[11px] uppercase tracking-wider text-gray-400">

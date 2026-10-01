@@ -6,7 +6,8 @@ export type ExampleName =
   | 'FisEvents'
   | 'FisApart'
   | 'Build vs Buy'
-  | 'MamiVibe';
+  | 'MamiVibe'
+  | 'Studio Dentistico Marin';
 
 // Strings may use **bold**, line breaks (\n) and [DA CONFERMARE: ...]
 // placeholders: render them with <RichText />.

@@ -59,6 +59,10 @@ export const en: Dictionary = {
       MamiVibe: {
         tag: 'Website · Next.js + Sanity',
         description: 'Fast, content-driven business website on a headless CMS'
+      },
+      'Studio Dentistico Marin': {
+        tag: 'Website · Conegliano, Italy',
+        description: 'Website for a dental practice in Conegliano'
       }
     },
     headless: {

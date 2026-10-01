@@ -4,13 +4,13 @@ description: "Web app su misura per aziende: preventivatori, dashboard, aree cli
 h1: "Sviluppo di web app su misura per aziende"
 faq:
   - q: "Quanto costa una web app su misura?"
-    a: "Dipende da quante funzioni servono e da quali programmi deve collegarsi. [DA CONFERMARE: fascia indicativa per una web app semplice, ad esempio un preventivatore o un'area clienti.] Dopo la prima chiamata ricevi un preventivo scritto, con il perimetro della prima versione."
+    a: "Dipende da quante funzioni servono e da quali programmi deve collegarsi. Indicativamente, una web app semplice come un preventivatore o un'area clienti costa tra 5.000 e 8.000 euro. Dopo la prima chiamata ricevi un preventivo scritto, con il perimetro della prima versione."
   - q: "Funziona anche su smartphone?"
     a: "Sì. Una web app si adatta allo schermo e si può aggiungere alla schermata Home del telefono, dove si apre come un'app, senza passare dagli store."
   - q: "Si può collegare al gestionale o al sito che uso già?"
     a: "Nella maggior parte dei casi sì, se il programma esistente permette di scambiare dati (tramite API o esportazioni). Lo si verifica nella prima chiamata, prima di fare il preventivo."
   - q: "Chi si occupa di server, sicurezza e aggiornamenti?"
-    a: "[DA CONFERMARE: hosting e manutenzione inclusi nel prezzo, a canone mensile o a parte.]"
+    a: "Hosting, backup, aggiornamenti di sicurezza e piccole correzioni sono coperti da un canone annuale pari al 10 per cento del prezzo di sviluppo più 600 euro. Le nuove funzioni dopo il rilascio si valutano a giornata."
 ---
 
 Una web app è un programma che si usa dal browser, da computer o da smartphone, senza installare nulla. Per una piccola impresa è spesso il modo più diretto per trasformare un lavoro fatto a mano, tra fogli Excel, email e telefonate, in uno strumento che fa una parte del lavoro al posto tuo.
@@ -33,7 +33,7 @@ Per la maggior parte degli strumenti aziendali la web app è sufficiente e costa
 
 Ogni web app parte da **FisServer**, la base software che ho costruito e collaudato su altri progetti: accesso degli utenti, ruoli e permessi, separazione dei dati tra aziende, sicurezza, API. Queste parti non si riscrivono ogni volta, quindi il tempo del progetto va nelle funzioni che servono a te.
 
-Per l'interfaccia uso Next.js. Quando servono funzioni di intelligenza artificiale, come un assistente che risponde alle domande dei clienti, uso il Vercel AI SDK. Due esempi concreti:
+Le tecnologie si scelgono in base al progetto: ad esempio Next.js per l'interfaccia, o il Vercel AI SDK quando servono funzioni di intelligenza artificiale come un assistente che risponde ai clienti. All'occorrenza ne uso molte altre, comprese quelle che la tua azienda usa già. Due esempi concreti:
 
 - **FisEvents**: piattaforma per creare il sito di un evento e gestire gli iscritti.
 - **FisApart**: assistente conversazionale che risponde ai clienti di un sito di prenotazioni.
@@ -42,7 +42,7 @@ Per l'interfaccia uso Next.js. Quando servono funzioni di intelligenza artificia
 
 1. **Una chiamata** per capire il processo di oggi e il risultato che vuoi ottenere.
 2. **Un perimetro scritto**: cosa fa la prima versione, cosa resta per dopo, costi e tempi.
-3. **La prima versione funzionante** `[DA CONFERMARE: in genere in X settimane]`, da provare con i tuoi dati reali.
+3. **La prima versione funzionante**, in genere in 4-6 settimane, da provare con i tuoi dati reali.
 4. **Miglioramenti e nuove funzioni**, una alla volta, mentre lo strumento è già in uso.
 
 Se non sai ancora se ti serve uno strumento su misura o un software già pronto, puoi partire da [Build vs Buy](https://bvb.fiscet.it), lo strumento gratuito che analizza il tuo caso.

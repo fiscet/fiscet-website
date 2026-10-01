@@ -4,7 +4,7 @@ description: "Portale B2B su misura: catalogo, listini per cliente, ordini di ri
 h1: "Portale B2B su misura per rivenditori e agenti"
 faq:
   - q: "Quanto costa un portale B2B su misura?"
-    a: "Dipende soprattutto da come vanno gestiti listini e condizioni commerciali e dal collegamento con il gestionale. [DA CONFERMARE: fascia indicativa per una prima versione con catalogo, listini per cliente e ordini.]"
+    a: "Dipende soprattutto da come vanno gestiti listini e condizioni commerciali e dal collegamento con il gestionale. Indicativamente, una prima versione con catalogo, listini per cliente e ordini costa tra 8.000 e 13.000 euro."
   - q: "Posso partire con una versione ridotta?"
     a: "Sì, ed è il modo consigliato. Una prima versione con catalogo, listini e ordini è già utile; area agenti, documenti e integrazioni si aggiungono dopo, quando il portale è in uso."
   - q: "Si collega al mio gestionale?"
@@ -41,5 +41,5 @@ Il portale parte da **FisServer**, la mia base software già collaudata. Gestisc
 
 1. **Una chiamata** per capire come ricevi gli ordini oggi, quali regole commerciali applichi e quale gestionale usi.
 2. **Un perimetro scritto** della prima versione, con costi e tempi.
-3. **La prima versione** `[DA CONFERMARE: in genere in X settimane]`, provata con un gruppo ristretto di clienti.
+3. **La prima versione**, in genere in 6-8 settimane, provata con un gruppo ristretto di clienti.
 4. **L'apertura a tutti i clienti** e le funzioni successive, una alla volta.
