@@ -10,8 +10,8 @@ export default function HomeSection({ home }: { home: Dictionary['home'] }) {
   return (
     <Section id="home">
       <div className="home-text">
-        <div className="my-10">
-          <HomeHeroClaim hero={home.hero} />
+        <div className="mb-10">
+          <HomeHeroClaim h1={home.h1} hero={home.hero} />
         </div>
         <div className="my-10">
           <HomeExamples home={home} />

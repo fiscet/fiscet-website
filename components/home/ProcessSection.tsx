@@ -20,13 +20,13 @@ export default function ProcessSection({
               {index + 1}
             </span>
             <p className="mt-2 font-bold text-fis-logo">{step.title}</p>
-            <p className="mt-2 text-gray-600">{step.text}</p>
+            <p className="mt-2 text-gray-700">{step.text}</p>
           </li>
         ))}
       </ol>
       <div className="mt-10">
         <HomeTech tech={tech} />
-        <p className="mt-4 text-gray-600">{process.techText}</p>
+        <p className="mt-4 max-w-3xl leading-relaxed text-gray-700">{process.techText}</p>
       </div>
     </Section>
   );

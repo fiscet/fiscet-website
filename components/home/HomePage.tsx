@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { PageTitle } from '@/components/PageTitle';
 import AboutSection from '@/components/AboutSection';
 import HomeSection from '@/components/home/HomeSection';
 import { ServiceSection } from '@/components/services/ServiceSection';
@@ -14,7 +13,7 @@ import WhenSection from '@/components/home/WhenSection';
 import ProcessSection from '@/components/home/ProcessSection';
 import FaqSection from '@/components/home/FaqSection';
 import { getDictionary, type Dictionary, type Locale } from '@/lib/i18n';
-import { servicePageExists } from '@/lib/pages';
+import { resolveServiceHref } from '@/lib/navigation';
 import { HOME_PATHS, absoluteUrl, languageAlternates } from '@/lib/seo';
 import { AUTHOR_NAME, AUTHOR_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -71,7 +70,6 @@ export default function HomePage({ locale }: { locale: Locale }) {
       />
       <HashScroll />
       <div className="container mx-auto flex flex-col p-4 mb-4">
-        <PageTitle className="text-center">{dict.home.h1}</PageTitle>
         {locale === 'it' ? (
           <ItalianSections dict={dict} />
         ) : (
@@ -80,7 +78,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <SectionSpacer />
         <ContactSection dict={dict} />
       </div>
-      <Footer footer={dict.footer} />
+      <Footer locale={locale} />
     </>
   );
 }
@@ -92,20 +90,18 @@ function ItalianSections({ dict }: { dict: Dictionary }) {
   // Links to service pages appear only once the page's markdown file exists.
   const services = {
     ...home.services,
-    items: home.services.items.map(({ link, ...item }) =>
-      link && link.href.startsWith('/') && !servicePageExists(link.href.slice(1))
-        ? item
-        : { ...item, link }
-    )
+    items: home.services.items.map(({ link, ...item }) => {
+      const href = link && resolveServiceHref('it', link.href);
+      return href ? { ...item, link: { ...link, href } } : item;
+    })
   };
 
   return (
     <>
       <Section id="home">
-        <div className="my-10">
-          <HomeHeroClaim hero={home.hero} />
-        </div>
+        <HomeHeroClaim h1={home.h1} hero={home.hero} />
       </Section>
+      <SectionSpacer />
       <ServiceSection services={services} />
       {home.when && (
         <>

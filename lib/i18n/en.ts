@@ -6,12 +6,12 @@ export const en: Dictionary = {
   homePath: '/en',
 
   nav: {
-    home: 'Home',
     about: 'About',
     services: 'Services',
     contact: 'Contact',
     blog: 'Blog',
     blogHref: '/en/blog',
+    cta: 'Let’s work together',
     menuToggle: 'Toggle menu',
     switchLabel: 'IT',
     switchTitle: 'Versione italiana',
@@ -26,16 +26,15 @@ export const en: Dictionary = {
       'Custom web applications built with Next.js and headless CMS solutions like Payload CMS, Sanity.io, and Strapi.',
     h1: 'Custom Web Solutions for your business',
     hero: {
-      titleStart: 'Want an app in a',
-      titleHighlight: 'short time?',
-      subtitle: 'Yes, because we start from FisServer.',
-      text: 'Our own software foundation: multi-tenant backend, roles and permissions, APIs. Already built, already tested. Your app is what we add on top.',
+      eyebrow: 'Christian Zanchetta · full-stack developer',
+      lead: 'Want an app in a short time? We start from FisServer, our own software foundation: multi-tenant backend, roles and permissions, APIs. Already built, already tested. Your app is what we add on top.',
       stats: [
         { value: 'weeks', label: 'to first release' },
         { value: '1', label: 'proven foundation, reused' },
         { value: '0', label: 'boilerplate rewritten' }
       ],
-      cta: 'Let’s work together'
+      cta: 'Let’s work together',
+      secondaryCta: 'See services'
     },
     portfolioLabel: 'Portfolio',
     examples: {
@@ -192,7 +191,10 @@ export const en: Dictionary = {
 
   footer: {
     copyright: 'Fiscet by Christian Zanchetta. All rights reserved.',
-    cookiePreferences: 'Cookie preferences'
+    cookiePreferences: 'Cookie preferences',
+    privacy: 'Privacy policy',
+    servicesTitle: 'Services',
+    exploreTitle: 'Explore'
   },
 
   blog: {

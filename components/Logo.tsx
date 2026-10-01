@@ -1,14 +1,18 @@
-import { motion } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-export default function Logo() {
+// Logo-2025.png is 1479x647.
+export default function Logo({ href }: { href: string }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay: 0.2 }}
-    >
-      <Image src="/images/Logo-2025.png" alt="Logo" width={230} height={100} />
-    </motion.div>
+    <Link href={href} aria-label="Fiscet, home" className="shrink-0">
+      <Image
+        src="/images/Logo-2025.png"
+        alt="Fiscet"
+        width={1479}
+        height={647}
+        priority
+        className="h-10 w-auto md:h-11"
+      />
+    </Link>
   );
 }

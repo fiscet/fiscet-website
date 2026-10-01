@@ -1,23 +1,17 @@
-'use client';
-
 import { cn } from '@/lib/utils';
-import { motion } from 'motion/react';
 
 export function SectionTitle({
   children,
-  className
+  className,
+  as: Tag = 'h2'
 }: {
   children: string;
   className?: string;
+  as?: 'h2' | 'h3';
 }) {
   return (
-    <motion.h3
-      className={cn('text-xl font-bold text-fis-logo mb-4', className)}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.3 }}
-    >
+    <Tag className={cn('text-xl font-bold text-fis-logo mb-4', className)}>
       {children}
-    </motion.h3>
+    </Tag>
   );
 }

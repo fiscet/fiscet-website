@@ -8,6 +8,7 @@ import CookieBanner from '@/components/cookie-consent/CookieBanner';
 import { Analytics } from '@vercel/analytics/next';
 import { getDictionary, type Locale } from '@/lib/i18n';
 import { getLanguageSwitchMap } from '@/lib/i18n/alternates';
+import { getServiceLinks } from '@/lib/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,10 +30,11 @@ export default function RootShell({
           <Header
             homePath={dict.homePath}
             nav={dict.nav}
+            services={getServiceLinks(locale)}
             switchMap={getLanguageSwitchMap()}
             otherHomePath={getDictionary(locale === 'it' ? 'en' : 'it').homePath}
           />
-          <main className="mt-6">{children}</main>
+          <main>{children}</main>
           <Toaster />
           <CookieBanner cookie={dict.cookie} privacy={dict.privacy} />
         </CookieConsentProvider>

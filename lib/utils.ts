@@ -5,24 +5,19 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Link to a section of a home page: '/#about' for '/', '/en#about' for '/en'.
+export function homeAnchor(homePath: string, id: string): string {
+  return homePath === '/' ? `/#${id}` : `${homePath}#${id}`;
+}
+
+// Sections carry scroll-margin-top (globals.css), so scrollIntoView already
+// leaves room for the sticky header.
 export const handleScrollTo = (id: string) => {
-  const element = document.getElementById(id);
-
-  if (element) {
-    const headerOffset = 140; // Height of the sticky header
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  }
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 };
 
-// Smooth-scroll to the section named in the URL hash, accounting for the
-// sticky header. Used on the home page so cross-page links like /#about land
-// correctly after navigation.
+// Smooth-scroll to the section named in the URL hash. Used on the home page
+// so cross-page links like /#about land correctly after navigation.
 export const scrollToHash = () => {
   const id = window.location.hash.replace('#', '');
   if (!id) return;

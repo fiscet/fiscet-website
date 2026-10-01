@@ -1,5 +1,4 @@
 import Footer from '@/components/Footer';
-import { getDictionary } from '@/lib/i18n';
 
 export default function BlogLayout({
   children
@@ -9,7 +8,7 @@ export default function BlogLayout({
   return (
     <>
       <div className="container mx-auto px-4">{children}</div>
-      <Footer footer={getDictionary('en').footer} />
+      <Footer locale="en" />
     </>
   );
 }

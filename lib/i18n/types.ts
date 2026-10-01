@@ -17,12 +17,12 @@ export type Dictionary = {
   homePath: string;
 
   nav: {
-    home: string;
     about: string;
     services: string;
     contact: string;
     blog: string;
     blogHref: string;
+    cta: string;
     menuToggle: string;
     switchLabel: string;
     switchTitle: string;
@@ -35,12 +35,12 @@ export type Dictionary = {
     organizationDescription: string;
     h1: string;
     hero: {
-      titleStart: string;
-      titleHighlight: string;
-      subtitle: string;
-      text: string;
+      // Shown next to the author photo, above the h1.
+      eyebrow: string;
+      lead: string;
       stats: { value: string; label: string }[];
       cta: string;
+      secondaryCta: string;
     };
     portfolioLabel: string;
     examples: Record<ExampleName, { tag: string; description: string }>;
@@ -138,6 +138,9 @@ export type Dictionary = {
   footer: {
     copyright: string;
     cookiePreferences: string;
+    privacy: string;
+    servicesTitle: string;
+    exploreTitle: string;
   };
 
   blog: {

@@ -8,8 +8,8 @@ export default function ContactSection({ dict }: { dict: Dictionary }) {
   return (
     <Section id="contact">
       <div className="max-w-2xl mx-auto">
-        <SectionTitle>{dict.home.contact.title}</SectionTitle>
-        <p className="text-gray-600 text-center mb-8">
+        <SectionTitle className="text-3xl">{dict.home.contact.title}</SectionTitle>
+        <p className="mb-8 leading-relaxed text-gray-700">
           <RichText text={dict.home.contact.intro} />
         </p>
         <ContactForm form={dict.contactForm} privacy={dict.privacy} />

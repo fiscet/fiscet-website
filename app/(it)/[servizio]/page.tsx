@@ -89,7 +89,7 @@ export default async function ServicePage({ params }: { params: Params }) {
           </div>
         </article>
       </div>
-      <Footer footer={dict.footer} />
+      <Footer locale="it" />
     </>
   );
 }

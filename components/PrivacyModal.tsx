@@ -10,9 +10,14 @@ import { useState } from 'react';
 import type { Dictionary } from '@/lib/i18n';
 
 export default function PrivacyModal({
-  privacy
+  privacy,
+  label,
+  className = 'text-primary hover:underline'
 }: {
   privacy: Dictionary['privacy'];
+  // Button text, when it differs from the inline link label.
+  label?: string;
+  className?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,9 +26,9 @@ export default function PrivacyModal({
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="text-primary hover:underline"
+        className={className}
       >
-        {privacy.linkLabel}
+        {label ?? privacy.linkLabel}
       </button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>

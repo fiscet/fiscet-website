@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { getDictionary, type Locale } from '@/lib/i18n';
 
 export default function NotFoundContent({ locale }: { locale: Locale }) {
-  const { notFound, homePath, footer } = getDictionary(locale);
+  const { notFound, homePath } = getDictionary(locale);
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function NotFoundContent({ locale }: { locale: Locale }) {
           </Button>
         </Link>
       </section>
-      <Footer footer={footer} />
+      <Footer locale={locale} />
     </>
   );
 }

@@ -7,12 +7,12 @@ export const it: Dictionary = {
   homePath: '/',
 
   nav: {
-    home: 'Home',
     about: 'Chi sono',
     services: 'Servizi',
     contact: 'Contatti',
     blog: 'Blog',
     blogHref: '/blog',
+    cta: 'Parliamone',
     menuToggle: 'Apri o chiudi il menu',
     switchLabel: 'EN',
     switchTitle: 'English version',
@@ -27,17 +27,20 @@ export const it: Dictionary = {
     organizationDescription:
       'Sviluppo di gestionali, web app e siti su misura per micro e piccole imprese. Prima versione funzionante in settimane, non in mesi.',
     h1: 'Gestionali e web app su misura per piccole imprese',
+    // Hero copy: proposal to review with Christian (October 2026).
     hero: {
-      titleStart: 'Ti serve un gestionale',
-      titleHighlight: 'in tempi brevi?',
-      subtitle: 'Sì, perché non si parte da zero.',
-      text: 'Ogni progetto parte da FisServer, una base software già costruita e collaudata: utenti, ruoli e permessi, sicurezza, API. Il tuo gestionale è quello che ci costruisco sopra.',
+      eyebrow: 'Christian Zanchetta · sviluppatore full-stack',
+      lead: 'Un unico programma per ordini, magazzino, clienti e commesse, costruito sul modo in cui lavori. La prima versione funzionante arriva in settimane, non in mesi, perché si parte da una base software già collaudata.',
       stats: [
-        { value: 'settimane', label: 'alla prima versione funzionante' },
-        { value: '1', label: 'base collaudata, riutilizzata' },
-        { value: '0', label: 'lavoro ripetuto da capo' }
+        { value: '4-8 settimane', label: 'per la prima versione funzionante' },
+        { value: '20 anni', label: 'di sviluppo software' },
+        {
+          value: '1 referente',
+          label: "chi scrive il codice, dall'analisi all'assistenza"
+        }
       ],
-      cta: 'Parliamone'
+      cta: 'Parliamone',
+      secondaryCta: 'Cosa posso fare per te'
     },
     portfolioLabel: 'Lavori e progetti',
     examples: {
@@ -87,25 +90,25 @@ export const it: Dictionary = {
           title: 'Gestionali su misura',
           description:
             'Ordini, magazzino, clienti, commesse: un unico programma costruito sul modo in cui lavori, al posto di fogli Excel e software che non si parlano.',
-          link: { label: 'Quando conviene →', href: '#quando' }
+          link: { label: 'Quando conviene', href: '#quando' }
         },
         {
           title: 'Web app per aziende',
           description:
             'Preventivatori, aree riservate per i clienti, prenotazioni, dashboard. Funzionano nel browser e sullo smartphone, senza installare nulla.',
-          link: { label: 'Scopri di più →', href: '/sviluppo-web-app' }
+          link: { label: 'Scopri di più', href: '/sviluppo-web-app' }
         },
         {
           title: 'Portali B2B',
           description:
             'Catalogo, listini dedicati e ordini online per rivenditori e agenti, collegati ai dati che hai già.',
-          link: { label: 'Scopri di più →', href: '/portale-b2b' }
+          link: { label: 'Scopri di più', href: '/portale-b2b' }
         },
         {
           title: 'Siti web aziendali',
           description:
             'Siti veloci, che aggiorni in autonomia e costruiti per farti trovare su Google.',
-          link: { label: 'Scopri di più →', href: '/siti-web-aziendali' }
+          link: { label: 'Scopri di più', href: '/siti-web-aziendali' }
         }
       ]
     },
@@ -260,7 +263,10 @@ export const it: Dictionary = {
 
   footer: {
     copyright: 'Fiscet di Christian Zanchetta. Tutti i diritti riservati.',
-    cookiePreferences: 'Preferenze cookie'
+    cookiePreferences: 'Preferenze cookie',
+    privacy: 'Informativa privacy',
+    servicesTitle: 'Servizi',
+    exploreTitle: 'Esplora'
   },
 
   blog: {

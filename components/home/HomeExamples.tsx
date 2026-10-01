@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Dictionary, ExampleName } from '@/lib/i18n/types';
 import RichText from '../RichText';
+import { SectionTitle } from '../SectionTitle';
 
 type Example = {
   name: ExampleName;
@@ -61,10 +62,7 @@ export default function HomeExamples({
 }) {
   return (
     <>
-      <div className="flex gap-4 items-center mb-4">
-        <span className="text-sm text-gray-400">{home.portfolioLabel}</span>
-        <span className="block min-h-[1px] max-h-[1px] w-8 bg-gray-400"></span>
-      </div>
+      <SectionTitle className="text-3xl">{home.portfolioLabel}</SectionTitle>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {examples.map((example) => {
           const { tag, description } = home.examples[example.name];
@@ -86,13 +84,13 @@ export default function HomeExamples({
                   className="rounded-md object-contain"
                 />
               </div>
-              <span className="mt-4 text-[11px] uppercase tracking-wider text-gray-400">
+              <span className="mt-4 text-[11px] uppercase tracking-wider text-gray-500">
                 {tag}
               </span>
               <span className="mt-1 font-semibold text-gray-800">
                 {example.name}
               </span>
-              <span className="mt-1 text-sm text-gray-500">{description}</span>
+              <span className="mt-1 text-sm text-gray-600">{description}</span>
             </Link>
           );
         })}

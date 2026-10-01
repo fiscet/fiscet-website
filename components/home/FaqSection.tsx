@@ -38,8 +38,8 @@ export default function FaqSection({
       <dl className="max-w-3xl space-y-6">
         {faq.items.map((item) => (
           <div key={item.question}>
-            <dt className="font-bold text-fis-logo">{item.question}</dt>
-            <dd className="mt-2 text-gray-600">
+            <dt className="text-lg font-bold text-fis-logo">{item.question}</dt>
+            <dd className="mt-2 leading-relaxed text-gray-700">
               <RichText text={item.answer} />
             </dd>
           </div>
