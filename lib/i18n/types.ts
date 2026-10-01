@@ -29,6 +29,9 @@ export type Dictionary = {
   };
 
   home: {
+    metaTitle: string;
+    metaDescription: string;
+    organizationDescription: string;
     h1: string;
     hero: {
       titleStart: string;

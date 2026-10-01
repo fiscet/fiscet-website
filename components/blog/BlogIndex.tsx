@@ -4,6 +4,7 @@ import Link from 'next/link';
 import LangBadge from '@/components/LangBadge';
 import { getAllPosts, getPublishedPosts, isPostPublished } from '@/lib/blog';
 import { formatDate, getDictionary, type Locale } from '@/lib/i18n';
+import { blogIndexPaths, languageAlternates } from '@/lib/seo';
 import { AUTHOR_NAME, AUTHOR_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 
 export function getBlogIndexMetadata(locale: Locale): Metadata {
@@ -14,13 +15,17 @@ export function getBlogIndexMetadata(locale: Locale): Metadata {
     title: blog.title,
     description: blog.metaDescription,
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: languageAlternates(blogIndexPaths())
+    },
     openGraph: {
       title: blog.title,
       description: blog.metaDescription,
       url,
       type: 'website',
-      locale: ogLocale
+      locale: ogLocale,
+      siteName: SITE_NAME
     }
   };
 }

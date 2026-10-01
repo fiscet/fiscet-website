@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import LangBadge from '@/components/LangBadge';
 import { getPublishedPosts, type BlogPost } from '@/lib/blog';
 import { formatDate, getDictionary, type Locale } from '@/lib/i18n';
+import { languageAlternates, postLanguagePaths } from '@/lib/seo';
 import { AUTHOR_NAME, AUTHOR_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 
 const OG_LOCALES = { it: 'it_IT', en: 'en_US' } as const;
@@ -16,18 +17,23 @@ export function getBlogArticleMetadata(
 ): Metadata {
   const { blog, nav } = getDictionary(locale);
   const url = `${SITE_URL}${nav.blogHref}/${post.slug}`;
+  const languagePaths = postLanguagePaths(post);
 
   return {
     title: `${post.title}${blog.titleSuffix}`,
     description: post.description,
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      ...(languagePaths && { languages: languageAlternates(languagePaths) })
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       url,
       type: 'article',
       locale: OG_LOCALES[post.lang],
+      siteName: SITE_NAME,
       publishedTime: post.publishedAt,
       authors: [AUTHOR_NAME],
       ...(post.image && { images: [{ url: `${SITE_URL}${post.image}` }] })

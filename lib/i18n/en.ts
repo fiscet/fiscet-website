@@ -19,6 +19,11 @@ export const en: Dictionary = {
   },
 
   home: {
+    metaTitle: 'Custom business software and web apps | Fiscet',
+    metaDescription:
+      'Custom business software, web apps and websites for small companies. First working release in weeks, built on a proven foundation.',
+    organizationDescription:
+      'Custom web applications built with Next.js and headless CMS solutions like Payload CMS, Sanity.io, and Strapi.',
     h1: 'Custom Web Solutions for your business',
     hero: {
       titleStart: 'Want an app in a',

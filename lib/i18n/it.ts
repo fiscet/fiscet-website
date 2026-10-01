@@ -20,6 +20,12 @@ export const it: Dictionary = {
   },
 
   home: {
+    // Title and description from docs/seo-italia/keyword-map.md.
+    metaTitle: 'Gestionali e web app su misura per piccole imprese | Fiscet',
+    metaDescription:
+      'Sviluppo di gestionali, web app e siti su misura per micro e piccole imprese. Prima versione funzionante in settimane, non in mesi.',
+    organizationDescription:
+      'Sviluppo di gestionali, web app e siti su misura per micro e piccole imprese. Prima versione funzionante in settimane, non in mesi.',
     h1: 'Gestionali e web app su misura per piccole imprese',
     hero: {
       titleStart: 'Ti serve un gestionale',
