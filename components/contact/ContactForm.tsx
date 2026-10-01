@@ -15,24 +15,38 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { toast } from 'sonner';
 import PrivacyModal from '@/components/PrivacyModal';
+import type { Dictionary } from '@/lib/i18n';
 
-const formSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  subject: z.string().min(5, 'Subject must be at least 5 characters'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-  privacyAccepted: z.boolean().refine((val) => val === true, {
-    message: 'You must accept the privacy policy to proceed'
-  })
-});
+type FormDict = Dictionary['contactForm'];
 
-export function ContactForm() {
+function createFormSchema(errors: FormDict['errors']) {
+  return z.object({
+    name: z.string().min(2, errors.name),
+    email: z.string().email(errors.email),
+    subject: z.string().min(5, errors.subject),
+    message: z.string().min(10, errors.message),
+    privacyAccepted: z.boolean().refine((val) => val === true, {
+      message: errors.privacy
+    })
+  });
+}
+
+type FormValues = z.infer<ReturnType<typeof createFormSchema>>;
+
+export function ContactForm({
+  form: t,
+  privacy
+}: {
+  form: FormDict;
+  privacy: Dictionary['privacy'];
+}) {
   const [isLoading, setIsLoading] = useState(false);
+  const formSchema = useMemo(() => createFormSchema(t.errors), [t.errors]);
 
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
@@ -43,7 +57,7 @@ export function ContactForm() {
     }
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: FormValues) {
     setIsLoading(true);
     try {
       const response = await fetch('/api/contact', {
@@ -59,15 +73,15 @@ export function ContactForm() {
         throw new Error('Failed to send message');
       }
 
-      toast.success('Success!', {
-        description: 'Your message has been sent successfully.'
+      toast.success(t.success.title, {
+        description: t.success.description
       });
 
       form.reset();
     } catch (error) {
       console.error(error);
-      toast.error('Error!', {
-        description: 'Failed to send message. Please try again later.'
+      toast.error(t.failure.title, {
+        description: t.failure.description
       });
     } finally {
       setIsLoading(false);
@@ -82,9 +96,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>{t.nameLabel}</FormLabel>
               <FormControl>
-                <Input placeholder="Your name" {...field} />
+                <Input placeholder={t.namePlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -95,9 +109,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{t.emailLabel}</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder={t.emailPlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -108,9 +122,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>{t.subjectLabel}</FormLabel>
               <FormControl>
-                <Input placeholder="Message subject" {...field} />
+                <Input placeholder={t.subjectPlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -121,10 +135,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{t.messageLabel}</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Your message here..."
+                  placeholder={t.messagePlaceholder}
                   className="min-h-[150px]"
                   {...field}
                 />
@@ -146,7 +160,11 @@ export function ContactForm() {
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel>
-                  I accept the <PrivacyModal />
+                  <span>
+                    {t.privacyBefore}
+                    <PrivacyModal privacy={privacy} />
+                    {t.privacyAfter}
+                  </span>
                 </FormLabel>
                 <FormMessage />
               </div>
@@ -154,7 +172,7 @@ export function ContactForm() {
           )}
         />
         <Button type="submit" disabled={isLoading}>
-          {isLoading ? 'Sending...' : 'Send Message'}
+          {isLoading ? t.submitting : t.submit}
         </Button>
       </form>
     </Form>

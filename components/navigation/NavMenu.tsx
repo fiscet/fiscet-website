@@ -1,36 +1,44 @@
 'use client';
 
 import Link from 'next/link';
+import type { Dictionary } from '@/lib/i18n';
 import NavItem from './NavItem';
 
-export const NAV_LINKS = [
-  { sectionId: 'home', text: 'Home' },
-  { sectionId: 'about', text: 'About' },
-  { sectionId: 'services', text: 'Services' },
-  { sectionId: 'contact', text: 'Contact' }
-] as const;
+export const NAV_SECTIONS = ['home', 'about', 'services', 'contact'] as const;
 
 export type NavProps = {
+  nav: Dictionary['nav'];
+  switchHref: string;
   handleNavClick: (sectionId: string) => void;
 };
 
-export default function NavMenu({ handleNavClick }: NavProps) {
+export default function NavMenu({ nav, switchHref, handleNavClick }: NavProps) {
   return (
     <>
-      {NAV_LINKS.map(({ sectionId, text }) => (
+      {NAV_SECTIONS.map((sectionId) => (
         <NavItem
           key={sectionId}
           sectionId={sectionId}
           handleClick={handleNavClick}
         >
-          {text}
+          {nav[sectionId]}
         </NavItem>
       ))}
       <Link
-        href="/blog"
+        href={nav.blogHref}
         className="text-fis-logo hover:text-gray-400 cursor-pointer"
       >
-        Blog
+        {nav.blog}
+      </Link>
+      <Link
+        href={switchHref}
+        hrefLang={nav.switchHrefLang}
+        lang={nav.switchHrefLang}
+        title={nav.switchTitle}
+        aria-label={nav.switchTitle}
+        className="text-fis-logo hover:text-gray-400 cursor-pointer font-semibold"
+      >
+        {nav.switchLabel}
       </Link>
     </>
   );

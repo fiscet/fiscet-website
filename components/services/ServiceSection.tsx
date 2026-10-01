@@ -1,14 +1,23 @@
 'use client';
 
 import { motion, useInView } from 'motion/react';
-import { services } from './data';
+import type { Dictionary } from '@/lib/i18n';
+import { SERVICE_ICONS, type Service } from './data';
 import { ServiceCard } from './ServiceCard';
 import { useRef } from 'react';
 import { SectionTitle } from '../SectionTitle';
 import Section from '../Section';
 
-export function ServiceSection() {
+export function ServiceSection({
+  services: dict
+}: {
+  services: Dictionary['home']['services'];
+}) {
   const ref = useRef(null);
+  const services: Service[] = dict.items.map((item, index) => ({
+    ...item,
+    icon: SERVICE_ICONS[index]
+  }));
   const isInView = useInView(ref, {
     once: false,
     amount: 0.4
@@ -17,7 +26,7 @@ export function ServiceSection() {
   return (
     <Section id="services">
       <div ref={ref}>
-        <SectionTitle className="text-3xl">Services</SectionTitle>
+        <SectionTitle className="text-3xl">{dict.title}</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div

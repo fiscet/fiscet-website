@@ -1,40 +1,24 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import LangBadge from '@/components/LangBadge';
-import {
-  getAllPublishedSlugs,
-  getPostBySlug,
-  getPublishedPosts,
-} from '@/lib/blog';
-import { AUTHOR_NAME, AUTHOR_URL, SITE_URL } from '@/lib/site';
+import { getPublishedPosts, type BlogPost } from '@/lib/blog';
+import { formatDate, getDictionary, type Locale } from '@/lib/i18n';
+import { AUTHOR_NAME, AUTHOR_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 
 const OG_LOCALES = { it: 'it_IT', en: 'en_US' } as const;
 
-export const revalidate = 3600;
-export const dynamicParams = true;
+export function getBlogArticleMetadata(
+  post: BlogPost,
+  locale: Locale
+): Metadata {
+  const { blog, nav } = getDictionary(locale);
+  const url = `${SITE_URL}${nav.blogHref}/${post.slug}`;
 
-type Params = Promise<{ slug: string }>;
-
-export async function generateStaticParams() {
-  return getAllPublishedSlugs().map((slug) => ({ slug }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Params;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
-  if (!post) return {};
-
-  const url = `${SITE_URL}/blog/${post.slug}`;
   return {
-    title: `${post.title} · Fiscet Blog`,
+    title: `${post.title}${blog.titleSuffix}`,
     description: post.description,
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     alternates: { canonical: url },
@@ -46,31 +30,27 @@ export async function generateMetadata({
       locale: OG_LOCALES[post.lang],
       publishedTime: post.publishedAt,
       authors: [AUTHOR_NAME],
-      ...(post.image && { images: [{ url: `${SITE_URL}${post.image}` }] }),
+      ...(post.image && { images: [{ url: `${SITE_URL}${post.image}` }] })
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      ...(post.image && { images: [`${SITE_URL}${post.image}`] }),
-    },
+      ...(post.image && { images: [`${SITE_URL}${post.image}`] })
+    }
   };
 }
 
-function formatDate(iso: string): string {
-  const d = new Date(iso);
-  return d.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
-
-export default async function BlogArticlePage({ params }: { params: Params }) {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
-
-  if (!post) notFound();
+export default function BlogArticle({
+  post,
+  locale
+}: {
+  post: BlogPost;
+  locale: Locale;
+}) {
+  const { blog, nav, homePath, langBadge } = getDictionary(locale);
+  const blogUrl = `${SITE_URL}${nav.blogHref}`;
+  const homeUrl = homePath === '/' ? SITE_URL : `${SITE_URL}${homePath}`;
 
   const allPosts = getPublishedPosts();
   const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
@@ -78,7 +58,7 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
   const olderPost = allPosts[currentIndex + 1] ?? null;
   const newerPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 
-  const articleUrl = `${SITE_URL}/blog/${post.slug}`;
+  const articleUrl = `${blogUrl}/${post.slug}`;
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -89,34 +69,34 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
     dateModified: post.publishedAt,
     inLanguage: post.lang,
     author: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: 'Fiscet', url: SITE_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
     ...(post.image && { image: `${SITE_URL}${post.image}` }),
     isPartOf: {
       '@type': 'Blog',
-      '@id': `${SITE_URL}/blog`,
-      name: 'Fiscet Blog',
-    },
+      '@id': blogUrl,
+      name: blog.name
+    }
   };
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 1, name: blog.home, item: homeUrl },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: `${SITE_URL}/blog`,
+        item: blogUrl
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: articleUrl,
-      },
-    ],
+        item: articleUrl
+      }
+    ]
   };
 
   return (
@@ -131,17 +111,20 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
       />
 
       <header className="pt-10 pb-8">
-        <nav lang="en" aria-label="Breadcrumb" className="mb-6">
+        <nav lang={locale} aria-label={blog.breadcrumbLabel} className="mb-6">
           <ol className="flex items-center gap-2 text-sm text-muted-foreground">
             <li>
-              <Link href="/" className="hover:text-fis-logo transition-colors">
-                Home
+              <Link
+                href={homePath}
+                className="hover:text-fis-logo transition-colors"
+              >
+                {blog.home}
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
               <Link
-                href="/blog"
+                href={nav.blogHref}
                 className="hover:text-fis-logo transition-colors"
               >
                 Blog
@@ -153,9 +136,14 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
             </li>
           </ol>
         </nav>
-        <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-          <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-          <LangBadge lang={post.lang} />
+        <div
+          lang={locale}
+          className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium"
+        >
+          <time dateTime={post.publishedAt}>
+            {formatDate(post.publishedAt, locale)}
+          </time>
+          <LangBadge lang={post.lang} srLabel={langBadge.srLabel} />
         </div>
         <h1 className="mt-2 text-3xl md:text-5xl font-bold text-fis-logo leading-tight">
           {post.title}
@@ -163,8 +151,8 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
           {post.description}
         </p>
-        <p className="mt-6 text-sm text-muted-foreground">
-          By{' '}
+        <p lang={locale} className="mt-6 text-sm text-muted-foreground">
+          {blog.by}{' '}
           <a
             href={AUTHOR_URL}
             target="_blank"
@@ -197,24 +185,22 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
       )}
 
       <div className="prose prose-lg max-w-none prose-headings:text-fis-logo prose-a:text-fis-logo prose-strong:text-foreground">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {post.content}
-        </ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
       </div>
 
       {(olderPost || newerPost) && (
         <nav
-          lang="en"
-          aria-label="More posts"
+          lang={locale}
+          aria-label={blog.morePostsLabel}
           className="mt-16 pt-8 border-t border-border grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {olderPost ? (
             <Link
-              href={`/blog/${olderPost.slug}`}
+              href={`${nav.blogHref}/${olderPost.slug}`}
               className="block rounded-2xl p-5 bg-secondary hover:bg-accent transition-colors"
             >
               <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                Previous
+                {blog.previous}
               </span>
               <span
                 lang={olderPost.lang}
@@ -228,11 +214,11 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
           )}
           {newerPost ? (
             <Link
-              href={`/blog/${newerPost.slug}`}
+              href={`${nav.blogHref}/${newerPost.slug}`}
               className="block rounded-2xl p-5 bg-secondary hover:bg-accent transition-colors md:text-right"
             >
               <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                Next
+                {blog.next}
               </span>
               <span
                 lang={newerPost.lang}

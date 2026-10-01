@@ -1,14 +1,15 @@
 import Footer from '@/components/Footer';
+import { getDictionary } from '@/lib/i18n';
 
 export default function BlogLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
   return (
     <>
       <div className="container mx-auto px-4">{children}</div>
-      <Footer />
+      <Footer footer={getDictionary('it').footer} />
     </>
   );
 }

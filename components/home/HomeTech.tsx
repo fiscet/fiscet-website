@@ -1,11 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Dictionary } from '@/lib/i18n';
 
-export default function HomeTech() {
+export default function HomeTech({
+  tech
+}: {
+  tech: Dictionary['home']['tech'];
+}) {
   return (
     <>
       <div className="flex gap-4 items-center mb-4">
-        <span className="text-sm text-gray-400">Most used technologies</span>
+        <span className="text-sm text-gray-400">{tech.label}</span>
         <span className="block min-h-[1px] max-h-[1px] w-8 bg-gray-400"></span>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
@@ -13,8 +18,8 @@ export default function HomeTech() {
           <Link href="https://payloadcms.com" target="_blank">
             <Image
               src="/images/payload_cms_logo.jpg"
-              alt="Backend with Payload CMS + NextJS"
-              title="Backend with Payload CMS + NextJS"
+              alt={tech.alt.payload}
+              title={tech.alt.payload}
               width={50}
               height={50}
               className="rounded-md"
@@ -23,8 +28,8 @@ export default function HomeTech() {
           <Link href="https://sanity.io" target="_blank">
             <Image
               src="/images/sanity_io_logo.jpg"
-              alt="Backend with Sanity.io + NextJS"
-              title="Backend with Sanity.io + NextJS"
+              alt={tech.alt.sanity}
+              title={tech.alt.sanity}
               width={50}
               height={50}
               className="rounded-md"
@@ -33,8 +38,8 @@ export default function HomeTech() {
           <Link href="https://strapi.io" target="_blank">
             <Image
               src="/images/strapi_io_logo.png"
-              alt="Backend with Strapi + NextJS"
-              title="Backend with Strapi + NextJS"
+              alt={tech.alt.strapi}
+              title={tech.alt.strapi}
               width={50}
               height={50}
             />
@@ -44,8 +49,8 @@ export default function HomeTech() {
         <Link href="https://nextjs.org" target="_blank">
           <Image
             src="/images/nextjs_logo.jpg"
-            alt="Frontend with Next.js"
-            title="Frontend with Next.js"
+            alt={tech.alt.nextjs}
+            title={tech.alt.nextjs}
             width={50}
             height={50}
             className="rounded-md"

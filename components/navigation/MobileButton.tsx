@@ -1,13 +1,17 @@
 export type MobileButtonProps = {
+  label: string;
   toggleMobileMenu: () => void;
 };
 
-export default function MobileButton({ toggleMobileMenu }: MobileButtonProps) {
+export default function MobileButton({
+  label,
+  toggleMobileMenu
+}: MobileButtonProps) {
   return (
     <button
       className="md:hidden p-2 focus:outline-none cursor-pointer"
       onClick={toggleMobileMenu}
-      aria-label="Toggle menu"
+      aria-label={label}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

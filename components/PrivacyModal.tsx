@@ -7,8 +7,13 @@ import {
   DialogTitle
 } from '@/components/ui/dialog';
 import { useState } from 'react';
+import type { Dictionary } from '@/lib/i18n';
 
-export default function PrivacyModal() {
+export default function PrivacyModal({
+  privacy
+}: {
+  privacy: Dictionary['privacy'];
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,76 +23,51 @@ export default function PrivacyModal() {
         onClick={() => setIsOpen(true)}
         className="text-primary hover:underline"
       >
-        privacy policy
+        {privacy.linkLabel}
       </button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Privacy Policy</DialogTitle>
+            <DialogTitle>{privacy.title}</DialogTitle>
           </DialogHeader>
 
           <div className="prose prose-lg">
-            <p className="mb-4">
-              At our company, we take your privacy seriously. We want to be
-              transparent about how we handle your data.
-            </p>
+            <p className="mb-4">{privacy.intro}</p>
 
             <h2 className="text-2xl font-semibold mt-6 mb-4">
-              Data Collection and Usage
+              {privacy.collectionTitle}
             </h2>
-            <p className="mb-4">
-              When you contact us through our contact form, we collect the
-              following information:
-            </p>
+            <p className="mb-4">{privacy.collectionIntro}</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Your name</li>
-              <li>Your email address</li>
-              <li>The subject of your message</li>
-              <li>Your message content</li>
+              {privacy.collectionItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
 
             <h2 className="text-2xl font-semibold mt-6 mb-4">
-              Data Protection
+              {privacy.protectionTitle}
             </h2>
-            <p className="mb-4">We want to assure you that:</p>
+            <p className="mb-4">{privacy.protectionIntro}</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>
-                We do not store your personal data beyond what is necessary to
-                respond to your inquiry
-              </li>
-              <li>We do not share your information with any third parties</li>
-              <li>We do not use your data for marketing purposes</li>
-              <li>
-                Your data is not forwarded to any external services or
-                organizations
-              </li>
+              {privacy.protectionItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
 
             <h2 className="text-2xl font-semibold mt-6 mb-4">
-              Cookies and Analytics
+              {privacy.cookiesTitle}
             </h2>
-            <p className="mb-4">
-              We use Vercel Web Analytics, which is cookie-free and does not
-              collect personal data or track you across sites.
-            </p>
-            <p className="mb-4">
-              We also use Google Analytics to understand how the site is used.
-              Google Analytics sets cookies and is only loaded after you accept
-              it in the cookie banner. If you reject or ignore the banner, no
-              Google Analytics cookies are set and no data is sent to Google. You
-              can change your choice at any time via the &ldquo;Cookie
-              preferences&rdquo; link in the footer.
-            </p>
+            {privacy.cookiesParagraphs.map((paragraph) => (
+              <p key={paragraph} className="mb-4">
+                {paragraph}
+              </p>
+            ))}
 
             <h2 className="text-2xl font-semibold mt-6 mb-4">
-              Contact Information
+              {privacy.contactTitle}
             </h2>
-            <p className="mb-4">
-              If you have any questions about our privacy policy or how we
-              handle your data, please feel free to contact us through our
-              contact form.
-            </p>
+            <p className="mb-4">{privacy.contactText}</p>
           </div>
         </DialogContent>
       </Dialog>

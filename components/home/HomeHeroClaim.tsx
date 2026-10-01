@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import { motion } from 'motion/react';
+import type { Dictionary } from '@/lib/i18n';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -16,7 +17,11 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-hero-mono'
 });
 
-export default function HomeHeroClaim() {
+export default function HomeHeroClaim({
+  hero
+}: {
+  hero: Dictionary['home']['hero'];
+}) {
   return (
     <div
       className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} @container relative w-full overflow-hidden rounded-lg bg-[oklch(1_0_0)] text-[oklch(0.22_0.02_255)]`}
@@ -47,8 +52,8 @@ export default function HomeHeroClaim() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Want an app in a{' '}
-            <span className="text-[oklch(0.58_0.15_45)]">short time?</span>
+            {hero.titleStart}{' '}
+            <span className="text-[oklch(0.58_0.15_45)]">{hero.titleHighlight}</span>
           </motion.h2>
 
           <div className="flex items-stretch gap-[2%]">
@@ -64,7 +69,7 @@ export default function HomeHeroClaim() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                Yes — because we start from FisServer.
+                {hero.subtitle}
               </motion.h3>
               <div
                 className="max-w-[62ch] text-[oklch(0.44_0.015_255)]"
@@ -73,66 +78,36 @@ export default function HomeHeroClaim() {
                   lineHeight: 1.4
                 }}
               >
-                Our own software foundation: multi-tenant backend, roles and
-                permissions, APIs. Already built, already tested. Your app is
-                what we add on top.
+                {hero.text}
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex flex-wrap items-end gap-x-[4%] gap-y-4 border-t border-[oklch(0.9_0.008_250)] pt-[3%]">
-          <div className="flex flex-col gap-1">
-            <span
-              className="font-bold text-[oklch(0.58_0.15_45)]"
-              style={{
-                fontFamily: 'var(--font-hero-mono)',
-                fontSize: 'clamp(1.1rem, 3.8cqw, 3.4rem)'
-              }}
-            >
-              weeks
-            </span>
-            <span
-              className="text-[oklch(0.5_0.015_255)]"
-              style={{ fontSize: 'clamp(0.55rem, 1.3cqw, 1.1rem)' }}
-            >
-              to first release
-            </span>
-          </div>
-          <div className="flex flex-col gap-1">
-            <span
-              className="font-bold"
-              style={{
-                fontFamily: 'var(--font-hero-mono)',
-                fontSize: 'clamp(1.1rem, 3.8cqw, 3.4rem)'
-              }}
-            >
-              1
-            </span>
-            <span
-              className="text-[oklch(0.5_0.015_255)]"
-              style={{ fontSize: 'clamp(0.55rem, 1.3cqw, 1.1rem)' }}
-            >
-              proven foundation, reused
-            </span>
-          </div>
-          <div className="flex flex-col gap-1">
-            <span
-              className="font-bold"
-              style={{
-                fontFamily: 'var(--font-hero-mono)',
-                fontSize: 'clamp(1.1rem, 3.8cqw, 3.4rem)'
-              }}
-            >
-              0
-            </span>
-            <span
-              className="text-[oklch(0.5_0.015_255)]"
-              style={{ fontSize: 'clamp(0.55rem, 1.3cqw, 1.1rem)' }}
-            >
-              boilerplate rewritten
-            </span>
-          </div>
+          {hero.stats.map((stat, index) => (
+            <div key={stat.label} className="flex flex-col gap-1">
+              <span
+                className={
+                  index === 0
+                    ? 'font-bold text-[oklch(0.58_0.15_45)]'
+                    : 'font-bold'
+                }
+                style={{
+                  fontFamily: 'var(--font-hero-mono)',
+                  fontSize: 'clamp(1.1rem, 3.8cqw, 3.4rem)'
+                }}
+              >
+                {stat.value}
+              </span>
+              <span
+                className="text-[oklch(0.5_0.015_255)]"
+                style={{ fontSize: 'clamp(0.55rem, 1.3cqw, 1.1rem)' }}
+              >
+                {stat.label}
+              </span>
+            </div>
+          ))}
 
           <Link
             href="#contact"
@@ -143,7 +118,7 @@ export default function HomeHeroClaim() {
                 'clamp(0.5rem, 1.9cqw, 1.1rem) clamp(0.8rem, 3.4cqw, 1.9rem)'
             }}
           >
-            Let&apos;s work together
+            {hero.cta}
           </Link>
         </div>
       </div>
