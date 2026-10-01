@@ -5,6 +5,7 @@ description: "Cosa è già in vigore, cosa è stato rinviato e cosa fare subito,
 publishedAt: 2026-08-31
 seriesOrder: 44
 lang: it
+translationKey: ai-act
 image: /images/blog/ai-act.jpeg
 imageCredit: 'Immagine di copertina generata con intelligenza artificiale.'
 ---

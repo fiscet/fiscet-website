@@ -5,6 +5,7 @@ description: "What's actually in force, what got postponed, and what to do now, 
 publishedAt: 2026-08-31
 seriesOrder: 45
 lang: en
+translationKey: ai-act
 image: /images/blog/ai-act.jpeg
 imageCredit: 'Cover image generated with artificial intelligence.'
 ---

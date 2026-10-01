@@ -52,7 +52,7 @@ export default function BlogArticle({
   const blogUrl = `${SITE_URL}${nav.blogHref}`;
   const homeUrl = homePath === '/' ? SITE_URL : `${SITE_URL}${homePath}`;
 
-  const allPosts = getPublishedPosts();
+  const allPosts = getPublishedPosts(locale);
   const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
   // allPosts is sorted newest-first; "previous" is the next (older) item
   const olderPost = allPosts[currentIndex + 1] ?? null;

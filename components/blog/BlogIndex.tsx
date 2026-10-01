@@ -30,8 +30,8 @@ export default function BlogIndex({ locale }: { locale: Locale }) {
   const blogUrl = `${SITE_URL}${nav.blogHref}`;
   const homeUrl = homePath === '/' ? SITE_URL : `${SITE_URL}${homePath}`;
 
-  const allPosts = getAllPosts();
-  const publishedPosts = getPublishedPosts();
+  const allPosts = getAllPosts(locale);
+  const publishedPosts = getPublishedPosts(locale);
 
   const blogJsonLd = {
     '@context': 'https://schema.org',

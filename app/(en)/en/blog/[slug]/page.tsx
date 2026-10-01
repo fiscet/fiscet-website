@@ -11,7 +11,7 @@ export const dynamicParams = true;
 type Params = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
-  return getAllPublishedSlugs('it').map((slug) => ({ slug }));
+  return getAllPublishedSlugs('en').map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -20,21 +20,21 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug, 'it');
+  const post = getPostBySlug(slug, 'en');
   if (!post) return {};
 
-  return getBlogArticleMetadata(post, 'it');
+  return getBlogArticleMetadata(post, 'en');
 }
 
-export default async function ItalianBlogArticlePage({
+export default async function EnglishBlogArticlePage({
   params
 }: {
   params: Params;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug, 'it');
+  const post = getPostBySlug(slug, 'en');
 
   if (!post) notFound();
 
-  return <BlogArticle post={post} locale="it" />;
+  return <BlogArticle post={post} locale="en" />;
 }

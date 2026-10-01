@@ -11,7 +11,7 @@ export const en: Dictionary = {
     services: 'Services',
     contact: 'Contact',
     blog: 'Blog',
-    blogHref: '/blog',
+    blogHref: '/en/blog',
     menuToggle: 'Toggle menu',
     switchLabel: 'IT',
     switchTitle: 'Versione italiana',

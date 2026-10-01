@@ -13,6 +13,8 @@ export type BlogPost = {
   lang: PostLang;
   image?: string;
   imageCredit?: string;
+  // Shared by equivalent articles in different languages (e.g. 'ai-act').
+  translationKey?: string;
   content: string;
 };
 
@@ -53,6 +55,9 @@ function readAllPosts(): BlogPost[] {
       lang: normalizeLang(data.lang),
       image: data.image ? String(data.image) : undefined,
       imageCredit: data.imageCredit ? String(data.imageCredit) : undefined,
+      translationKey: data.translationKey
+        ? String(data.translationKey)
+        : undefined,
       content,
     };
   });
@@ -63,16 +68,22 @@ export function isPostPublished(post: BlogPost, now = new Date()): boolean {
   return post.publishedAt <= today;
 }
 
-export function getAllPosts(): BlogPost[] {
-  return readAllPosts().sort((a, b) =>
+function readPosts(lang?: PostLang): BlogPost[] {
+  const posts = readAllPosts();
+  return lang ? posts.filter((p) => p.lang === lang) : posts;
+}
+
+// `lang` omitted: posts in every language.
+export function getAllPosts(lang?: PostLang): BlogPost[] {
+  return readPosts(lang).sort((a, b) =>
     a.publishedAt === b.publishedAt
       ? a.seriesOrder - b.seriesOrder
       : b.publishedAt.localeCompare(a.publishedAt)
   );
 }
 
-export function getPublishedPosts(): BlogPost[] {
-  return readAllPosts()
+export function getPublishedPosts(lang?: PostLang): BlogPost[] {
+  return readPosts(lang)
     .filter((p) => isPostPublished(p))
     .sort((a, b) =>
       a.publishedAt === b.publishedAt
@@ -81,12 +92,25 @@ export function getPublishedPosts(): BlogPost[] {
     );
 }
 
-export function getPostBySlug(slug: string): BlogPost | null {
-  const post = readAllPosts().find((p) => p.slug === slug);
+export function getPostBySlug(
+  slug: string,
+  lang?: PostLang
+): BlogPost | null {
+  const post = readPosts(lang).find((p) => p.slug === slug);
   if (!post || !isPostPublished(post)) return null;
   return post;
 }
 
-export function getAllPublishedSlugs(): string[] {
-  return getPublishedPosts().map((p) => p.slug);
+export function getAllPublishedSlugs(lang?: PostLang): string[] {
+  return getPublishedPosts(lang).map((p) => p.slug);
+}
+
+// Published article in the other language with the same translationKey.
+export function getTranslation(post: BlogPost): BlogPost | null {
+  if (!post.translationKey) return null;
+  return (
+    getPublishedPosts().find(
+      (p) => p.translationKey === post.translationKey && p.lang !== post.lang
+    ) ?? null
+  );
 }
