@@ -161,6 +161,11 @@ export type Dictionary = {
     srLabel: string;
   };
 
+  // Service pages exist only in Italian (app/(it)/[servizio]).
+  servicePage?: {
+    cta: string;
+  };
+
   notFound: {
     metaTitle: string;
     title: string;

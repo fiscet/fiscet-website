@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getPublishedPosts } from '@/lib/blog';
+import { getServicePageSlugs } from '@/lib/pages';
 import {
   HOME_PATHS,
   absoluteUrl,
@@ -65,5 +66,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticRoutes, ...postRoutes];
+  const serviceRoutes: MetadataRoute.Sitemap = getServicePageSlugs().map(
+    (slug) => ({
+      url: absoluteUrl(`/${slug}`),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9
+    })
+  );
+
+  return [...staticRoutes, ...serviceRoutes, ...postRoutes];
 }

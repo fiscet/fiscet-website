@@ -14,6 +14,7 @@ import WhenSection from '@/components/home/WhenSection';
 import ProcessSection from '@/components/home/ProcessSection';
 import FaqSection from '@/components/home/FaqSection';
 import { getDictionary, type Dictionary, type Locale } from '@/lib/i18n';
+import { servicePageExists } from '@/lib/pages';
 import { HOME_PATHS, absoluteUrl, languageAlternates } from '@/lib/seo';
 import { AUTHOR_NAME, AUTHOR_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -88,6 +89,16 @@ export default function HomePage({ locale }: { locale: Locale }) {
 function ItalianSections({ dict }: { dict: Dictionary }) {
   const { home } = dict;
 
+  // Links to service pages appear only once the page's markdown file exists.
+  const services = {
+    ...home.services,
+    items: home.services.items.map(({ link, ...item }) =>
+      link && link.href.startsWith('/') && !servicePageExists(link.href.slice(1))
+        ? item
+        : { ...item, link }
+    )
+  };
+
   return (
     <>
       <Section id="home">
@@ -95,7 +106,7 @@ function ItalianSections({ dict }: { dict: Dictionary }) {
           <HomeHeroClaim hero={home.hero} />
         </div>
       </Section>
-      <ServiceSection services={home.services} />
+      <ServiceSection services={services} />
       {home.when && (
         <>
           <SectionSpacer />

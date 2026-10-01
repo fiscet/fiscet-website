@@ -90,17 +90,20 @@ export const it: Dictionary = {
         {
           title: 'Web app per aziende',
           description:
-            'Preventivatori, aree riservate per i clienti, prenotazioni, dashboard. Funzionano nel browser e sullo smartphone, senza installare nulla.'
+            'Preventivatori, aree riservate per i clienti, prenotazioni, dashboard. Funzionano nel browser e sullo smartphone, senza installare nulla.',
+          link: { label: 'Scopri di più →', href: '/sviluppo-web-app' }
         },
         {
           title: 'Portali B2B',
           description:
-            'Catalogo, listini dedicati e ordini online per rivenditori e agenti, collegati ai dati che hai già.'
+            'Catalogo, listini dedicati e ordini online per rivenditori e agenti, collegati ai dati che hai già.',
+          link: { label: 'Scopri di più →', href: '/portale-b2b' }
         },
         {
           title: 'Siti web aziendali',
           description:
-            'Siti veloci, che aggiorni in autonomia e costruiti per farti trovare su Google. Anche restyling di siti esistenti.'
+            'Siti veloci, che aggiorni in autonomia e costruiti per farti trovare su Google. Anche restyling di siti esistenti.',
+          link: { label: 'Scopri di più →', href: '/siti-web-aziendali' }
         }
       ]
     },
@@ -286,6 +289,10 @@ export const it: Dictionary = {
 
   langBadge: {
     srLabel: 'Lingua: '
+  },
+
+  servicePage: {
+    cta: 'Parliamone'
   },
 
   notFound: {
