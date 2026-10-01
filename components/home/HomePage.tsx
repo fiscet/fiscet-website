@@ -85,7 +85,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
   );
 }
 
-// Order from docs/seo-italia/copy/home-it.md.
+// Section order from the Italian SEO brief.
 function ItalianSections({ dict }: { dict: Dictionary }) {
   const { home } = dict;
 

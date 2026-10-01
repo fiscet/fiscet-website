@@ -1,6 +1,6 @@
 import type { Dictionary } from './types';
 
-// Page copy comes from docs/seo-italia/copy/home-it.md.
+// Page copy from the Italian SEO brief (October 2026).
 export const it: Dictionary = {
   locale: 'it',
   ogLocale: 'it_IT',
@@ -20,7 +20,7 @@ export const it: Dictionary = {
   },
 
   home: {
-    // Title and description from docs/seo-italia/keyword-map.md.
+    // Title and description from the keyword map of the Italian SEO brief.
     metaTitle: 'Gestionali e web app su misura per piccole imprese | Fiscet',
     metaDescription:
       'Sviluppo di gestionali, web app e siti su misura per micro e piccole imprese. Prima versione funzionante in settimane, non in mesi.',
@@ -65,12 +65,14 @@ export const it: Dictionary = {
         tag: 'Sito web · Next.js + Sanity',
         description:
           'Sito per una libera professionista: veloce, aggiornabile in autonomia.'
+      },
+      'Studio Dentistico Marin': {
+        tag: 'Sito web · Conegliano',
+        description: 'Sito per uno studio dentistico a Conegliano.'
       }
     },
-    portfolioNote:
-      '[DA CONFERMARE: aggiungere dentistaconegliano.it come caso "Sito web per uno studio dentistico", se il cliente è d\'accordo. È l\'unico caso italiano e copre la keyword "sito web per dentisti".]',
     tech: {
-      label: 'Tecnologie che uso',
+      label: 'Alcune delle tecnologie che uso',
       alt: {
         payload: 'Backend con Payload CMS e Next.js',
         sanity: 'Backend con Sanity.io e Next.js',
@@ -102,7 +104,7 @@ export const it: Dictionary = {
         {
           title: 'Siti web aziendali',
           description:
-            'Siti veloci, che aggiorni in autonomia e costruiti per farti trovare su Google. Anche restyling di siti esistenti.',
+            'Siti veloci, che aggiorni in autonomia e costruiti per farti trovare su Google.',
           link: { label: 'Scopri di più →', href: '/siti-web-aziendali' }
         }
       ]
@@ -144,7 +146,7 @@ export const it: Dictionary = {
         }
       ],
       techText:
-        'Next.js per siti e web app, Sanity e Payload CMS per i contenuti, AdonisJS e PostgreSQL per i gestionali, Vercel AI SDK e Mastra per le funzioni di intelligenza artificiale.'
+        "Le tecnologie si scelgono in base al progetto, non il contrario. Qualche esempio tra quelle che uso più spesso: Next.js, Sanity, AdonisJS, PostgreSQL e Vercel AI SDK. All'occorrenza lavoro con molte altre, compresi i programmi e i linguaggi che la tua azienda usa già."
     },
     faq: {
       title: 'Domande frequenti',
@@ -152,17 +154,12 @@ export const it: Dictionary = {
         {
           question: 'Quanto costa un gestionale su misura?',
           answer:
-            'Dipende dal numero di moduli e dalle integrazioni con i programmi che usi già. [DA CONFERMARE: tua fascia di prezzo per un gestionale con 2-3 moduli, ad esempio "Un gestionale con 2-3 moduli parte da X euro".] Partire da una base già pronta riduce il costo rispetto a uno sviluppo da zero. Per confronto, le agenzie italiane indicano cifre molto diverse: da circa 5.000 euro per un gestionale con pochi moduli a 20.000-40.000 euro per il primo modulo di un progetto più strutturato.'
+            'Dipende dal numero di moduli e dalle integrazioni con i programmi che usi già. Indicativamente, una prima versione con 1-2 processi costa tra 5.000 e 9.000 euro, un gestionale con 3-5 moduli tra 10.000 e 22.000 euro. Partire da una base già pronta riduce il costo rispetto a uno sviluppo da zero.'
         },
         {
           question: 'In quanto tempo è pronto?',
           answer:
-            '[DA CONFERMARE: es. "La prima versione funzionante è pronta in genere in 4-8 settimane"]. Poi si aggiungono le altre funzioni un modulo alla volta, mentre il sistema è già in uso.'
-        },
-        {
-          question: 'Il software resta mio?',
-          answer:
-            '[DA CONFERMARE: condizioni su proprietà del codice e dei dati, licenza della base FisServer, possibilità di cambiare fornitore.]'
+            'La prima versione funzionante è pronta in genere in 4-8 settimane. Poi si aggiungono le altre funzioni un modulo alla volta, mentre il sistema è già in uso.'
         },
         {
           question:
@@ -180,16 +177,15 @@ export const it: Dictionary = {
     about: {
       title: 'Chi sono',
       paragraphs: [
-        'Sono Christian Zanchetta, sviluppatore full-stack. Realizzo gestionali, web app e siti per micro e piccole imprese, lavorando da remoto con aziende in tutta Italia.',
-        'Lavori direttamente con chi scrive il codice: nessun passaggio tra commerciale, project manager e sviluppatori, e le decisioni si prendono in una telefonata.',
-        '[DA CONFERMARE: anni di esperienza e una riga su dove vivi, ad esempio "Italiano, vivo in Ungheria". Dirlo apertamente evita dubbi quando il cliente vede un numero o un fuso diverso.]'
+        'Sono Christian Zanchetta, sviluppatore full-stack da 20 anni. Realizzo gestionali, web app e siti per micro e piccole imprese, lavorando da remoto con aziende in tutta Italia.',
+        'Lavori direttamente con chi scrive il codice: nessun passaggio tra commerciale, project manager e sviluppatori, e le decisioni si prendono in una telefonata.'
       ],
       cta: 'Lavoriamo insieme'
     },
     contact: {
       title: 'Contatti',
       intro:
-        'Raccontami in poche righe cosa vorresti migliorare. Ti rispondo [DA CONFERMARE: es. "entro un giorno lavorativo"] con qualche domanda per capire se e come posso aiutarti.'
+        'Raccontami in poche righe cosa vorresti migliorare. Ti rispondo entro due giorni con qualche domanda per capire se e come posso aiutarti.'
     }
   },
 

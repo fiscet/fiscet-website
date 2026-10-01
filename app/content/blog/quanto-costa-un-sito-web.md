@@ -76,7 +76,11 @@ Investire nella fascia alta ha senso quando il sito ha un compito commerciale pr
 
 ## I miei prezzi
 
-`[DA CONFERMARE: le tue fasce di prezzo, ad esempio in una tabella con tre righe: sito vetrina, sito aziendale con gestione dei contenuti, restyling di un sito esistente. Indicare se IVA inclusa e cosa comprende ciascuna fascia.]`
+Realizzo siti aziendali su misura, con un pannello per gestire i contenuti in autonomia. Costano indicativamente tra 3.500 e 5.000 euro e sono online in genere in 6-10 settimane, a seconda dei tempi di preparazione dei testi. I testi si scrivono a quattro mani: tu porti la conoscenza del tuo lavoro e dei tuoi clienti, io la struttura e l'attenzione a come le persone cercano su Google.
+
+Non realizzo siti vetrina da modello né restyling di siti esistenti: per queste esigenze, i listini riportati sopra offrono soluzioni più adatte e più economiche.
+
+Le cifre sono indicative: il prezzo definitivo arriva con un preventivo scritto, dopo una prima chiamata.
 
 Se vuoi una stima per il tuo caso, descrivimi il sito che hai in mente nella [pagina dei contatti](/#contact). Per capire come lavoro sui siti aziendali c'è la pagina dedicata ai [siti web su misura](/siti-web-aziendali).
 
