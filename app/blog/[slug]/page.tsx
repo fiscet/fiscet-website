@@ -10,11 +10,7 @@ import {
   getPostBySlug,
   getPublishedPosts,
 } from '@/lib/blog';
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.fiscet.it';
-const AUTHOR_NAME = 'Christian Zanchetta';
-const AUTHOR_URL =
-  'https://www.linkedin.com/in/christian-zanchetta-a7140621/?locale=en-US';
+import { AUTHOR_NAME, AUTHOR_URL, SITE_URL } from '@/lib/site';
 
 const OG_LOCALES = { it: 'it_IT', en: 'en_US' } as const;
 
@@ -36,7 +32,7 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const url = `${BASE_URL}/blog/${post.slug}`;
+  const url = `${SITE_URL}/blog/${post.slug}`;
   return {
     title: `${post.title} · Fiscet Blog`,
     description: post.description,
@@ -50,13 +46,13 @@ export async function generateMetadata({
       locale: OG_LOCALES[post.lang],
       publishedTime: post.publishedAt,
       authors: [AUTHOR_NAME],
-      ...(post.image && { images: [{ url: `${BASE_URL}${post.image}` }] }),
+      ...(post.image && { images: [{ url: `${SITE_URL}${post.image}` }] }),
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      ...(post.image && { images: [`${BASE_URL}${post.image}`] }),
+      ...(post.image && { images: [`${SITE_URL}${post.image}`] }),
     },
   };
 }
@@ -82,7 +78,7 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
   const olderPost = allPosts[currentIndex + 1] ?? null;
   const newerPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 
-  const articleUrl = `${BASE_URL}/blog/${post.slug}`;
+  const articleUrl = `${SITE_URL}/blog/${post.slug}`;
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -93,12 +89,12 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
     dateModified: post.publishedAt,
     inLanguage: post.lang,
     author: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL },
-    publisher: { '@type': 'Organization', name: 'Fiscet', url: BASE_URL },
+    publisher: { '@type': 'Organization', name: 'Fiscet', url: SITE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
-    ...(post.image && { image: `${BASE_URL}${post.image}` }),
+    ...(post.image && { image: `${SITE_URL}${post.image}` }),
     isPartOf: {
       '@type': 'Blog',
-      '@id': `${BASE_URL}/blog`,
+      '@id': `${SITE_URL}/blog`,
       name: 'Fiscet Blog',
     },
   };
@@ -107,12 +103,12 @@ export default async function BlogArticlePage({ params }: { params: Params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: `${BASE_URL}/blog`,
+        item: `${SITE_URL}/blog`,
       },
       {
         '@type': 'ListItem',

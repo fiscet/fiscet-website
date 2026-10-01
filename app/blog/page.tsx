@@ -3,11 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LangBadge from '@/components/LangBadge';
 import { getAllPosts, getPublishedPosts, isPostPublished } from '@/lib/blog';
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.fiscet.it';
-const AUTHOR_NAME = 'Christian Zanchetta';
-const AUTHOR_URL =
-  'https://www.linkedin.com/in/christian-zanchetta-a7140621/?locale=en-US';
+import { AUTHOR_NAME, AUTHOR_URL, SITE_URL } from '@/lib/site';
 
 export const revalidate = 3600;
 
@@ -16,12 +12,12 @@ export const metadata: Metadata = {
   description:
     'Notes on building fast, scalable web applications with Next.js and headless CMS — decisions, trade-offs, and lessons from real client work.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
-  alternates: { canonical: `${BASE_URL}/blog` },
+  alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
     title: 'Blog · Fiscet',
     description:
       'Notes on building fast, scalable web applications with Next.js and headless CMS.',
-    url: `${BASE_URL}/blog`,
+    url: `${SITE_URL}/blog`,
     type: 'website',
   },
 };
@@ -42,16 +38,16 @@ export default function BlogIndexPage() {
   const blogJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    '@id': `${BASE_URL}/blog`,
+    '@id': `${SITE_URL}/blog`,
     name: 'Fiscet Blog',
     description:
       'Notes on building fast, scalable web applications with Next.js and headless CMS.',
-    url: `${BASE_URL}/blog`,
+    url: `${SITE_URL}/blog`,
     author: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL },
     publisher: {
       '@type': 'Organization',
       name: 'Fiscet',
-      url: BASE_URL,
+      url: SITE_URL,
     },
     blogPost: publishedPosts.map((p) => ({
       '@type': 'BlogPosting',
@@ -59,7 +55,7 @@ export default function BlogIndexPage() {
       description: p.description,
       datePublished: p.publishedAt,
       inLanguage: p.lang,
-      url: `${BASE_URL}/blog/${p.slug}`,
+      url: `${SITE_URL}/blog/${p.slug}`,
       author: { '@type': 'Person', name: AUTHOR_NAME },
     })),
   };
@@ -68,12 +64,12 @@ export default function BlogIndexPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: `${BASE_URL}/blog`,
+        item: `${SITE_URL}/blog`,
       },
     ],
   };

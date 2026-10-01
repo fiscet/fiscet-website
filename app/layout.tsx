@@ -7,13 +7,12 @@ import GoogleTagManager from '@/components/GoogleTagManager';
 import { CookieConsentProvider } from '@/components/cookie-consent/CookieConsentContext';
 import CookieBanner from '@/components/cookie-consent/CookieBanner';
 import { Analytics } from '@vercel/analytics/next';
+import { SITE_URL } from '@/lib/site';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.fiscet.it';
-
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(SITE_URL),
   title: 'Fullstack Applications Next.js, Payload CMS, Sanity & Strapi',
   description:
     'Custom web applications built with Next.js, leveraging headless CMS solutions like Payload CMS, Sanity.io, and Strapi. Fast, scalable, and user-friendly digital solutions for your business with modern tech stack.',

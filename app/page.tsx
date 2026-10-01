@@ -7,28 +7,25 @@ import SectionSpacer from '@/components/SectionSpacer';
 import ContactSection from '@/components/contact/ContactSection';
 import Footer from '@/components/Footer';
 import HashScroll from '@/components/HashScroll';
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.fiscet.it';
+import { AUTHOR_NAME, AUTHOR_URL, SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
-  alternates: { canonical: BASE_URL },
+  alternates: { canonical: SITE_URL },
 };
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Fiscet',
-  url: BASE_URL,
+  url: SITE_URL,
   description:
     'Custom web applications built with Next.js and headless CMS solutions like Payload CMS, Sanity.io, and Strapi.',
   founder: {
     '@type': 'Person',
-    name: 'Christian Zanchetta',
-    url: 'https://www.linkedin.com/in/christian-zanchetta-a7140621/?locale=en-US',
+    name: AUTHOR_NAME,
+    url: AUTHOR_URL,
   },
-  sameAs: [
-    'https://www.linkedin.com/in/christian-zanchetta-a7140621/?locale=en-US',
-  ],
+  sameAs: [AUTHOR_URL],
 };
 
 export default function HomePage() {
