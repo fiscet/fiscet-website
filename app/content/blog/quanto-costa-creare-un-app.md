@@ -2,7 +2,7 @@
 slug: quanto-costa-creare-un-app
 title: "Quanto costa creare un'app o una web app nel 2026"
 description: "Costi di sviluppo di un'app per aziende: app nativa, cross-platform e web app a confronto, fasce di prezzo, backend e costi annuali."
-publishedAt: 2026-10-20
+publishedAt: 2026-10-03
 lang: it
 seriesOrder: 0
 ---

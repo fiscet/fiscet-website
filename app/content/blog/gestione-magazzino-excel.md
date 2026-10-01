@@ -2,7 +2,7 @@
 slug: gestione-magazzino-excel
 title: "Gestione magazzino con Excel: modello gratuito e limiti"
 description: "Un modello Excel gratuito per carico, scarico e giacenze, le regole per usarlo senza errori e i segnali che indicano quando passare a un gestionale."
-publishedAt: 2026-10-22
+publishedAt: 2026-10-04
 lang: it
 seriesOrder: 0
 ---

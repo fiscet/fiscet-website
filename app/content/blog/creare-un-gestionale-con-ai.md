@@ -2,7 +2,7 @@
 slug: creare-un-gestionale-con-ai
 title: "Creare un gestionale con l'AI: cosa funziona e cosa no"
 description: "Si può creare un gestionale con l'intelligenza artificiale? Cosa si ottiene con gli strumenti di oggi, dove si rompe e quando serve uno sviluppatore."
-publishedAt: 2026-10-29
+publishedAt: 2026-10-06
 lang: it
 seriesOrder: 0
 ---

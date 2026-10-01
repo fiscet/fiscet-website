@@ -2,7 +2,7 @@
 slug: gestionale-pronto-o-su-misura
 title: "Gestionale pronto o su misura? Come decidere"
 description: "Software in abbonamento o gestionale su misura: criteri pratici per una piccola impresa, costi su cinque anni e uno strumento gratuito per decidere."
-publishedAt: 2026-10-27
+publishedAt: 2026-10-05
 lang: it
 seriesOrder: 0
 ---

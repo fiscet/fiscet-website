@@ -2,7 +2,7 @@
 slug: quanto-costa-un-gestionale-su-misura
 title: "Quanto costa un gestionale su misura nel 2026"
 description: "Prezzi reali di un gestionale su misura per una piccola impresa: fasce indicative, tempi, costi annuali e confronto con un software in abbonamento."
-publishedAt: 2026-10-13
+publishedAt: 2026-10-01
 lang: it
 seriesOrder: 0
 ---

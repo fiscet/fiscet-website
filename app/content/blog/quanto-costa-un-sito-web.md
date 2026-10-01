@@ -2,7 +2,7 @@
 slug: quanto-costa-un-sito-web
 title: "Quanto costa un sito web nel 2026: prezzi e voci"
 description: "Quanto costa fare un sito web per un'azienda: fasce di prezzo per tipologia, costi annuali di gestione e cosa controllare in un preventivo."
-publishedAt: 2026-10-15
+publishedAt: 2026-10-02
 lang: it
 seriesOrder: 0
 ---
