@@ -14,23 +14,20 @@ type Example = {
   logoHeight?: number;
 };
 
+// Client work first, then my own products.
 const examples: Example[] = [
   {
-    name: 'FisServer',
-    href: 'https://fisserver.fiscet.it',
-    logo: '/images/fisserver_logo.png',
-    logoSize: 100
+    name: 'Studio Dentistico Marin',
+    href: 'https://dentistaconegliano.it',
+    logo: '/images/marin_logo.webp',
+    logoSize: 100,
+    logoWidth: 220,
+    logoHeight: 45
   },
   {
-    name: 'FisEvents',
-    href: 'https://fisevents.com',
-    logo: '/images/fisevents_logo.png',
-    logoSize: 130
-  },
-  {
-    name: 'FisApart',
-    href: 'https://fisapart.fiscet.it',
-    logo: '/images/fisapart_logo.png',
+    name: 'MamiVibe',
+    href: 'https://mamivibe.hu',
+    logo: '/images/mamivibe_logo.png',
     logoSize: 100
   },
   {
@@ -40,18 +37,22 @@ const examples: Example[] = [
     logoSize: 100
   },
   {
-    name: 'MamiVibe',
-    href: 'https://mamivibe.hu',
-    logo: '/images/mamivibe_logo.png',
+    name: 'FisApart',
+    href: 'https://fisapart.fiscet.it',
+    logo: '/images/fisapart_logo.png',
     logoSize: 100
   },
   {
-    name: 'Studio Dentistico Marin',
-    href: 'https://dentistaconegliano.it',
-    logo: '/images/marin_logo.webp',
-    logoSize: 100,
-    logoWidth: 220,
-    logoHeight: 45
+    name: 'FisEvents',
+    href: 'https://fisevents.com',
+    logo: '/images/fisevents_logo.png',
+    logoSize: 130
+  },
+  {
+    name: 'FisServer',
+    href: 'https://fisserver.fiscet.it',
+    logo: '/images/fisserver_logo.png',
+    logoSize: 100
   }
 ];
 

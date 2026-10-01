@@ -58,14 +58,30 @@ export type Dictionary = {
         link?: { label: string; href: string };
       }[];
     };
-    when?: {
+    // Big-company tools next to their small-business version.
+    bigTools?: {
       title: string;
       intro: string;
-      items: string[];
+      bigLabel: string;
+      smallLabel: string;
+      rows: { big: string; small: string }[];
+    };
+    // For visitors who don't know yet what they need.
+    unsure?: {
+      title: string;
+      intro: string;
+      cases: { title: string; text: string }[];
+      closing: string;
+      cta: string;
       boxTitle: string;
       boxText: string;
       boxCta: string;
       boxHref: string;
+    };
+    when?: {
+      title: string;
+      intro: string;
+      items: string[];
     };
     process?: {
       title: string;

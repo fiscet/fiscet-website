@@ -10,6 +10,8 @@ import Section from '@/components/Section';
 import HomeExamples from '@/components/home/HomeExamples';
 import HomeHeroClaim from '@/components/home/HomeHeroClaim';
 import WhenSection from '@/components/home/WhenSection';
+import BigToolsSection from '@/components/home/BigToolsSection';
+import UnsureSection from '@/components/home/UnsureSection';
 import ProcessSection from '@/components/home/ProcessSection';
 import FaqSection from '@/components/home/FaqSection';
 import { getDictionary, type Dictionary, type Locale } from '@/lib/i18n';
@@ -103,6 +105,18 @@ function ItalianSections({ dict }: { dict: Dictionary }) {
       </Section>
       <SectionSpacer />
       <ServiceSection services={services} />
+      {home.bigTools && (
+        <>
+          <SectionSpacer />
+          <BigToolsSection bigTools={home.bigTools} />
+        </>
+      )}
+      {home.unsure && (
+        <>
+          <SectionSpacer />
+          <UnsureSection unsure={home.unsure} />
+        </>
+      )}
       {home.when && (
         <>
           <SectionSpacer />

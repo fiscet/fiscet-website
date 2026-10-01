@@ -27,10 +27,10 @@ export const it: Dictionary = {
     organizationDescription:
       'Sviluppo di gestionali, web app e siti su misura per micro e piccole imprese. Prima versione funzionante in settimane, non in mesi.',
     h1: 'Gestionali e web app su misura per piccole imprese',
-    // Hero copy: proposal to review with Christian (October 2026).
+    // Hero and mission copy: draft to review with Christian (October 2026).
     hero: {
-      eyebrow: 'Christian Zanchetta · sviluppatore full-stack',
-      lead: 'Un unico programma per ordini, magazzino, clienti e commesse, costruito sul modo in cui lavori. La prima versione funzionante arriva in settimane, non in mesi, perché si parte da una base software già collaudata.',
+      eyebrow: 'Christian Zanchetta · sviluppatore per micro e piccole imprese',
+      lead: 'Le grandi aziende hanno gestionali, automazioni e assistenti che rispondono ai clienti. Ti aiuto a capire quali di questi strumenti servono anche alla tua impresa, e li costruisco su misura solo quando un software pronto non basta.',
       stats: [
         { value: '4-8 settimane', label: 'per la prima versione funzionante' },
         { value: '20 anni', label: 'di sviluppo software' },
@@ -45,17 +45,17 @@ export const it: Dictionary = {
     portfolioLabel: 'Lavori e progetti',
     examples: {
       FisServer: {
-        tag: 'Base software · AdonisJS + PostgreSQL',
+        tag: 'Base software',
         description:
-          'Le fondamenta da cui partono i miei gestionali: più aziende sullo stesso sistema, ruoli e permessi, accesso sicuro per gli assistenti AI.'
+          'Le fondamenta comuni dei miei gestionali: accessi, ruoli e permessi, sicurezza. Già pronte e collaudate, così il tuo progetto parte da qui e non da zero.'
       },
       FisEvents: {
-        tag: 'SaaS · Next.js + Sanity',
+        tag: 'Piattaforma · eventi',
         description:
           "Siti per eventi e gestione degli iscritti in un'unica piattaforma."
       },
       FisApart: {
-        tag: 'Demo AI · Vercel AI SDK',
+        tag: 'Demo · assistente AI',
         description:
           'Assistente conversazionale che risponde ai clienti di un sito di prenotazioni.'
       },
@@ -65,7 +65,7 @@ export const it: Dictionary = {
           'Aiuta le piccole imprese a decidere se comprare un software o farlo sviluppare.'
       },
       MamiVibe: {
-        tag: 'Sito web · Next.js + Sanity',
+        tag: 'Sito web · libera professionista',
         description:
           'Sito per una libera professionista: veloce, aggiornabile in autonomia.'
       },
@@ -112,6 +112,62 @@ export const it: Dictionary = {
         }
       ]
     },
+    bigTools: {
+      title: 'Strumenti da grande azienda, su misura per la tua',
+      intro:
+        'Quello che nelle grandi aziende richiede reparti interi e software costosi, in una piccola impresa può farlo uno strumento costruito sulle tue esigenze.',
+      bigLabel: 'Nelle grandi aziende',
+      smallLabel: 'Nella tua',
+      rows: [
+        {
+          big: 'Un ERP che collega ordini, magazzino e fatture',
+          small: 'Un gestionale con solo i moduli che ti servono'
+        },
+        {
+          big: 'Un CRM con lo storico di ogni cliente',
+          small: 'Clienti, telefonate, preventivi e scadenze in un posto solo'
+        },
+        {
+          big: 'Sistemi che si passano i dati da soli',
+          small: 'Niente più dati ricopiati da un programma all\'altro'
+        },
+        {
+          big: 'Un call center',
+          small: 'Un assistente che risponde alle domande frequenti, anche fuori orario'
+        },
+        {
+          big: 'Un ufficio che prepara i report',
+          small: 'I numeri della settimana in una pagina, sempre aggiornati'
+        }
+      ]
+    },
+    unsure: {
+      title: 'Non sai cosa ti serve? È il punto di partenza più comune',
+      intro:
+        'Molte piccole imprese si trovano in una di queste situazioni. Nessuna è un problema: è solo il punto da cui partire.',
+      cases: [
+        {
+          title: 'Ti arrangi con quello che hai',
+          text: 'Excel, Word, un quaderno, WhatsApp. Funziona, ma ti costa ore ogni settimana. Il primo passo è capire quante, e quanto valgono.'
+        },
+        {
+          title: 'Hai comprato un programma che non usate',
+          text: 'Succede spesso: era pensato per un altro tipo di azienda. A volte il problema è il programma, a volte come è stato introdotto. Si guarda cosa tenere e cosa cambiare.'
+        },
+        {
+          title: 'Vorresti investire, ma non sai in cosa',
+          text: 'È la situazione migliore per partire: prima di comprare qualsiasi cosa, guardiamo insieme come lavori e cosa ti farebbe risparmiare più tempo.'
+        }
+      ],
+      closing:
+        'Prima capiamo cosa ti serve. A volte basta uno strumento già pronto da pochi euro al mese, e te lo dico. Lo costruisco su misura solo quando conviene a te.',
+      cta: 'Parliamone',
+      boxTitle: 'Preferisci farti un\'idea da solo?',
+      boxText:
+        'Build vs Buy è uno strumento gratuito che analizza il tuo caso e ti dice se ti conviene un software pronto o uno su misura, con una risposta motivata in pochi minuti.',
+      boxCta: 'Prova Build vs Buy',
+      boxHref: 'https://bvb.fiscet.it'
+    },
     when: {
       title: 'Quando ha senso un gestionale su misura',
       intro:
@@ -121,19 +177,14 @@ export const it: Dictionary = {
         'Paghi un software in abbonamento, ne usi un terzo, e le funzioni che ti servono davvero mancano.',
         'Le informazioni sono sparse tra email, WhatsApp e fogli di calcolo: per sapere a che punto è un lavoro devi chiedere a qualcuno.',
         'Il tuo modo di lavorare è quello che ti distingue dai concorrenti, e nessun software pronto lo rispecchia.'
-      ],
-      boxTitle: 'Non sai se ti conviene un software pronto o uno su misura?',
-      boxText:
-        'Build vs Buy è uno strumento gratuito che analizza il tuo caso e ti dà una risposta motivata in pochi minuti.',
-      boxCta: 'Prova Build vs Buy',
-      boxHref: 'https://bvb.fiscet.it'
+      ]
     },
     process: {
       title: 'Come lavoro',
       steps: [
         {
           title: 'Analisi',
-          text: 'Una chiamata per capire come lavori oggi, cosa non funziona e cosa deve fare il software. Ne escono un perimetro chiaro e un preventivo.'
+          text: 'Guardiamo insieme come lavori oggi e cosa ti fa perdere tempo. Ti dico cosa ti serve, anche quando la risposta è un programma già pronto che non faccio io. Se serve qualcosa su misura, ne escono un perimetro chiaro e un preventivo.'
         },
         {
           title: 'Prima versione in settimane',
@@ -154,6 +205,11 @@ export const it: Dictionary = {
     faq: {
       title: 'Domande frequenti',
       items: [
+        {
+          question: "Ho un'impresa di poche persone: fa per me?",
+          answer:
+            "Sì, è proprio il tipo di azienda con cui lavoro. Si parte dal processo che oggi ti fa perdere più tempo, non da un sistema completo. E se ti basta uno strumento già pronto, te lo dico prima di proporti qualsiasi sviluppo."
+        },
         {
           question: 'Quanto costa un gestionale su misura?',
           answer:
@@ -181,6 +237,7 @@ export const it: Dictionary = {
       title: 'Chi sono',
       paragraphs: [
         'Sono Christian Zanchetta, sviluppatore full-stack da 20 anni. Realizzo gestionali, web app e siti per micro e piccole imprese, lavorando da remoto con aziende in tutta Italia.',
+        'Lavoro con le micro e piccole imprese per scelta. Le grandi aziende hanno uffici IT, consulenti e software costruiti apposta per loro. Una piccola impresa spesso ha solo il titolare, che la sera ricopia gli ordini su Excel. Il mio lavoro è portare gli stessi strumenti dove fanno più differenza.',
         'Lavori direttamente con chi scrive il codice: nessun passaggio tra commerciale, project manager e sviluppatori, e le decisioni si prendono in una telefonata.'
       ],
       cta: 'Lavoriamo insieme'
@@ -200,7 +257,8 @@ export const it: Dictionary = {
     subjectLabel: 'Oggetto',
     subjectPlaceholder: 'Di cosa si tratta',
     messageLabel: 'Messaggio',
-    messagePlaceholder: 'Ad esempio: gestiamo gli ordini su Excel e vorremmo...',
+    messagePlaceholder:
+      'Ad esempio: siamo in 4, gli ordini arrivano su WhatsApp e li ricopiamo su Excel...',
     privacyBefore: "Ho letto l'",
     privacyAfter:
       ' e acconsento al trattamento dei dati per ricevere una risposta.',
