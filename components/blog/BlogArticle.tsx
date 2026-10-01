@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkPlaceholders from '@/lib/remark-placeholders';
 import LangBadge from '@/components/LangBadge';
 import { getPublishedPosts, type BlogPost } from '@/lib/blog';
 import { formatDate, getDictionary, type Locale } from '@/lib/i18n';
@@ -191,7 +192,7 @@ export default function BlogArticle({
       )}
 
       <div className="prose prose-lg max-w-none prose-headings:text-fis-logo prose-a:text-fis-logo prose-strong:text-foreground">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm, remarkPlaceholders]}>{post.content}</ReactMarkdown>
       </div>
 
       {(olderPost || newerPost) && (
