@@ -51,7 +51,29 @@ export type Dictionary = {
     };
     services: {
       title: string;
-      items: { title: string; description: string }[];
+      items: {
+        title: string;
+        description: string;
+        link?: { label: string; href: string };
+      }[];
+    };
+    when?: {
+      title: string;
+      intro: string;
+      items: string[];
+      boxTitle: string;
+      boxText: string;
+      boxCta: string;
+      boxHref: string;
+    };
+    process?: {
+      title: string;
+      steps: { title: string; text: string }[];
+      techText: string;
+    };
+    faq?: {
+      title: string;
+      items: { question: string; answer: string }[];
     };
     about: {
       title: string;

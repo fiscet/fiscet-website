@@ -7,7 +7,13 @@ import SectionSpacer from '@/components/SectionSpacer';
 import ContactSection from '@/components/contact/ContactSection';
 import Footer from '@/components/Footer';
 import HashScroll from '@/components/HashScroll';
-import { getDictionary, type Locale } from '@/lib/i18n';
+import Section from '@/components/Section';
+import HomeExamples from '@/components/home/HomeExamples';
+import HomeHeroClaim from '@/components/home/HomeHeroClaim';
+import WhenSection from '@/components/home/WhenSection';
+import ProcessSection from '@/components/home/ProcessSection';
+import FaqSection from '@/components/home/FaqSection';
+import { getDictionary, type Dictionary, type Locale } from '@/lib/i18n';
 import { HOME_PATHS, absoluteUrl, languageAlternates } from '@/lib/seo';
 import { AUTHOR_NAME, AUTHOR_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -65,15 +71,67 @@ export default function HomePage({ locale }: { locale: Locale }) {
       <HashScroll />
       <div className="container mx-auto flex flex-col p-4 mb-4">
         <PageTitle className="text-center">{dict.home.h1}</PageTitle>
-        <HomeSection home={dict.home} />
-        <SectionSpacer />
-        <AboutSection about={dict.home.about} />
-        <SectionSpacer />
-        <ServiceSection services={dict.home.services} />
+        {locale === 'it' ? (
+          <ItalianSections dict={dict} />
+        ) : (
+          <EnglishSections dict={dict} />
+        )}
         <SectionSpacer />
         <ContactSection dict={dict} />
       </div>
       <Footer footer={dict.footer} />
+    </>
+  );
+}
+
+// Order from docs/seo-italia/copy/home-it.md.
+function ItalianSections({ dict }: { dict: Dictionary }) {
+  const { home } = dict;
+
+  return (
+    <>
+      <Section id="home">
+        <div className="my-10">
+          <HomeHeroClaim hero={home.hero} />
+        </div>
+      </Section>
+      <ServiceSection services={home.services} />
+      {home.when && (
+        <>
+          <SectionSpacer />
+          <WhenSection when={home.when} />
+        </>
+      )}
+      <SectionSpacer />
+      <Section id="lavori">
+        <HomeExamples home={home} />
+      </Section>
+      {home.process && (
+        <>
+          <SectionSpacer />
+          <ProcessSection process={home.process} tech={home.tech} />
+        </>
+      )}
+      <SectionSpacer />
+      <AboutSection about={home.about} />
+      {home.faq && (
+        <>
+          <SectionSpacer />
+          <FaqSection faq={home.faq} />
+        </>
+      )}
+    </>
+  );
+}
+
+function EnglishSections({ dict }: { dict: Dictionary }) {
+  return (
+    <>
+      <HomeSection home={dict.home} />
+      <SectionSpacer />
+      <AboutSection about={dict.home.about} />
+      <SectionSpacer />
+      <ServiceSection services={dict.home.services} />
     </>
   );
 }

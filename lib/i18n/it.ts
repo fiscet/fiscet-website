@@ -84,7 +84,8 @@ export const it: Dictionary = {
         {
           title: 'Gestionali su misura',
           description:
-            'Ordini, magazzino, clienti, commesse: un unico programma costruito sul modo in cui lavori, al posto di fogli Excel e software che non si parlano.'
+            'Ordini, magazzino, clienti, commesse: un unico programma costruito sul modo in cui lavori, al posto di fogli Excel e software che non si parlano.',
+          link: { label: 'Quando conviene →', href: '#quando' }
         },
         {
           title: 'Web app per aziende',
@@ -100,6 +101,76 @@ export const it: Dictionary = {
           title: 'Siti web aziendali',
           description:
             'Siti veloci, che aggiorni in autonomia e costruiti per farti trovare su Google. Anche restyling di siti esistenti.'
+        }
+      ]
+    },
+    when: {
+      title: 'Quando ha senso un gestionale su misura',
+      intro:
+        'Non sempre serve. Di solito conviene quando ti riconosci in almeno una di queste situazioni.',
+      items: [
+        "Gestisci ordini, magazzino o clienti su più file Excel, e qualcuno passa ore a copiare dati da un file all'altro.",
+        'Paghi un software in abbonamento, ne usi un terzo, e le funzioni che ti servono davvero mancano.',
+        'Le informazioni sono sparse tra email, WhatsApp e fogli di calcolo: per sapere a che punto è un lavoro devi chiedere a qualcuno.',
+        'Il tuo modo di lavorare è quello che ti distingue dai concorrenti, e nessun software pronto lo rispecchia.'
+      ],
+      boxTitle: 'Non sai se ti conviene un software pronto o uno su misura?',
+      boxText:
+        'Build vs Buy è uno strumento gratuito che analizza il tuo caso e ti dà una risposta motivata in pochi minuti.',
+      boxCta: 'Prova Build vs Buy',
+      boxHref: 'https://bvb.fiscet.it'
+    },
+    process: {
+      title: 'Come lavoro',
+      steps: [
+        {
+          title: 'Analisi',
+          text: 'Una chiamata per capire come lavori oggi, cosa non funziona e cosa deve fare il software. Ne escono un perimetro chiaro e un preventivo.'
+        },
+        {
+          title: 'Prima versione in settimane',
+          text: 'Si parte da FisServer, quindi il tempo va nelle funzioni che servono a te, non nelle fondamenta.'
+        },
+        {
+          title: 'Uso reale e miglioramenti',
+          text: 'La provi con i tuoi dati, si corregge quello che non va e si aggiunge il resto un modulo alla volta.'
+        },
+        {
+          title: 'Assistenza nel tempo',
+          text: 'Aggiornamenti e modifiche quando servono, con un unico referente: chi ha scritto il codice.'
+        }
+      ],
+      techText:
+        'Next.js per siti e web app, Sanity e Payload CMS per i contenuti, AdonisJS e PostgreSQL per i gestionali, Vercel AI SDK e Mastra per le funzioni di intelligenza artificiale.'
+    },
+    faq: {
+      title: 'Domande frequenti',
+      items: [
+        {
+          question: 'Quanto costa un gestionale su misura?',
+          answer:
+            'Dipende dal numero di moduli e dalle integrazioni con i programmi che usi già. [DA CONFERMARE: tua fascia di prezzo per un gestionale con 2-3 moduli, ad esempio "Un gestionale con 2-3 moduli parte da X euro".] Partire da una base già pronta riduce il costo rispetto a uno sviluppo da zero. Per confronto, le agenzie italiane indicano cifre molto diverse: da circa 5.000 euro per un gestionale con pochi moduli a 20.000-40.000 euro per il primo modulo di un progetto più strutturato.'
+        },
+        {
+          question: 'In quanto tempo è pronto?',
+          answer:
+            '[DA CONFERMARE: es. "La prima versione funzionante è pronta in genere in 4-8 settimane"]. Poi si aggiungono le altre funzioni un modulo alla volta, mentre il sistema è già in uso.'
+        },
+        {
+          question: 'Il software resta mio?',
+          answer:
+            '[DA CONFERMARE: condizioni su proprietà del codice e dei dati, licenza della base FisServer, possibilità di cambiare fornitore.]'
+        },
+        {
+          question:
+            'Posso partire da quello che uso già, come Excel o un vecchio gestionale?',
+          answer:
+            'Sì. I dati esistenti si importano nel nuovo sistema e, quando serve, il gestionale può scambiare dati con i programmi che tieni, ad esempio quello per la fatturazione elettronica.'
+        },
+        {
+          question: 'Lavori anche con aziende lontane da te?',
+          answer:
+            'Sì, lavoro da remoto con aziende in tutta Italia. Analisi, presentazioni e aggiornamenti si fanno in videochiamata.'
         }
       ]
     },
