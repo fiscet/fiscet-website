@@ -4,7 +4,7 @@ description: "Web app su misura per aziende: preventivatori, dashboard, aree cli
 h1: "Sviluppo di web app su misura per aziende"
 faq:
   - q: "Quanto costa una web app su misura?"
-    a: "Dipende da quante funzioni servono e da quali programmi deve collegarsi. Indicativamente, una web app semplice come un preventivatore o un'area clienti costa tra 5.000 e 8.000 euro. Dopo la prima chiamata ricevi un preventivo scritto, con il perimetro della prima versione."
+    a: "Dipende da quante funzioni servono e da quali programmi deve collegarsi. Indicativamente, una web app semplice come un preventivatore o un'area clienti costa tra 4.000 e 7.000 euro. Dopo la prima chiamata ricevi un preventivo scritto, con il perimetro della prima versione."
   - q: "Funziona anche su smartphone?"
     a: "Sì. Una web app si adatta allo schermo e si può aggiungere alla schermata Home del telefono, dove si apre come un'app, senza passare dagli store."
   - q: "Si può collegare al gestionale o al sito che uso già?"

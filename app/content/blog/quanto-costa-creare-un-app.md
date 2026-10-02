@@ -78,7 +78,7 @@ Con queste informazioni una prima stima arriva in pochi giorni, invece che dopo 
 
 ## I miei prezzi
 
-Indicativamente, una web app semplice come un preventivatore o un'area clienti costa tra 5.000 e 8.000 euro ed è pronta in genere in 4-6 settimane. Hosting, backup, aggiornamenti di sicurezza e piccole correzioni sono coperti da un canone annuale pari al 10 per cento del prezzo di sviluppo più 600 euro. Su una web app da 6.000 euro, ad esempio, il canone è di 1.200 euro l'anno. I progetti con più tipi di utenti o integrazioni con altri programmi si valutano dopo una prima chiamata, perché il costo dipende soprattutto da quei collegamenti. Le cifre sono indicative: il prezzo definitivo arriva con un preventivo scritto.
+Indicativamente, una web app semplice come un preventivatore o un'area clienti costa tra 4.000 e 7.000 euro ed è pronta in genere in 4-6 settimane. Hosting, backup, aggiornamenti di sicurezza e piccole correzioni sono coperti da un canone annuale pari al 10 per cento del prezzo di sviluppo più 600 euro. Su una web app da 6.000 euro, ad esempio, il canone è di 1.200 euro l'anno. I progetti con più tipi di utenti o integrazioni con altri programmi si valutano dopo una prima chiamata, perché il costo dipende soprattutto da quei collegamenti. Le cifre sono indicative: il prezzo definitivo arriva con un preventivo scritto.
 
 Per capire come lavoro sulle web app per aziende c'è la pagina dedicata allo [sviluppo di web app](/sviluppo-web-app). Per una stima sul tuo progetto puoi scrivermi dalla [pagina dei contatti](/#contact).
 
