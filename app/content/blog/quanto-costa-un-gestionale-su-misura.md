@@ -89,8 +89,8 @@ Queste sono le mie fasce indicative, costruite partendo da FisServer:
 
 | Progetto | Prezzo indicativo | Tempi tipici |
 |---|---|---|
-| Prima versione con 1-2 processi (ad esempio ordini e magazzino) | 5.000 - 9.000 € | 4-8 settimane |
-| Gestionale con 3-5 moduli e qualche integrazione | 10.000 - 22.000 € | 2-4 mesi |
+| Prima versione con 1-2 processi (ad esempio ordini e magazzino) | 4.000 - 8.000 € | 4-8 settimane |
+| Gestionale con 3-5 moduli e qualche integrazione | 8.000 - 17.000 € | 2-4 mesi |
 | Nuove funzioni dopo il rilascio | 400 - 500 € a giornata | |
 
 Hosting, backup, aggiornamenti di sicurezza e piccole correzioni sono coperti da un canone annuale pari al 10 per cento del prezzo di sviluppo più 600 euro: su un gestionale da 8.000 euro sono 1.400 euro l'anno.

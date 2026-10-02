@@ -213,7 +213,7 @@ export const it: Dictionary = {
         {
           question: 'Quanto costa un gestionale su misura?',
           answer:
-            'Dipende dal numero di moduli e dalle integrazioni con i programmi che usi già. Indicativamente, una prima versione con 1-2 processi costa tra 5.000 e 9.000 euro, un gestionale con 3-5 moduli tra 10.000 e 22.000 euro. Partire da una base già pronta riduce il costo rispetto a uno sviluppo da zero.'
+            'Dipende dal numero di moduli e dalle integrazioni con i programmi che usi già. Indicativamente, una prima versione con 1-2 processi costa tra 4.000 e 8.000 euro, un gestionale con 3-5 moduli tra 8.000 e 17.000 euro. Partire da una base già pronta riduce il costo rispetto a uno sviluppo da zero.'
         },
         {
           question: 'In quanto tempo è pronto?',
