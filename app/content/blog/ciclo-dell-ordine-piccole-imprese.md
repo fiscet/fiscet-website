@@ -38,7 +38,7 @@ Un secondo rapporto dello stesso gruppo di ricerca, pubblicato a ottobre 2025, d
 | Imprese con canali digitali propri (portali, eShop) | circa 16% |
 | Imprese presenti su marketplace B2b | 9% |
 
-L'EDI è lo scambio diretto di ordini e documenti tra i sistemi di due aziende, senza che nessuno li ricopi. È molto diffuso tra le grandi imprese e nella grande distribuzione, molto meno tra le piccole. Il dato che riguarda più da vicino una piccola impresa è il terzo: circa un'impresa su sei ha un canale proprio, come un'area riservata, in cui i clienti ordinano da soli.
+[L'EDI](https://www.ibm.com/it-it/think/topics/edi-electronic-data-interchange) è lo scambio diretto di ordini e documenti tra i sistemi di due aziende, senza che nessuno li ricopi. È molto diffuso tra le grandi imprese e nella grande distribuzione, molto meno tra le piccole. Il dato che riguarda più da vicino una piccola impresa è il terzo: circa un'impresa su sei ha un canale proprio, come un'area riservata, in cui i clienti ordinano da soli.
 
 C'è poi un dato sui compratori. L'86% dei buyer B2b intervistati si trova a proprio agio con le piattaforme digitali nella vita privata, ma la quota scende al 60% quando si tratta di acquisti aziendali. Chi compra per un'azienda è abituato a ordinare online a casa, ma sul lavoro trova ancora strumenti meno comodi o non li trova affatto.
 
