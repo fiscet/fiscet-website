@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getPublishedPosts } from '@/lib/blog';
-import { getServicePageSlugs } from '@/lib/pages';
+import { getServicePageSlugs, getServicePageUpdatedAt } from '@/lib/pages';
 import {
   HOME_PATHS,
   absoluteUrl,
@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const lastUpdate = (lang: 'it' | 'en') => {
     const latest = posts.find((p) => p.lang === lang);
-    return latest ? new Date(latest.publishedAt) : new Date();
+    return latest ? new Date(latest.publishedAt) : undefined;
   };
 
   const homeAlternates = { languages: languageAlternates(HOME_PATHS) };
@@ -25,14 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: absoluteUrl(HOME_PATHS.it),
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
       alternates: homeAlternates
     },
     {
       url: absoluteUrl(HOME_PATHS.en),
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
       alternates: homeAlternates
@@ -69,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes: MetadataRoute.Sitemap = getServicePageSlugs().map(
     (slug) => ({
       url: absoluteUrl(`/${slug}`),
-      lastModified: new Date(),
+      lastModified: getServicePageUpdatedAt(slug),
       changeFrequency: 'monthly',
       priority: 0.9
     })

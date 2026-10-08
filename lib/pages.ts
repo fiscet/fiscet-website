@@ -27,6 +27,17 @@ export function getServicePageSlugs(): string[] {
     .map((f) => f.replace(/\.md$/, ''));
 }
 
+export function getServicePageUpdatedAt(slug: string): Date | undefined {
+  if (!servicePageExists(slug)) return undefined;
+
+  const raw = fs.readFileSync(path.join(PAGES_DIR, `${slug}.md`), 'utf8');
+  const { data } = matter(raw);
+  const value =
+    data.updatedAt instanceof Date ? data.updatedAt : new Date(String(data.updatedAt));
+
+  return Number.isNaN(value.getTime()) ? undefined : value;
+}
+
 export function servicePageExists(slug: string): boolean {
   return getServicePageSlugs().includes(slug);
 }
