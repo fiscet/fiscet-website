@@ -76,9 +76,9 @@ Una strada prudente è partire con una web app e passare a un'app nativa solo qu
 
 Con queste informazioni una prima stima arriva in pochi giorni, invece che dopo settimane di domande.
 
-## I miei prezzi
+## Dove si colloca il mio lavoro
 
-Indicativamente, una web app semplice come un preventivatore o un'area clienti costa tra 4.000 e 7.000 euro ed è pronta in genere in 4-6 settimane. Hosting, backup, aggiornamenti di sicurezza e piccole correzioni sono coperti da un canone annuale pari al 10 per cento del prezzo di sviluppo più 600 euro. Su una web app da 6.000 euro, ad esempio, il canone è di 1.200 euro l'anno. I progetti con più tipi di utenti o integrazioni con altri programmi si valutano dopo una prima chiamata, perché il costo dipende soprattutto da quei collegamenti. Le cifre sono indicative: il prezzo definitivo arriva con un preventivo scritto.
+Non sviluppo app native per gli store: lavoro su web app, programmi che si usano dal browser, come un preventivatore o un'area clienti. Sono progetti più leggeri di un'app mobile completa: indicativamente rientrano in una fascia tra 4.000 e 7.000 euro e sono pronti in genere in 4-6 settimane. I progetti con più tipi di utenti o integrazioni con altri programmi si valutano dopo una prima chiamata, perché il costo dipende soprattutto da quei collegamenti. Le cifre del mercato sono indicative: il prezzo di un progetto specifico arriva con un preventivo scritto.
 
 Per capire come lavoro sulle web app per aziende c'è la pagina dedicata allo [sviluppo di web app](/sviluppo-web-app). Per una stima sul tuo progetto puoi scrivermi dalla [pagina dei contatti](/#contact).
 

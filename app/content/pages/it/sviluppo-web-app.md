@@ -4,13 +4,14 @@ description: "Web app su misura per aziende: preventivatori, dashboard, aree cli
 h1: "Sviluppo di web app su misura per aziende"
 faq:
   - q: "Quanto costa una web app su misura?"
-    a: "Dipende da quante funzioni servono e da quali programmi deve collegarsi. Indicativamente, una web app semplice come un preventivatore o un'area clienti costa tra 4.000 e 7.000 euro. Dopo la prima chiamata ricevi un preventivo scritto, con il perimetro della prima versione."
+    a: "Dipende da quante funzioni servono e da quali programmi deve collegarsi. Sul mercato, una prima versione di un'applicazione su misura per una piccola impresa costa in genere tra 4.000 e 12.000 euro, e una web app semplice come un preventivatore o un'area clienti rientra indicativamente tra 4.000 e 7.000 euro. Dopo la prima chiamata ricevi un preventivo scritto, con il perimetro della prima versione."
   - q: "Funziona anche su smartphone?"
     a: "Sì. Una web app si adatta allo schermo e si può aggiungere alla schermata Home del telefono, dove si apre come un'app, senza passare dagli store."
   - q: "Si può collegare al gestionale o al sito che uso già?"
     a: "Nella maggior parte dei casi sì, se il programma esistente permette di scambiare dati (tramite API o esportazioni). Lo si verifica nella prima chiamata, prima di fare il preventivo."
   - q: "Chi si occupa di server, sicurezza e aggiornamenti?"
-    a: "Hosting, backup, aggiornamenti di sicurezza e piccole correzioni sono coperti da un canone annuale pari al 10 per cento del prezzo di sviluppo più 600 euro. Le nuove funzioni dopo il rilascio si valutano a giornata."
+    a: "Hosting, backup, aggiornamenti di sicurezza e piccole correzioni si concordano a parte. Le nuove funzioni dopo il rilascio si valutano a giornata."
+updatedAt: "2026-10-02"
 ---
 
 Una web app è un programma che si usa dal browser, da computer o da smartphone, senza installare nulla. Per una piccola impresa è spesso il modo più diretto per trasformare un lavoro fatto a mano, tra fogli Excel, email e telefonate, in uno strumento che fa una parte del lavoro al posto tuo.

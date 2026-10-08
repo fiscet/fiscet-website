@@ -83,19 +83,11 @@ Il tema è approfondito nella guida [Gestionale pronto o su misura? Come decider
 - Di chi sono il codice e i dati, e cosa succede se un giorno cambi fornitore?
 - Quali sono i tempi, e cosa serve da parte tua per rispettarli?
 
-## I miei prezzi
+## Dove si colloca il mio lavoro
 
-Queste sono le mie fasce indicative, costruite partendo da FisServer:
+Lavoro su gestionali costruiti partendo da FisServer, una base già sviluppata e collaudata. I progetti che seguo di solito rientrano nelle prime due fasce della tabella sopra: una prima versione che copre uno o due processi, oppure un gestionale con qualche modulo e qualche integrazione. In termini indicativi, il primo caso sta tra 4.000 e 8.000 euro e richiede 4-8 settimane, il secondo tra 8.000 e 17.000 euro e 2-4 mesi.
 
-| Progetto | Prezzo indicativo | Tempi tipici |
-|---|---|---|
-| Prima versione con 1-2 processi (ad esempio ordini e magazzino) | 4.000 - 8.000 € | 4-8 settimane |
-| Gestionale con 3-5 moduli e qualche integrazione | 8.000 - 17.000 € | 2-4 mesi |
-| Nuove funzioni dopo il rilascio | 400 - 500 € a giornata | |
-
-Hosting, backup, aggiornamenti di sicurezza e piccole correzioni sono coperti da un canone annuale pari al 10 per cento del prezzo di sviluppo più 600 euro: su un gestionale da 8.000 euro sono 1.400 euro l'anno.
-
-Le cifre sono indicative: il prezzo definitivo arriva con un preventivo scritto, dopo una prima chiamata in cui si definisce il perimetro.
+Le cifre del mercato sono indicative: il prezzo di un progetto specifico arriva con un preventivo scritto, dopo una prima chiamata in cui si definisce il perimetro.
 
 Se vuoi una stima per il tuo caso, descrivimi in poche righe come lavori oggi nella [pagina dei contatti](/#contact). Se non hai ancora deciso tra software pronto e su misura, [Build vs Buy](https://bvb.fiscet.it) analizza il tuo caso gratuitamente.
 

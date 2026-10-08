@@ -4,7 +4,7 @@ description: "Siti web aziendali su misura: veloci, aggiornabili in autonomia e 
 h1: "Siti web aziendali su misura"
 faq:
   - q: "Quanto costa un sito web aziendale?"
-    a: "Indicativamente, un sito aziendale su misura con un pannello per gestire i contenuti in autonomia costa tra 3.500 e 5.000 euro. Il prezzo dipende soprattutto dal numero di pagine e dalle funzioni richieste. Le voci che incidono sul prezzo sono spiegate nella guida su quanto costa un sito web."
+    a: "Non c'è un prezzo fisso. Sul mercato italiano un sito aziendale su misura costa in genere da circa 2.000 a 7.000 euro, e un progetto con pannello per gestire i contenuti in autonomia rientra indicativamente tra 3.500 e 5.000 euro. Il prezzo dipende soprattutto dal numero di pagine e dalle funzioni richieste. Le voci che incidono sul prezzo sono spiegate nella guida su quanto costa un sito web."
   - q: "Posso aggiornare il sito da solo?"
     a: "Sì. Testi, foto, notizie e pagine si modificano da un pannello di gestione, senza toccare il codice e senza chiedere ogni volta allo sviluppatore."
   - q: "Ho già un sito: con quello nuovo perdo il posizionamento su Google?"
@@ -13,6 +13,7 @@ faq:
     a: "Il dominio deve essere intestato alla tua azienda. Se ne hai già uno si usa quello, e la posta elettronica resta dove si trova oggi."
   - q: "In quanto tempo è online?"
     a: "In genere in 6-10 settimane. La durata dipende soprattutto dalla preparazione dei testi, che si scrivono insieme."
+updatedAt: "2026-10-01"
 ---
 
 Un sito aziendale ha due compiti precisi: far capire in pochi secondi cosa fai, per chi e come contattarti, e farsi trovare su Google da chi cerca quello che offri. Il resto (animazioni, effetti, pagine in più) conta solo se aiuta questi due obiettivi.

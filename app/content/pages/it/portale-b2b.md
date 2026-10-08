@@ -4,13 +4,14 @@ description: "Portale B2B su misura: catalogo, listini per cliente, ordini di ri
 h1: "Portale B2B su misura per rivenditori e agenti"
 faq:
   - q: "Quanto costa un portale B2B su misura?"
-    a: "Dipende soprattutto da come vanno gestiti listini e condizioni commerciali e dal collegamento con il gestionale. Indicativamente, una prima versione con catalogo, listini per cliente e ordini costa tra 8.000 e 13.000 euro."
+    a: "Dipende soprattutto da come vanno gestiti listini e condizioni commerciali e dal collegamento con il gestionale. Una prima versione con catalogo, listini per cliente e ordini è un progetto più impegnativo di un sito o di una web app semplice: indicativamente una prima versione rientra tra 8.000 e 13.000 euro, e sul mercato si supera facilmente questa cifra quando c'è l'integrazione con il gestionale. Il preventivo scritto arriva dopo la prima chiamata."
   - q: "Posso partire con una versione ridotta?"
     a: "Sì, ed è il modo consigliato. Una prima versione con catalogo, listini e ordini è già utile; area agenti, documenti e integrazioni si aggiungono dopo, quando il portale è in uso."
   - q: "Si collega al mio gestionale?"
     a: "Dipende da come il gestionale rende disponibili i dati: alcuni hanno API, altri permettono esportazioni periodiche. Si verifica all'inizio, prima del preventivo, perché è la voce che incide di più su costi e tempi."
   - q: "I miei clienti devono installare qualcosa?"
     a: "No. Il portale si usa dal browser, da computer o da smartphone, con un accesso personale per ogni cliente o agente."
+updatedAt: "2026-10-01"
 ---
 
 Un portale B2B è un sito ad accesso riservato in cui rivenditori, agenti e clienti professionali consultano il catalogo, vedono i propri prezzi e inviano ordini. Prende il posto degli ordini via email e telefono e dei listini in PDF che, quando arrivano al cliente, sono già vecchi.

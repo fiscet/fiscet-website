@@ -74,13 +74,13 @@ I costruttori di siti in abbonamento permettono di mettere online un sito senza 
 
 Investire nella fascia alta ha senso quando il sito ha un compito commerciale preciso e misurabile: portare richieste di preventivo, prenotazioni o contatti da un settore in cui su Google ci sono molti concorrenti. Se invece il sito serve soprattutto come biglietto da visita per chi ti conosce già, una soluzione più semplice è spesso la scelta più razionale.
 
-## I miei prezzi
+## Dove si colloca il mio lavoro
 
-Realizzo siti aziendali su misura, con un pannello per gestire i contenuti in autonomia. Costano indicativamente tra 3.500 e 5.000 euro e sono online in genere in 6-10 settimane, a seconda dei tempi di preparazione dei testi. I testi si scrivono a quattro mani: tu porti la conoscenza del tuo lavoro e dei tuoi clienti, io la struttura e l'attenzione a come le persone cercano su Google.
+Realizzo siti aziendali su misura, con un pannello per gestire i contenuti in autonomia. Sono progetti che indicativamente rientrano tra 3.500 e 5.000 euro, nella parte centrale delle fasce di mercato viste sopra, e sono online in genere in 6-10 settimane, a seconda dei tempi di preparazione dei testi. I testi si scrivono a quattro mani: tu porti la conoscenza del tuo lavoro e dei tuoi clienti, io la struttura e l'attenzione a come le persone cercano su Google.
 
 Non realizzo siti vetrina da modello né restyling di siti esistenti: per queste esigenze, i listini riportati sopra offrono soluzioni più adatte e più economiche.
 
-Le cifre sono indicative: il prezzo definitivo arriva con un preventivo scritto, dopo una prima chiamata.
+Le cifre del mercato sono indicative: il prezzo di un progetto specifico arriva con un preventivo scritto, dopo una prima chiamata.
 
 Se vuoi una stima per il tuo caso, descrivimi il sito che hai in mente nella [pagina dei contatti](/#contact). Per capire come lavoro sui siti aziendali c'è la pagina dedicata ai [siti web su misura](/siti-web-aziendali).
 
