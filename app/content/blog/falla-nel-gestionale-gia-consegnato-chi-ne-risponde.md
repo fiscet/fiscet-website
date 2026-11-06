@@ -35,7 +35,7 @@ Il GDPR è il regolamento europeo sulla protezione dei dati personali. Se il ges
 
 **Titolare e responsabile del trattamento.** Il titolare è chi decide perché e come trattare i dati: di solito l'azienda cliente. Il responsabile è il fornitore che li tratta per conto del titolare. Una software house può diventare responsabile quando si occupa di installazione, assistenza e manutenzione che comportano accesso ai dati. Se invece il software è installato sui server del cliente, la gestione dell'infrastruttura resta al cliente.
 
-**Articolo 28: il contratto tra le due parti.** Stabilisce che il rapporto tra titolare e responsabile deve essere regolato da un contratto (o altro atto giuridico) scritto. Il responsabile deve trattare i dati solo su istruzione documentata del titolare e adottare le misure di sicurezza previste. Se il contratto manca, il Garante per la protezione dei dati personali può sanzionare entrambi.
+**Articolo 28: il contratto con chi tratta i dati per tuo conto.** Non è il contratto di sviluppo. È un atto separato, spesso chiamato nomina a responsabile del trattamento, necessario solo quando il fornitore tratta dati personali per conto del cliente: per esempio gestisce l'hosting, accede al database per l'assistenza o fa migrazioni di dati. Stabilisce, tra l'altro, che il fornitore agisce solo su istruzioni documentate del cliente e applica misure di sicurezza adeguate. Se il fornitore ha accesso ai dati e questo atto manca, il Garante per la protezione dei dati personali può sanzionare entrambi. Se invece consegna il software e non ha alcun accesso ai dati, di norma non è responsabile del trattamento e l'articolo 28 non si applica.
 
 **Articolo 32: la sicurezza.** Richiede misure tecniche e organizzative adeguate al rischio, tenendo conto dello stato dell'arte. Non significa "nessuna falla mai", ma "aver fatto quanto ragionevolmente possibile e aggiornarsi nel tempo".
 
@@ -68,7 +68,7 @@ Un punto decisivo: l'articolo 1229 del Codice civile dichiara nulle le clausole 
 - **Scrivi al cliente** (email o PEC): cosa hai trovato, che rischio comporta, cosa proponi, entro quando. Tono tecnico, non allarmista.
 - **Correggi i problemi critici con un accordo semplice**, anche gratuito, e proponi un canone di assistenza per il resto.
 - **Se emergono segni di violazione, avvisa subito il cliente.** Le 72 ore sono le sue.
-- **Per i lavori futuri**: contratto con perimetro, accordo ex art. 28, canone di manutenzione e una limitazione di responsabilità ragionevole.
+- **Per i lavori futuri**: contratto con perimetro, canone di manutenzione, limitazione di responsabilità ragionevole e, se avrai accesso ai dati, nomina a responsabile ex art. 28.
 
 Alla risposta "dovevi pensarci prima" c'è una replica corretta: il rischio esiste che io te lo dica o no. Dirlo ti dà la possibilità di decidere.
 
