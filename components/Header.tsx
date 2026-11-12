@@ -109,7 +109,7 @@ export default function Header({
           <MobileMenu id={menuId}>
             {services.length > 0 ? (
               <>
-                <p className="pt-2 pb-1 text-xs font-semibold uppercase tracking-wider text-fis-logo/60">
+                <p className="pt-2 pb-1 text-xs font-semibold uppercase tracking-wider text-fis-logo/70">
                   {nav.services}
                 </p>
                 {services.map((link) => (

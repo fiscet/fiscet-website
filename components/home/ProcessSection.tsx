@@ -5,10 +5,12 @@ import HomeTech from './HomeTech';
 
 export default function ProcessSection({
   process,
-  tech
+  tech,
+  newTab
 }: {
   process: NonNullable<Dictionary['home']['process']>;
   tech: Dictionary['home']['tech'];
+  newTab: string;
 }) {
   return (
     <Section id="come-lavoro">
@@ -25,7 +27,7 @@ export default function ProcessSection({
         ))}
       </ol>
       <div className="mt-10">
-        <HomeTech tech={tech} />
+        <HomeTech tech={tech} newTab={newTab} />
         <p className="mt-4 max-w-3xl leading-relaxed text-gray-700">{process.techText}</p>
       </div>
     </Section>

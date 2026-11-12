@@ -167,6 +167,7 @@ export default function BlogArticle({
             className="text-fis-logo hover:underline"
           >
             {AUTHOR_NAME}
+            <span className="sr-only"> {blog.newTab}</span>
           </a>
         </p>
       </header>

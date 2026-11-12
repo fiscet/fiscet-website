@@ -29,7 +29,7 @@ export default function HomeSection({ home }: { home: Dictionary['home'] }) {
             ))}
           </div>
         )}
-        <HomeTech tech={home.tech} />
+        <HomeTech tech={home.tech} newTab={home.newTab} />
       </div>
     </Section>
   );

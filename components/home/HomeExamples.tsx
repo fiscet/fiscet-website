@@ -92,6 +92,7 @@ export default function HomeExamples({
                 {example.name}
               </span>
               <span className="mt-1 text-sm text-gray-600">{description}</span>
+              <span className="sr-only">{home.newTab}</span>
             </Link>
           );
         })}

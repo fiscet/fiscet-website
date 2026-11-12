@@ -90,7 +90,12 @@ export function ContactForm({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      {/* noValidate: validation messages come from the Zod schema, not the browser. */}
+      <form
+        noValidate
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6"
+      >
         <FormField
           control={form.control}
           name="name"
@@ -98,7 +103,11 @@ export function ContactForm({
             <FormItem>
               <FormLabel>{t.nameLabel}</FormLabel>
               <FormControl>
-                <Input placeholder={t.namePlaceholder} {...field} />
+                <Input
+                  placeholder={t.namePlaceholder}
+                  autoComplete="name"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -111,7 +120,13 @@ export function ContactForm({
             <FormItem>
               <FormLabel>{t.emailLabel}</FormLabel>
               <FormControl>
-                <Input placeholder={t.emailPlaceholder} {...field} />
+                <Input
+                  type="email"
+                  inputMode="email"
+                  autoComplete="email"
+                  placeholder={t.emailPlaceholder}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

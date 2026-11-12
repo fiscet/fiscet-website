@@ -13,6 +13,7 @@ export const en: Dictionary = {
     blogHref: '/en/blog',
     cta: 'Let’s work together',
     menuToggle: 'Toggle menu',
+    skipToContent: 'Skip to content',
     switchLabel: 'IT',
     switchTitle: 'Versione italiana',
     switchHrefLang: 'it'
@@ -24,6 +25,7 @@ export const en: Dictionary = {
       'Custom business software, web apps and websites for small companies. First working release in weeks, built on a proven foundation.',
     organizationDescription:
       'Custom web applications built with Next.js and headless CMS solutions like Payload CMS, Sanity.io, and Strapi.',
+    newTab: '(opens in a new tab)',
     h1: 'Custom Web Solutions for your business',
     hero: {
       eyebrow: 'Christian Zanchetta · full-stack developer',
@@ -150,6 +152,7 @@ export const en: Dictionary = {
 
   privacy: {
     linkLabel: 'privacy policy',
+    closeLabel: 'Close',
     title: 'Privacy Policy',
     intro:
       'At our company, we take your privacy seriously. We want to be transparent about how we handle your data.',
@@ -198,6 +201,7 @@ export const en: Dictionary = {
   },
 
   blog: {
+    newTab: '(opens in a new tab)',
     name: 'Fiscet Blog',
     title: 'Blog · Fiscet',
     titleSuffix: ' · Fiscet Blog',

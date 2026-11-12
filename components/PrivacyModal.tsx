@@ -32,7 +32,10 @@ export default function PrivacyModal({
       </button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+        <DialogContent
+          closeLabel={privacy.closeLabel}
+          className="max-w-3xl max-h-[80vh] overflow-y-auto"
+        >
           <DialogHeader>
             <DialogTitle>{privacy.title}</DialogTitle>
           </DialogHeader>

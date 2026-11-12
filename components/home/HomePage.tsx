@@ -114,7 +114,7 @@ function ItalianSections({ dict }: { dict: Dictionary }) {
       {home.unsure && (
         <>
           <SectionSpacer />
-          <UnsureSection unsure={home.unsure} />
+          <UnsureSection unsure={home.unsure} newTab={home.newTab} />
         </>
       )}
       {home.when && (
@@ -130,7 +130,11 @@ function ItalianSections({ dict }: { dict: Dictionary }) {
       {home.process && (
         <>
           <SectionSpacer />
-          <ProcessSection process={home.process} tech={home.tech} />
+          <ProcessSection
+            process={home.process}
+            tech={home.tech}
+            newTab={home.newTab}
+          />
         </>
       )}
       <SectionSpacer />

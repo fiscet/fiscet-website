@@ -27,6 +27,12 @@ export default function RootShell({
       <body className={`${inter.className} antialiased`}>
         <CookieConsentProvider>
           <GoogleTagManager />
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-fis-logo focus:shadow-lg"
+          >
+            {dict.nav.skipToContent}
+          </a>
           <Header
             homePath={dict.homePath}
             nav={dict.nav}
@@ -34,7 +40,9 @@ export default function RootShell({
             switchMap={getLanguageSwitchMap()}
             otherHomePath={getDictionary(locale === 'it' ? 'en' : 'it').homePath}
           />
-          <main>{children}</main>
+          <main id="main-content" tabIndex={-1} className="outline-none">
+            {children}
+          </main>
           <Toaster />
           <CookieBanner cookie={dict.cookie} privacy={dict.privacy} />
         </CookieConsentProvider>
