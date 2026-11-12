@@ -102,6 +102,7 @@ export default function BlogIndex({ locale }: { locale: Locale }) {
             className="text-fis-logo hover:underline"
           >
             {AUTHOR_NAME}
+            <span className="sr-only"> {blog.newTab}</span>
           </a>
         </p>
       </section>
@@ -119,7 +120,7 @@ export default function BlogIndex({ locale }: { locale: Locale }) {
               >
                 <article
                   lang={post.lang}
-                  className={`flex gap-4 md:gap-6 ${!published ? 'opacity-60' : ''}`}
+                  className={`flex gap-4 md:gap-6`}
                 >
                   <div className="flex-1 min-w-0">
                     <div

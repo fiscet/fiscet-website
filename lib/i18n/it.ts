@@ -14,6 +14,7 @@ export const it: Dictionary = {
     blogHref: '/blog',
     cta: 'Parliamone',
     menuToggle: 'Apri o chiudi il menu',
+    skipToContent: 'Vai al contenuto',
     switchLabel: 'EN',
     switchTitle: 'English version',
     switchHrefLang: 'en'
@@ -26,6 +27,7 @@ export const it: Dictionary = {
       'Sviluppo di gestionali, web app e siti su misura per micro e piccole imprese. Prima versione funzionante in settimane, non in mesi.',
     organizationDescription:
       'Sviluppo di gestionali, web app e siti su misura per micro e piccole imprese. Prima versione funzionante in settimane, non in mesi.',
+    newTab: '(si apre in una nuova scheda)',
     h1: 'Gestionali e web app su misura per piccole imprese',
     // Hero and mission copy: draft to review with Christian (October 2026).
     hero: {
@@ -280,6 +282,7 @@ export const it: Dictionary = {
 
   privacy: {
     linkLabel: 'informativa privacy',
+    closeLabel: 'Chiudi',
     title: 'Informativa privacy',
     intro:
       'Prendo sul serio la tua privacy e voglio essere trasparente su come tratto i tuoi dati.',
@@ -328,6 +331,7 @@ export const it: Dictionary = {
   },
 
   blog: {
+    newTab: '(si apre in una nuova scheda)',
     name: 'Blog di Fiscet',
     title: 'Blog: guide su gestionali, web app e siti | Fiscet',
     titleSuffix: ' | Fiscet',

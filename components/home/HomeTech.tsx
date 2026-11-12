@@ -3,9 +3,11 @@ import Link from 'next/link';
 import type { Dictionary } from '@/lib/i18n';
 
 export default function HomeTech({
-  tech
+  tech,
+  newTab
 }: {
   tech: Dictionary['home']['tech'];
+  newTab: string;
 }) {
   return (
     <>
@@ -24,6 +26,7 @@ export default function HomeTech({
               height={50}
               className="rounded-md"
             />
+            <span className="sr-only">{newTab}</span>
           </Link>
           <Link href="https://sanity.io" target="_blank">
             <Image
@@ -34,6 +37,7 @@ export default function HomeTech({
               height={50}
               className="rounded-md"
             />
+            <span className="sr-only">{newTab}</span>
           </Link>
           <Link href="https://strapi.io" target="_blank">
             <Image
@@ -43,6 +47,7 @@ export default function HomeTech({
               width={50}
               height={50}
             />
+            <span className="sr-only">{newTab}</span>
           </Link>
         </div>
         <div className="text-4xl font-bold">+</div>
@@ -55,6 +60,7 @@ export default function HomeTech({
             height={50}
             className="rounded-md"
           />
+          <span className="sr-only">{newTab}</span>
         </Link>
         <div className="text-4xl font-bold">&asymp;</div>
         <Link href="https://mastra.ai/" target="_blank">
@@ -65,6 +71,7 @@ export default function HomeTech({
             height={50}
             className="rounded-md"
           />
+          <span className="sr-only">{newTab}</span>
         </Link>
       </div>
     </>

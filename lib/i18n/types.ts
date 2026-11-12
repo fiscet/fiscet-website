@@ -24,6 +24,7 @@ export type Dictionary = {
     blogHref: string;
     cta: string;
     menuToggle: string;
+    skipToContent: string;
     switchLabel: string;
     switchTitle: string;
     switchHrefLang: Locale;
@@ -33,6 +34,8 @@ export type Dictionary = {
     metaTitle: string;
     metaDescription: string;
     organizationDescription: string;
+    // Screen-reader suffix for links that open in a new tab.
+    newTab: string;
     h1: string;
     hero: {
       // Shown next to the author photo, above the h1.
@@ -129,6 +132,7 @@ export type Dictionary = {
 
   privacy: {
     linkLabel: string;
+    closeLabel: string;
     title: string;
     intro: string;
     collectionTitle: string;
@@ -160,6 +164,7 @@ export type Dictionary = {
   };
 
   blog: {
+    newTab: string;
     name: string;
     title: string;
     titleSuffix: string;

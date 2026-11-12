@@ -4,9 +4,11 @@ import Section from '../Section';
 import { SectionTitle } from '../SectionTitle';
 
 export default function UnsureSection({
-  unsure
+  unsure,
+  newTab
 }: {
   unsure: NonNullable<Dictionary['home']['unsure']>;
+  newTab: string;
 }) {
   return (
     <Section id="da-dove-partire">
@@ -39,6 +41,7 @@ export default function UnsureSection({
           className="mt-4 inline-block rounded-md border border-fis-logo/30 px-5 py-2.5 font-semibold text-fis-logo transition-colors hover:border-fis-logo"
         >
           {unsure.boxCta}
+          <span className="sr-only"> {newTab}</span>
         </Link>
       </div>
     </Section>
