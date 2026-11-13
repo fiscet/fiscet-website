@@ -299,9 +299,9 @@ export const it: Dictionary = {
     protectionIntro: 'Ti garantisco che:',
     protectionItems: [
       'Non conservo i tuoi dati personali oltre quanto serve per rispondere alla tua richiesta',
-      'Non condivido le tue informazioni con terze parti',
+      'Non vendo né cedo le tue informazioni a terzi',
       'Non uso i tuoi dati per finalità di marketing',
-      'I tuoi dati non vengono inoltrati a servizi o organizzazioni esterne'
+      'Le tue informazioni passano solo dal servizio di posta elettronica che uso per ricevere e inviare i messaggi, e non vengono inoltrate ad altri servizi o organizzazioni'
     ],
     cookiesTitle: 'Cookie e statistiche',
     cookiesParagraphs: [
@@ -310,7 +310,62 @@ export const it: Dictionary = {
     ],
     contactTitle: 'Contatti',
     contactText:
-      'Se hai domande su questa informativa o su come tratto i tuoi dati, scrivimi tramite il modulo di contatto.'
+      'Se hai domande su questa informativa o su come tratto i tuoi dati, scrivimi tramite il modulo di contatto.',
+    guideTitle: 'Guida gratuita',
+    guideParagraphs: [
+      "Per ricevere la guida in PDF mi serve solo il tuo indirizzo email, che uso esclusivamente per inviartela. La base giuridica è la tua richiesta (art. 6, par. 1, lett. b del GDPR).",
+      "Non salvo l'indirizzo in nessun database, non ti iscrivo a newsletter e non lo uso per comunicazioni commerciali. L'email con la guida parte dal mio servizio di posta e una copia dell'indirizzo resta nella mia casella, perché è da lì che vedo che la guida è stata richiesta. La elimino entro 12 mesi."
+    ]
+  },
+
+  guide: {
+    path: '/guida-ia-automazione',
+    metaTitle:
+      'Guida gratuita: intelligenza artificiale e automazione nelle piccole imprese | Fiscet',
+    metaDescription:
+      'Guida pratica in PDF per le PMI italiane: idee, esempi, errori da evitare e norme da conoscere su intelligenza artificiale e automazione. Gratuita, ti arriva via email.',
+    h1: 'Intelligenza artificiale e automazione nelle piccole imprese',
+    lead: "Una guida pratica per le PMI italiane: da dove partire, cosa conviene automatizzare, quali errori evitare e quali norme conoscere prima di usare l'intelligenza artificiale in azienda.",
+    includesTitle: 'Cosa trovi nella guida',
+    includes: [
+      "Idee concrete su dove l'intelligenza artificiale e l'automazione fanno risparmiare tempo in una piccola impresa",
+      'Esempi pratici, pensati per aziende con pochi dipendenti',
+      'Gli errori da evitare, per non spendere tempo e soldi in strumenti che non servono',
+      'Le norme da conoscere prima di partire'
+    ],
+    formTitle: 'Ricevi la guida via email',
+    emailLabel: 'Email',
+    emailPlaceholder: 'nome@azienda.it',
+    privacyBefore: "Ho letto l'",
+    privacyAfter:
+      " e acconsento al trattamento del mio indirizzo email per ricevere la guida. Non ti iscrivo a nessuna newsletter.",
+    submit: 'Inviami la guida',
+    submitting: 'Invio in corso...',
+    errors: {
+      email: 'Inserisci un indirizzo email valido',
+      privacy: "Per ricevere la guida devi accettare l'informativa privacy"
+    },
+    success: {
+      title: 'Guida inviata',
+      description:
+        "Controlla la posta: ti ho scritto con la guida in allegato. Se non la trovi entro qualche minuto, guarda nello spam."
+    },
+    failure: {
+      title: 'Invio non riuscito',
+      description:
+        'Riprova tra qualche minuto o scrivimi tramite il modulo contatti.'
+    },
+    tooManyRequests: {
+      title: 'Troppe richieste',
+      description:
+        "Hai già richiesto la guida da poco. Controlla la posta (anche lo spam) o riprova tra un po'."
+    },
+    banner: {
+      label: 'Guida gratuita · PDF',
+      title: 'Intelligenza artificiale e automazione nelle piccole imprese',
+      text: 'Idee, esempi, errori da evitare e norme da conoscere. Ti arriva via email.',
+      cta: 'Scarica la guida'
+    }
   },
 
   cookie: {
