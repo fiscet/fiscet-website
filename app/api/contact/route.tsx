@@ -33,6 +33,8 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to: process.env.SMTP_TO,
+      // Replying to this notification answers the visitor, not info@.
+      replyTo: `${name.replace(/[\r\n"<>]/g, '')} <${email}>`,
       subject: `Contact Form: ${subject}`,
       text: `
         Name: ${name}

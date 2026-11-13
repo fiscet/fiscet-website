@@ -59,6 +59,11 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to: email,
+      // info@ sends an automatic reply and nobody reads it: answers go to the
+      // inbox that is actually read.
+      replyTo: process.env.SMTP_REPLY_TO || process.env.SMTP_TO,
+      // Tells out-of-office and other auto-responders not to reply to this.
+      headers: { 'Auto-Submitted': 'auto-generated' },
       subject: `La tua guida: ${GUIDE_TITLE}`,
       text: [
         'Ciao,',
@@ -92,6 +97,7 @@ export async function POST(req: Request) {
         from: process.env.SMTP_FROM,
         to: process.env.SMTP_TO,
         replyTo: email,
+        headers: { 'Auto-Submitted': 'auto-generated' },
         subject: 'Guida scaricata',
         text: `Qualcuno ha richiesto la guida "${GUIDE_TITLE}": ${email}`
       });
