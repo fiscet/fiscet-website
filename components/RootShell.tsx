@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google';
+import { inter } from '@/lib/fonts';
 import '@/app/globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import Header from '@/components/Header';
@@ -10,7 +10,6 @@ import { getDictionary, type Locale } from '@/lib/i18n';
 import { getLanguageSwitchMap } from '@/lib/i18n/alternates';
 import { getServiceLinks } from '@/lib/navigation';
 
-const inter = Inter({ subsets: ['latin'] });
 
 // Shared <html> shell for the two root layouts, app/(it) and app/(en)/en.
 export default function RootShell({

@@ -1,21 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FileText } from 'lucide-react';
-import { JetBrains_Mono, Space_Grotesk } from 'next/font/google';
+import { jetbrainsMono, spaceGrotesk } from '@/lib/fonts';
 import type { Dictionary } from '@/lib/i18n';
 import { AUTHOR_NAME } from '@/lib/site';
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font-hero-sans'
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['500', '700'],
-  variable: '--font-hero-mono'
-});
 
 // The page's h1 lives here: one block with title, lead, actions and numbers.
 export default function HomeHeroClaim({
