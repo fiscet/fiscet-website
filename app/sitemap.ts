@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getPublishedPosts } from '@/lib/blog';
+import { getDictionary } from '@/lib/i18n';
 import { getServicePageSlugs, getServicePageUpdatedAt } from '@/lib/pages';
 import {
   HOME_PATHS,
@@ -64,6 +65,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  const guide = getDictionary('it').guide;
+  const guideRoutes: MetadataRoute.Sitemap = guide
+    ? [
+        {
+          url: absoluteUrl(guide.path),
+          changeFrequency: 'monthly',
+          priority: 0.8
+        }
+      ]
+    : [];
+
   const serviceRoutes: MetadataRoute.Sitemap = getServicePageSlugs().map(
     (slug) => ({
       url: absoluteUrl(`/${slug}`),
@@ -73,5 +85,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticRoutes, ...serviceRoutes, ...postRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...guideRoutes, ...postRoutes];
 }

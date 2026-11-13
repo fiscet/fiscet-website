@@ -145,6 +145,32 @@ export type Dictionary = {
     cookiesParagraphs: string[];
     contactTitle: string;
     contactText: string;
+    // Only on the Italian site: the free guide download form.
+    guideTitle?: string;
+    guideParagraphs?: string[];
+  };
+
+  // Free PDF guide (Italian only): landing page, form and home banner.
+  guide?: {
+    path: string;
+    metaTitle: string;
+    metaDescription: string;
+    h1: string;
+    lead: string;
+    includesTitle: string;
+    includes: string[];
+    formTitle: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    privacyBefore: string;
+    privacyAfter: string;
+    submit: string;
+    submitting: string;
+    errors: { email: string; privacy: string };
+    success: { title: string; description: string };
+    failure: { title: string; description: string };
+    tooManyRequests: { title: string; description: string };
+    banner: { label: string; title: string; text: string; cta: string };
   };
 
   cookie: {

@@ -72,6 +72,19 @@ export default function PrivacyModal({
               </p>
             ))}
 
+            {privacy.guideTitle && privacy.guideParagraphs && (
+              <>
+                <h2 className="text-2xl font-semibold mt-6 mb-4">
+                  {privacy.guideTitle}
+                </h2>
+                {privacy.guideParagraphs.map((paragraph) => (
+                  <p key={paragraph} className="mb-4">
+                    {paragraph}
+                  </p>
+                ))}
+              </>
+            )}
+
             <h2 className="text-2xl font-semibold mt-6 mb-4">
               {privacy.contactTitle}
             </h2>

@@ -101,7 +101,7 @@ function ItalianSections({ dict }: { dict: Dictionary }) {
   return (
     <>
       <Section id="home">
-        <HomeHeroClaim h1={home.h1} hero={home.hero} />
+        <HomeHeroClaim h1={home.h1} hero={home.hero} guide={dict.guide} />
       </Section>
       <SectionSpacer />
       <ServiceSection services={services} />

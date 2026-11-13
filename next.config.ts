@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
     // app/global-not-found.tsx to render inside the site shell.
     globalNotFound: true,
   },
+  // The guide PDF is read from disk by /api/guide: make sure it ships with
+  // the serverless function.
+  outputFileTracingIncludes: {
+    "/api/guide": ["./private/guide/**/*"],
+  },
   // English articles moved from /blog/<slug> to /en/blog/<slug>.
   async redirects() {
     return getAllPosts("en").map((post) => ({
