@@ -11,6 +11,8 @@ In breve: secondo l'ISTAT (rapporto "Imprese e ICT", 15 dicembre 2025), vende on
 
 Vendere tramite una piattaforma non è un errore. Diventa un problema quando la piattaforma è l'unico canale e l'impresa non sa più chi sono i suoi clienti.
 
+Una precisazione sui termini. Per piattaforme qui si intendono i marketplace e i siti di intermediazione in cui vendono molte imprese insieme: generalisti, di settore o di prenotazione. Un negozio online costruito con un software di e-commerce in abbonamento, sul tuo dominio e con i clienti che si registrano da te, è invece un canale proprio: il fornitore del software ti dà lo strumento, ma non si mette tra te e chi compra.
+
 ## Cosa dicono i dati ISTAT
 
 L'indagine ISTAT riguarda le imprese con almeno 10 addetti e, per le vendite online, fa riferimento all'anno precedente a quello della rilevazione. Ecco i numeri principali.
