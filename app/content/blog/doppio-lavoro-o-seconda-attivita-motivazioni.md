@@ -5,6 +5,7 @@ description: "Chi fa due lavori per arrotondare e chi costruisce un'attività pr
 publishedAt: 2026-11-24
 lang: it
 seriesOrder: 0
+image: /images/blog/doppio-lavoro-o-seconda-attivita.jpeg
 ---
 
 In breve: in Italia il doppio lavoro dichiarato è poco diffuso. Secondo i dati Eurostat, nel 2021 gli occupati italiani con un secondo lavoro erano circa 348 mila, mentre nell'Unione europea chi ha più di un lavoro è intorno al 4% degli occupati. Chi invece affianca al lavoro dipendente un'attività propria sembra muoversi meno per i soldi di quanto si pensi: in un'indagine della banca online HYPE su circa 500 suoi clienti con partita IVA, solo il 13% dice di averla aperta per guadagnare di più, mentre il 29% cita autonomia e indipendenza.
