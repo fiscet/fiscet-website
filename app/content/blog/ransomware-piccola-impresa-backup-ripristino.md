@@ -5,6 +5,7 @@ description: "Nel 2025 in Italia la maggior parte delle vittime di ransomware so
 publishedAt: 2026-11-26
 lang: it
 seriesOrder: 0
+image: /images/blog/ransomware-piccola-impresa-backup-ripristino.jpeg
 ---
 
 In breve: secondo la Relazione annuale al Parlamento 2025 dell'Agenzia per la Cybersicurezza Nazionale (ACN), la maggior parte delle vittime di ransomware in Italia sono piccole imprese, in particolare del settore manifatturiero, spesso con livelli di sicurezza limitati. Il ransomware cifra i dati e chiede un riscatto per restituirli. La difesa che decide se un'azienda riparte in un giorno o in un mese è un backup scollegato dalla rete e provato almeno una volta. Un disco esterno sempre attaccato al computer, o una cartella di rete sincronizzata, di solito viene cifrato insieme a tutto il resto.
